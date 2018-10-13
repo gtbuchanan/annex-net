@@ -1,0 +1,68 @@
+namespace Annex.Collections
+{
+    public class static CollectionExtensions
+    {
+        public static void AddRange<T>(this System.Collections.Generic.ICollection<T> @this, System.Collections.Generic.IEnumerable<T> collection) { }
+    }
+}
+namespace Annex.Collections.Global
+{
+    public class static GlobalCollectionExtensions
+    {
+        public static T AddTo<T, TElement>(this T @this, System.Collections.Generic.ICollection<TElement> collection)
+            where T : TElement { }
+    }
+}
+namespace Annex.Delegates
+{
+    public class static ActionEx
+    {
+        public static System.Action Empty { get; }
+    }
+}
+namespace Annex.Linq
+{
+    public sealed class EnumerableComparer<T> : System.Collections.Generic.IEqualityComparer<System.Collections.Generic.IEnumerable<T>>
+    {
+        public EnumerableComparer() { }
+        public static Annex.Linq.EnumerableComparer<T> Default { get; }
+        public bool Equals(System.Collections.Generic.IEnumerable<T> x, System.Collections.Generic.IEnumerable<T> y) { }
+        public int GetHashCode(System.Collections.Generic.IEnumerable<T> obj) { }
+    }
+    public class static EnumerableExtensions
+    {
+        public static System.Collections.Generic.IEnumerable<T> Shuffle<T>(this System.Collections.Generic.IEnumerable<T> @this, System.Random random) { }
+    }
+    public class static LookupExtensions
+    {
+        public static System.Collections.Generic.IDictionary<TKey, System.Collections.Generic.IEnumerable<TElement>> ToDictionary<TKey, TElement>(this System.Linq.ILookup<TKey, TElement> @this) { }
+    }
+}
+namespace Annex.Numerics
+{
+    public class static FloatExtensions
+    {
+        public static bool NearlyEquals(this float @this, float value, double epsilon) { }
+    }
+}
+namespace Annex.Strings
+{
+    public class static StringExtensions
+    {
+        public static bool Contains(this string @this, string value, System.StringComparison comparisonType) { }
+    }
+}
+namespace Annex.Threading
+{
+    public class static CancellationTokenEx
+    {
+        public static System.Threading.CancellationToken Canceled { get; }
+    }
+}
+namespace Annex.Uris
+{
+    public class static UriExtensions
+    {
+        public static System.Linq.ILookup<string, string> ParseQueryString(this System.Uri @this) { }
+    }
+}

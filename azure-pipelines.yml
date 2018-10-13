@@ -1,0 +1,66 @@
+pool:
+  vmImage: VS2017-Win2016
+
+steps:
+- task: BatchScript@1
+  inputs:
+    filename: "C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Enterprise\\Common7\\Tools\\VsDevCmd.bat"
+    arguments: -no_logo
+    modifyEnvironment: true
+  displayName: Setup Environment Variables
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: custom
+    custom: tool
+    arguments: install --tool-path . nbgv
+  displayName: Install NBGV tool
+  condition: and(succeeded(), eq(variables['system.pullrequest.isfork'], false))
+
+- script: nbgv cloud
+  displayName: Set Version
+  condition: and(succeeded(), eq(variables['system.pullrequest.isfork'], false))
+
+- powershell: ./build
+  displayName: Cake Build
+  env:
+    CODECOV_TOKEN: $(Codecov.Token)
+
+- task: CopyFiles@2
+  displayName: Copy Artifacts
+  inputs:
+    sourceFolder: 'artifacts'
+    contents: '**'
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
+    condition: succeeded()
+
+- task: PublishTestResults@2
+  displayName: Publish Test Results
+  inputs:
+    testRunner: VSTest
+    testResultsFiles: '$(Build.ArtifactStagingDirectory)/TestResults/TestResults.trx'
+    condition: succeeded()
+
+- task: PublishCodeCoverageResults@1
+  displayName: Publish Test Coverage
+  inputs:
+    codeCoverageTool: Cobertura
+    summaryFileLocation: '$(Build.ArtifactStagingDirectory)/TestResults/TestCoverage.Cobertura.xml'
+    reportDirectory: '$(Build.ArtifactStagingDirectory)/TestCoverageReport'
+    condition: succeeded()
+
+- task: PublishBuildArtifacts@1
+  displayName: Publish Test Artifacts
+  inputs:
+    pathToPublish: '$(Build.ArtifactStagingDirectory)/TestResults'
+    artifactType: container
+    artifactName: Test Results
+    condition: succeeded()
+
+- task: PublishBuildArtifacts@1
+  displayName: Publish Package Artifacts
+  inputs:
+    pathToPublish: '$(Build.ArtifactStagingDirectory)/Packages'
+    artifactType: container
+    artifactName: Packages
+    condition: and(succeeded(), eq(variables['system.pullrequest.isfork'], false))
