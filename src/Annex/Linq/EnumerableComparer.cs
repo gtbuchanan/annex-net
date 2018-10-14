@@ -1,4 +1,4 @@
-﻿using JetBrains.Annotations;
+using JetBrains.Annotations;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,14 +12,17 @@ namespace Annex.Linq
         /// <summary>
         /// Gets the default <see cref="EnumerableComparer{T}"/>.
         /// </summary>
+        [NotNull]
         public static EnumerableComparer<T> Default { get; } = new EnumerableComparer<T>();
 
+        private EnumerableComparer() { }
+
         /// <inheritdoc />
-        public bool Equals(IEnumerable<T> x, IEnumerable<T> y) =>
+        public bool Equals([CanBeNull]IEnumerable<T> x, [CanBeNull]IEnumerable<T> y) =>
             ReferenceEquals(x, y) || x != null && y != null && x.SequenceEqual(y);
 
         /// <inheritdoc />
-        public int GetHashCode(IEnumerable<T> obj)
+        public int GetHashCode([NotNull]IEnumerable<T> obj)
         {
             unchecked
             {

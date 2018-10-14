@@ -24,7 +24,6 @@ namespace Annex.Linq
 {
     public sealed class EnumerableComparer<T> : System.Collections.Generic.IEqualityComparer<System.Collections.Generic.IEnumerable<T>>
     {
-        public EnumerableComparer() { }
         public static Annex.Linq.EnumerableComparer<T> Default { get; }
         public bool Equals(System.Collections.Generic.IEnumerable<T> x, System.Collections.Generic.IEnumerable<T> y) { }
         public int GetHashCode(System.Collections.Generic.IEnumerable<T> obj) { }

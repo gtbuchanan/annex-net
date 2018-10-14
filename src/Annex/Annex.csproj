@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Annex.NET</PackageId>
     <Description>An extension of the .NET Framework.</Description>
   </PropertyGroup>
 
