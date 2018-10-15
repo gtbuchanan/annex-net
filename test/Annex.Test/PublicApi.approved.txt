@@ -4,6 +4,14 @@ namespace Annex.Collections
     {
         public static void AddRange<T>(this System.Collections.Generic.ICollection<T> @this, System.Collections.Generic.IEnumerable<T> collection) { }
     }
+    public class static DictionaryExtensions
+    {
+        public static System.Collections.Specialized.NameValueCollection ToNameValueCollection(this System.Collections.Generic.IDictionary<string, System.Collections.Generic.IEnumerable<string>> @this) { }
+    }
+    public class static NameValueCollectionExtensions
+    {
+        public static System.Linq.ILookup<string, string> ToLookup(this System.Collections.Specialized.NameValueCollection @this) { }
+    }
 }
 namespace Annex.Collections.Global
 {
@@ -31,6 +39,11 @@ namespace Annex.Linq
     public class static EnumerableExtensions
     {
         public static System.Collections.Generic.IEnumerable<T> Shuffle<T>(this System.Collections.Generic.IEnumerable<T> @this, System.Random random) { }
+    }
+    public class static Grouping
+    {
+        public static System.Linq.IGrouping<TKey, TElement> Create<TKey, TElement>(TKey key, System.Collections.Generic.IEnumerable<TElement> values) { }
+        public static System.Linq.IGrouping<TKey, TElement> Empty<TKey, TElement>(TKey key = null) { }
     }
     public class static LookupExtensions
     {
