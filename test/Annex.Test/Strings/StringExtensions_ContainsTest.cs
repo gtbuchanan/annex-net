@@ -12,7 +12,7 @@ namespace Annex.Test.Strings
         [SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
         [SuppressMessage("ReSharper", "ReturnValueOfPureMethodIsNotUsed")]
         public void NullThisThrowsArgumentNullException(string value) =>
-            Should.Throw<ArgumentNullException>(() => ((string)null).Contains(value, StringComparison.InvariantCultureIgnoreCase));
+            Should.Throw<ArgumentNullException>(() => default(string).Contains(value, StringComparison.InvariantCultureIgnoreCase));
 
         [Test, AutoDomainData]
         [SuppressMessage("ReSharper", "ReturnValueOfPureMethodIsNotUsed")]

@@ -2,7 +2,7 @@ using Annex.Delegates;
 using NUnit.Framework;
 using Shouldly;
 
-namespace Annex.Test
+namespace Annex.Test.Delegates
 {
     public sealed class ActionEx_EmptyTest
     {

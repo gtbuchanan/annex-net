@@ -6,4 +6,8 @@
     <Description>An extension of the .NET Framework.</Description>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Enums.NET" Version="2.3.2" />
+  </ItemGroup>
+
 </Project>

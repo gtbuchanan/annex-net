@@ -1,4 +1,5 @@
 using Annex.Reactive.Linq;
+using Annex.Time.Global;
 using Microsoft.Reactive.Testing;
 using NUnit.Framework;
 using Shouldly;
@@ -22,7 +23,7 @@ namespace Annex.Reactive.Test.Linq
         public void ReturnsRepeatingSequence(TestScheduler testScheduler) =>
             testScheduler
                 .Start(() => ObservableEx.Void
-                    .RepeatAfterDelay(TimeSpan.FromTicks(300), testScheduler))
+                    .RepeatAfterDelay(300.Ticks(), testScheduler))
                 .Messages
                 .ShouldBe(
                     OnNext(200, Unit.Default),

@@ -1,3 +1,21 @@
+namespace Annex.Booleans.Global
+{
+    public enum BoundType
+    {
+        Include = 0,
+        Exclude = 1,
+        IncludeExclude = 2,
+        ExcludeInclude = 3,
+    }
+    public class static GlobalBooleanExtensions
+    {
+        public static bool In<TValue, TComparand>(this TValue @this, params TComparand[] comparands)
+            where TValue : TComparand { }
+        public static bool In<TValue, TComparand>(this TValue @this, System.Collections.Generic.IEqualityComparer<TComparand> comparer, params TComparand[] comparands)
+            where TValue : TComparand { }
+        public static bool InRange<T>(this T @this, T bound1, T bound2, Annex.Booleans.Global.BoundType boundType = 0, System.Collections.Generic.IComparer<T> comparer = null) { }
+    }
+}
 namespace Annex.Collections
 {
     public class static CollectionExtensions
@@ -26,6 +44,25 @@ namespace Annex.Delegates
     public class static ActionEx
     {
         public static System.Action Empty { get; }
+    }
+}
+namespace Annex.Global
+{
+    public class static GlobalClassExtensions
+    {
+        public static T NullIf<T>(this T @this, T value)
+            where T :  class { }
+        public static T NullIf<T>(this T @this, T value, System.Collections.Generic.IEqualityComparer<T> comparer)
+            where T :  class { }
+    }
+    public class static GlobalStructExtensions
+    {
+        public static System.Nullable<T> NullIf<T>(this T @this, T value)
+            where T :  struct { }
+        public static System.Nullable<T> NullIf<T>(this T @this, T value, System.Collections.Generic.IEqualityComparer<T> comparer)
+            where T :  struct { }
+        public static System.Nullable<T> NullIfDefault<T>(this T @this)
+            where T :  struct { }
     }
 }
 namespace Annex.Linq
@@ -57,11 +94,27 @@ namespace Annex.Numerics
         public static bool NearlyEquals(this float @this, float value, double epsilon) { }
     }
 }
+namespace Annex.Security
+{
+    public sealed class CryptoRandom : System.Random, System.IDisposable
+    {
+        public CryptoRandom() { }
+        public CryptoRandom(System.Security.Cryptography.RandomNumberGenerator generator) { }
+        public void Dispose() { }
+        public override int Next() { }
+        public override int Next(int maxValue) { }
+        public override int Next(int minValue, int maxValue) { }
+        public override void NextBytes(byte[] buffer) { }
+        public override double NextDouble() { }
+    }
+}
 namespace Annex.Strings
 {
     public class static StringExtensions
     {
         public static bool Contains(this string @this, string value, System.StringComparison comparisonType) { }
+        public static string NullIfEmpty(this string @this) { }
+        public static string NullIfWhiteSpace(this string @this) { }
     }
 }
 namespace Annex.Threading
@@ -69,6 +122,33 @@ namespace Annex.Threading
     public class static CancellationTokenEx
     {
         public static System.Threading.CancellationToken Canceled { get; }
+    }
+}
+namespace Annex.Time.Global
+{
+    public class static GlobalDateTimeExtensions
+    {
+        public static System.DateTime April(this int day, int year) { }
+        public static System.DateTime August(this int day, int year) { }
+        public static System.DateTime December(this int day, int year) { }
+        public static System.DateTime February(this int day, int year) { }
+        public static System.DateTime January(this int day, int year) { }
+        public static System.DateTime July(this int day, int year) { }
+        public static System.DateTime June(this int day, int year) { }
+        public static System.DateTime March(this int day, int year) { }
+        public static System.DateTime May(this int day, int year) { }
+        public static System.DateTime November(this int day, int year) { }
+        public static System.DateTime October(this int day, int year) { }
+        public static System.DateTime September(this int day, int year) { }
+    }
+    public class static GlobalTimeSpanExtensions
+    {
+        public static System.TimeSpan Days(this int days) { }
+        public static System.TimeSpan Hours(this int hours) { }
+        public static System.TimeSpan Milliseconds(this int milliseconds) { }
+        public static System.TimeSpan Minutes(this int minutes) { }
+        public static System.TimeSpan Seconds(this int seconds) { }
+        public static System.TimeSpan Ticks(this int ticks) { }
     }
 }
 namespace Annex.Uris

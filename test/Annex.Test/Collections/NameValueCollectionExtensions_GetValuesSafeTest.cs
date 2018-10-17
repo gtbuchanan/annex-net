@@ -3,12 +3,15 @@ using NUnit.Framework;
 using Shouldly;
 using System;
 using System.Collections.Specialized;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Annex.Test.Collections
 {
     internal sealed class NameValueCollectionExtensions_GetValuesSafeTest
     {
         [Test, AutoDomainData]
+        [SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
+        [SuppressMessage("ReSharper", "ReturnValueOfPureMethodIsNotUsed")]
         public static void NullThisThrowsArgumentNullException(string key) =>
             Should.Throw<ArgumentNullException>(() => ((NameValueCollection)null).GetValuesSafe(key))
                 .ParamName.ShouldBe("this");

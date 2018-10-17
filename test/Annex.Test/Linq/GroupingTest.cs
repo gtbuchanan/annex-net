@@ -3,6 +3,7 @@ using NUnit.Framework;
 using Shouldly;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
 
@@ -27,6 +28,7 @@ namespace Annex.Test.Linq
             new Grouping<object, object>(key, null).AsEnumerable().ShouldBeEmpty();
 
         [Test, AutoDomainData]
+        [SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
         public void GetEnumerator_ReturnsValues(object key, IEnumerable<object> values) =>
             new Grouping<object, object>(key, values).AsEnumerable().ShouldBe(values);
 
@@ -45,6 +47,7 @@ namespace Annex.Test.Linq
         [TestCaseSource(nameof(Empty_HasKeyWithNoValuesCases))]
         public void Empty_HasKeyWithNoValues(Type keyType, object expectedKey)
         {
+            // ReSharper disable once PossibleNullReferenceException
             var sut = typeof(Grouping)
                 .GetMethod(nameof(Grouping.Empty), BindingFlags.Public | BindingFlags.Static)
                 .MakeGenericMethod(keyType, typeof(object))
@@ -64,10 +67,12 @@ namespace Annex.Test.Linq
             Should.NotThrow(() => Grouping.Create((object)null, values));
 
         [Test, AutoDomainData]
+        [SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
         public void Create_NullValuesThrowsArgumentNullException(object key) =>
             Should.Throw<ArgumentNullException>(() => Grouping.Create<object, object>(key, null));
 
         [Test, AutoDomainData]
+        [SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
         public void Create_ReturnsGrouping(object key, IEnumerable<object> values)
         {
             var sut = Grouping.Create(key, values);

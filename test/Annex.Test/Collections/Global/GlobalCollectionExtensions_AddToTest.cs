@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 
-namespace Annex.Test.Collections
+namespace Annex.Test.Collections.Global
 {
     public sealed class GlobalCollectionExtensions_AddToTest
     {

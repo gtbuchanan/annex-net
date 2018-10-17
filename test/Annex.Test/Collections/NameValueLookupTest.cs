@@ -5,6 +5,7 @@ using NUnit.Framework;
 using Shouldly;
 using System;
 using System.Collections.Specialized;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
 namespace Annex.Test.Collections
@@ -12,6 +13,8 @@ namespace Annex.Test.Collections
     internal sealed class NameValueLookupTest
     {
         [Test]
+        [SuppressMessage("ReSharper", "ObjectCreationAsStatement")]
+        [SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
         public void Constructor_NullNvcThrowsArgumentNullException() =>
             Should.Throw<ArgumentNullException>(() => new NameValueLookup(null))
                 .ParamName.ShouldBe("nvc");
