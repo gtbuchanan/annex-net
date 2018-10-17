@@ -61,7 +61,7 @@ namespace Annex.Test.Numerics
         [TestCase(float.MaxValue, float.MaxValue, EPSILON, ExpectedResult = true)]
         [TestCase(float.MaxValue, -float.MaxValue, EPSILON, ExpectedResult = false)]
         [TestCase(-float.MaxValue, float.MaxValue, EPSILON, ExpectedResult = false)]
-        //[TestCase(float.MaxValue, float.MaxValue / 2, EPSILON, ExpectedResult = false)]
+        [TestCase(float.MaxValue, float.MaxValue / 2, EPSILON, ExpectedResult = false)]
         [TestCase(float.MaxValue, -float.MaxValue / 2, EPSILON, ExpectedResult = false)]
         [TestCase(-float.MaxValue, float.MaxValue / 2, EPSILON, ExpectedResult = false)]
         // Comparisons involving infinities

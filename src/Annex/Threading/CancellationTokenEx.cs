@@ -4,7 +4,7 @@ using System.Threading;
 namespace Annex.Threading
 {
     /// <summary>
-    ///     Propogates notification that operations should be canceled.
+    ///     Provides an additional set of static members for <see cref="CancellationToken"/>.
     /// </summary>
     [PublicAPI]
     public static class CancellationTokenEx

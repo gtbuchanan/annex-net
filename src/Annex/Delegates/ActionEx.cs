@@ -4,7 +4,7 @@ using System;
 namespace Annex.Delegates
 {
     /// <summary>
-    ///     Provides an additional set of static methods for <see cref="Action"/>.
+    ///     Provides an additional set of static members for <see cref="Action"/>.
     /// </summary>
     [PublicAPI]
     public static class ActionEx

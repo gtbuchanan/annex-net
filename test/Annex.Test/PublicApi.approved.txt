@@ -89,9 +89,23 @@ namespace Annex.Linq
 }
 namespace Annex.Numerics
 {
+    public class static DoubleEx
+    {
+        public const double MinNormal = 2.2250738585072014E-308D;
+    }
+    public class static DoubleExtensions
+    {
+        public static bool NearlyEquals(this double @this, double value, double epsilon) { }
+        public static string ToExactString(this double @this) { }
+    }
+    public class static FloatEx
+    {
+        public const float MinNormal = 1.175494E-38F;
+    }
     public class static FloatExtensions
     {
         public static bool NearlyEquals(this float @this, float value, double epsilon) { }
+        public static string ToExactString(this float @this) { }
     }
 }
 namespace Annex.Security
