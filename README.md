@@ -1,5 +1,6 @@
 [![Build Status](https://dev.azure.com/gtbuchanan/annex-net/_apis/build/status/gtbuchanan.annex-net?branchName=master)](https://dev.azure.com/gtbuchanan/annex-net/_build/latest?definitionId=1)
 [![codecov](https://codecov.io/gh/gtbuchanan/annex-net/branch/master/graph/badge.svg)](https://codecov.io/gh/gtbuchanan/annex-net)
+[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/gtbuchanan/annex-net)
 
 # Annex&#46;NET
 
