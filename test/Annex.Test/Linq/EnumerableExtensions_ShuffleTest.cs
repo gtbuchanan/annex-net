@@ -1,4 +1,5 @@
 using Annex.Linq;
+using AutoFixture;
 using AutoFixture.AutoNSubstitute;
 using NSubstitute;
 using NUnit.Framework;
@@ -15,33 +16,35 @@ namespace Annex.Test.Linq
         [Test, AutoDomainData]
         [SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
         [SuppressMessage("ReSharper", "ReturnValueOfPureMethodIsNotUsed")]
-        public void NullThisThrowsArgumentNullException(Random rng) =>
-            Should.Throw<ArgumentNullException>(() => ((IEnumerable<object>)null).Shuffle(rng).ToArray());
+        public void NullThisThrowsArgumentNullException(Random random) =>
+            Should.Throw<ArgumentNullException>(() => ((IEnumerable<object>)null).Shuffle(random))
+                .ParamName.ShouldBe("this");
 
         [Test, AutoDomainData]
         [SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
         [SuppressMessage("ReSharper", "ReturnValueOfPureMethodIsNotUsed")]
         public void NullRandomThrowsArgumentNullException([Substitute]IEnumerable<object> sut) =>
-            Should.Throw<ArgumentNullException>(() => sut.Shuffle(null).ToArray());
+            Should.Throw<ArgumentNullException>(() => sut.Shuffle(null))
+                .ParamName.ShouldBe("random");
 
         [Test, AutoDomainData]
         [SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
         [SuppressMessage("ReSharper", "IteratorMethodResultIsIgnored")]
         [SuppressMessage("ReSharper", "ReturnValueOfPureMethodIsNotUsed")]
-        public void IsLazilyEvaluated([Substitute] IEnumerable<object> sut, Random rng)
+        public void IsLazilyEvaluated([Substitute]IEnumerable<object> sut, Random random)
         {
-            sut.Shuffle(rng);
+            sut.Shuffle(random);
 
             sut.DidNotReceive().GetEnumerator();
         }
 
         [Test, AutoDomainData]
-        public void ReturnsRandomizedInput(object obj1, object obj2, object obj3, [Substitute]Random rng)
+        public void ReturnsRandomizedInput(Generator<object> g, [Substitute]Random random)
         {
-            var sut = new[] { obj1, obj2, obj3 };
-            rng.Next(Arg.Any<int>()).Returns(1, 2, 0);
+            var sut = g.Take(3).ToArray();
+            random.Next(Arg.Any<int>()).Returns(1, 2, 0);
 
-            sut.Shuffle(rng).ShouldBe(new[] { obj2, obj3, obj1 });
+            sut.Shuffle(random).ShouldBe(new[] { sut[1], sut[2], sut[0] });
         }
     }
 }

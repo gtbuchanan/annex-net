@@ -11,11 +11,11 @@ namespace Annex.Linq
         ///     Randomly shuffles a collection of objects using Durstenfield's variant of the
         ///     <see href="http://en.wikipedia.org/wiki/Fisher-Yates_shuffle">Fisher–Yates shuffle</see> algorithm.
         /// </summary>
-        /// <param name="this">The source sequence to shuffle.</param>
+        /// <param name="this">The source sequence.</param>
         /// <param name="random">The random number generator.</param>
         /// <returns>The provided collection of objects in a random order.</returns>
         /// <exception cref="ArgumentNullException">
-        ///     Thrown if <paramref name="this"/> or <paramref name="random"/> is <c>null</c>.
+        ///     <paramref name="this"/> or <paramref name="random"/> is <c>null</c>.
         /// </exception>
         /// <remarks>
         ///     Note that you need to be careful about the instance of Random you use as:
@@ -27,8 +27,7 @@ namespace Annex.Linq
         /// <see href="http://stackoverflow.com/a/1287572/1409101">Adapted from StackOverflow</see>
         [MustUseReturnValue, NotNull]
         public static IEnumerable<T> Shuffle<T>(
-            [NotNull]this IEnumerable<T> @this,
-            [NotNull]Random random)
+            [NotNull]this IEnumerable<T> @this, [NotNull]Random random)
         {
             var elements = @this.ToArray();
             for (var i = elements.Length - 1; i >= 0; i--)

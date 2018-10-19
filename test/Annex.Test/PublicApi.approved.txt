@@ -75,7 +75,9 @@ namespace Annex.Linq
     }
     public class static EnumerableExtensions
     {
+        public static T RandomElement<T>(this System.Collections.Generic.IEnumerable<T> @this, System.Random random) { }
         public static System.Collections.Generic.IEnumerable<T> Shuffle<T>(this System.Collections.Generic.IEnumerable<T> @this, System.Random random) { }
+        public static System.Collections.Generic.IEnumerable<T> TakeRandom<T>(this System.Collections.Generic.IEnumerable<T> @this, int count, System.Random random) { }
     }
     public class static Grouping
     {
