@@ -24,6 +24,11 @@ namespace Annex.Uris
                     arr => arr.Length > 1
                         ? Uri.UnescapeDataString(string.Join("=", arr.Skip(1)).Replace('+', ' '))
                         : string.Empty,
-                    StringComparer.InvariantCultureIgnoreCase);
+#if NETSTANDARD1_4
+                    StringComparer.OrdinalIgnoreCase
+#else
+                    StringComparer.InvariantCultureIgnoreCase
+#endif
+                    );
     }
 }

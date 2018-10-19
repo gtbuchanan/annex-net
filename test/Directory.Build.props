@@ -3,10 +3,9 @@
   <Import Project="../Directory.Build.props" />
 
   <PropertyGroup>
-    <Platforms>x64</Platforms>
     <IsPackable>false</IsPackable>
     <DebugType>full</DebugType>
-    
+
     <!-- TODO: Remove when fixed (https://github.com/shouldly/shouldly/issues/412) -->
     <Optimize>false</Optimize>
   </PropertyGroup>
@@ -14,7 +13,7 @@
   <ItemGroup>
     <Compile Include="..\SharedAssemblyInfo.cs" Link="Properties\SharedAssemblyInfo.cs" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <PackageReference Include="AutoFixture" Version="4.5.0" />
     <PackageReference Include="AutoFixture.AutoNSubstitute" Version="4.5.0" />
@@ -26,5 +25,5 @@
     <PackageReference Include="PublicApiGenerator" Version="8.0.1" />
     <PackageReference Include="Shouldly" Version="3.0.1" />
   </ItemGroup>
-  
+
 </Project>

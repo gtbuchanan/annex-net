@@ -10,6 +10,7 @@
 #tool "nuget:?package=Codecov&version=1.1.0"
 #tool "nuget:?package=OpenCover&version=4.6.519"
 #tool "nuget:?package=ReportGenerator&version=4.0.0-rc4"
+#tool "nuget:?package=vswhere&version=2.5.2"
 
 // Arguments
 var target = Argument("target", "Default");
@@ -17,6 +18,8 @@ var configuration = Argument("configuration", "Release");
 var artifactDirectory = Directory(Argument("artifactDirectory",
     EnvironmentVariable("BUILD_ARTIFACTSTAGINGDIRECTORY") ?? "./artifacts"));
 var codecovToken = Argument("codecovToken", EnvironmentVariable("CODECOV_TOKEN"));
+var vsDirectoryString = Argument("vsDirectory", string.Empty);
+var msBuildPathString = Argument("msBuildPath", string.Empty);
 
 // Build Info
 var version = GitVersioningGetVersion().SemVer2;
@@ -29,6 +32,13 @@ var isFork = !StringComparer.OrdinalIgnoreCase.Equals(
 var branchName = isAzurePipelines
     ? TFBuild.Environment.Repository.Branch
     : GitBranchCurrent(".").FriendlyName;
+var vsDirectory = string.IsNullOrWhiteSpace(vsDirectoryString)
+    ? VSWhereLatest()
+    : Directory(vsDirectoryString);
+var msBuildPath = string.IsNullOrWhiteSpace(msBuildPathString)
+    ? vsDirectory.CombineWithFilePath("./MSBuild/15.0/Bin/MSBuild.exe")
+    : File(msBuildPathString);
+Information(msBuildPath);
 
 // Paths
 var solutionFile = File("./Annex.sln");
@@ -40,6 +50,7 @@ var testCoverageCoberturaFile = testResultDirectory + File("TestCoverage.Cobertu
 var testCoverageReportDirectory = artifactDirectory + Directory("TestCoverageReport");
 var testCoverageReportFile = testCoverageReportDirectory + File("index.htm");
 var packageDirectory = artifactDirectory + Directory("Packages");
+var binaryDirectory = artifactDirectory + Directory("Binaries");
 
 ///////////////////////////////////////////
 
@@ -48,26 +59,37 @@ Setup(_ => Information($"Version {version} from branch {branchName}"));
 Task("Clean")
     .Does(() => {
         CleanDirectory(artifactDirectory);
-        DotNetCoreClean(solutionFile, new DotNetCoreCleanSettings {
-            Configuration = configuration,
-            Verbosity = DotNetCoreVerbosity.Quiet
-        });
+        MSBuild(solutionFile,
+            new MSBuildSettings {
+                Configuration = configuration,
+                MaxCpuCount = 0,
+                ToolPath = msBuildPath,
+                Verbosity = Verbosity.Minimal
+            }
+            .WithTarget("clean"));
     });
 
 Task("Build")
     .IsDependentOn("Clean")
     .Does(() => {
-        DotNetCoreBuild(solutionFile, new DotNetCoreBuildSettings {
-            Configuration = configuration,
-            Verbosity = DotNetCoreVerbosity.Minimal
-        });
+        MSBuild(solutionFile,
+            new MSBuildSettings {
+                Configuration = configuration,
+                MaxCpuCount = 0,
+                Restore = true,
+                ToolPath = msBuildPath,
+                Verbosity = Verbosity.Minimal
+            }
+            .WithTarget("build;pack")
+            .WithProperty("BaseOutputPath", (MakeAbsolute(binaryDirectory) + "/").Quote())
+            .WithProperty("PackageOutputPath", MakeAbsolute(packageDirectory).ToString().Quote()));
     });
 
 Task("Test")
     .IsDependentOn("Build")
     .Does(() => {
         Action<ICakeContext> dotNetCoreVsTest = context => {
-            var testDllFiles = context.GetFiles($"./test/**/bin/x64/{configuration}/net461/*.Test.dll");
+            var testDllFiles = context.GetFiles($"{binaryDirectory}/{configuration}/net461/*.Test.dll");
             context.DotNetCoreVSTest(testDllFiles, new DotNetCoreVSTestSettings {
                 ArgumentCustomization = args => args
                     .Append($"--ResultsDirectory:{testResultDirectory}"),
@@ -128,16 +150,6 @@ Task("UploadTestCoverage")
         });
     });
 
-Task("Package")
-    .Does(() => {
-        DotNetCorePack(solutionFile, new DotNetCorePackSettings {
-            Configuration = configuration,
-            NoBuild = true,
-            NoRestore = true,
-            OutputDirectory = packageDirectory
-        });
-    });
-
 Task("PublishTestResults")
     .WithCriteria(isAzurePipelines, "Not Azure Pipelines")
     .IsDependentOn("Test")
@@ -173,7 +185,7 @@ Task("PublishTestArtifacts")
 Task("PublishPackageArtifacts")
     .WithCriteria(isAzurePipelines, "Not Azure Pipelines")
     .WithCriteria(!isFork, "Fork")
-    .IsDependentOn("Package")
+    .IsDependentOn("Build")
     .Does(() => {
         var artifactName = "Packages";
         Information($"##vso[artifact.upload containerfolder={artifactName};artifactname={artifactName}]{packageDirectory}");

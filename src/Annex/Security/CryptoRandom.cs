@@ -21,9 +21,9 @@ namespace Annex.Security
         private IDisposable Disposable { get; }
 
         /// <summary>
-        ///     Creates a new instance of the <see cref="CryptoRandom"/> class. Defaults to <see cref="RNGCryptoServiceProvider"/>.
+        ///     Creates a new instance of the <see cref="CryptoRandom"/> class. Defaults to <see cref="RandomNumberGenerator.Create()"/>.
         /// </summary>
-        public CryptoRandom() : this(new RNGCryptoServiceProvider()) => Disposable = Generator;
+        public CryptoRandom() : this(RandomNumberGenerator.Create()) => Disposable = Generator;
 
         /// <summary>
         ///     Creates a new instance of the <see cref="CryptoRandom"/> class with the specified <see cref="RandomNumberGenerator"/>
