@@ -109,6 +109,24 @@ namespace Annex.Numerics
         public static bool NearlyEquals(this float @this, float value, double epsilon) { }
         public static string ToExactString(this float @this) { }
     }
+    [System.FlagsAttribute()]
+    public enum NumericClass : byte
+    {
+        Integral = 1,
+        NonIntegral = 2,
+        Complex = 4,
+        Vector = 8,
+        All = 15,
+    }
+}
+namespace Annex.Reflection
+{
+    public class static TypeExtensions
+    {
+        public static bool IsNumeric(this System.Type @this) { }
+        public static bool IsNumeric(this System.Type @this, Annex.Numerics.NumericClass numericClass) { }
+        public static System.Type UnwrapNullable(this System.Type @this) { }
+    }
 }
 namespace Annex.Security
 {
