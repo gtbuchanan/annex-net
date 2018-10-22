@@ -8,10 +8,15 @@
 
   <ItemGroup>
     <PackageReference Include="Enums.NET" Version="2.3.2" />
+    <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
     <PackageReference Include="System.Collections.Specialized" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) Or $(TargetFramework.StartsWith('Xamarin.')) ">
+    <Reference Include="System.Numerics" />
   </ItemGroup>
 
 </Project>

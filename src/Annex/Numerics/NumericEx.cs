@@ -19,11 +19,8 @@ namespace Annex.Numerics
             { typeof(decimal), NumericClass.FloatingPoint },
             { typeof(double), NumericClass.FloatingPoint },
             { typeof(float), NumericClass.FloatingPoint },
-#if NET461 || NETCOREAPP || NETSTANDARD || TIZEN || WINDOWS_UWP
             { typeof(BigInteger), NumericClass.Integral },
             { typeof(Complex), NumericClass.Complex },
-#endif
-#if NET461 || NETCOREAPP || TIZEN || WINDOWS_UWP
             { typeof(Matrix3x2), NumericClass.Vector },
             { typeof(Matrix4x4), NumericClass.Vector },
             { typeof(Plane), NumericClass.Vector },
@@ -31,9 +28,7 @@ namespace Annex.Numerics
             { typeof(Vector2), NumericClass.Vector },
             { typeof(Vector3), NumericClass.Vector },
             { typeof(Vector4), NumericClass.Vector },
-
-#endif
-#if NETCOREAPP || TIZEN || WINDOWS_UWP
+#if NETCOREAPP || NETFRAMEWORK || NETSTANDARD || TIZEN || WINDOWS_UWP
             { typeof(Vector<>), NumericClass.Vector }
 #endif
         };
