@@ -113,7 +113,7 @@ namespace Annex.Numerics
     public enum NumericClass : byte
     {
         Integral = 1,
-        NonIntegral = 2,
+        FloatingPoint = 2,
         Complex = 4,
         Vector = 8,
         All = 15,

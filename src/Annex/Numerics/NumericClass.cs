@@ -17,7 +17,7 @@ namespace Annex.Numerics
         /// <summary>
         ///     Represents numbers with both integer and fractional parts.
         /// </summary>
-        NonIntegral = 0b10,
+        FloatingPoint = 0b10,
 
         /// <summary>
         ///     Represents numbers with a real number part and an imaginary number part.
@@ -35,6 +35,6 @@ namespace Annex.Numerics
         /// <summary>
         ///     All numeric types.
         /// </summary>
-        All = Integral | NonIntegral | Complex | Vector
+        All = Integral | FloatingPoint | Complex | Vector
     }
 }

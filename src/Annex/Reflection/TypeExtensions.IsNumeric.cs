@@ -38,8 +38,8 @@ namespace Annex.Reflection
         /// <exception cref="ArgumentNullException"><paramref name="this"/> is <c>null</c>.</exception>
         /// <exception cref="ArgumentOutOfRangeException"><paramref name="numericClass"/> is invalid.</exception>
         /// <example>
-        ///     typeof(int).IsNumeric(NumericClass.NonIntegral); // false
-        ///     typeof(int).IsNumeric(NumericClass.Integral | NumericClass.NonIntegral); // true
+        ///     typeof(int).IsNumeric(NumericClass.FloatingPoint); // false
+        ///     typeof(int).IsNumeric(NumericClass.Integral | NumericClass.FloatingPoint); // true
         ///     typeof(BigInteger).IsNumeric(NumericClass.Integral); // true
         ///     typeof(Matrix3x2).IsNumeric(NumericClass.Vector); // true
         /// </example>
