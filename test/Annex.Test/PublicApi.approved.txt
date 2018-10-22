@@ -24,6 +24,8 @@ namespace Annex.Collections
     }
     public class static DictionaryExtensions
     {
+        public static TValue GetValueOrDefault<TKey, TValue>(this System.Collections.Generic.IDictionary<TKey, TValue> @this, TKey key) { }
+        public static TValue GetValueOrDefault<TKey, TValue>(this System.Collections.Generic.IDictionary<TKey, TValue> @this, TKey key, TValue defaultValue) { }
         public static System.Collections.Specialized.NameValueCollection ToNameValueCollection(this System.Collections.Generic.IDictionary<string, System.Collections.Generic.IEnumerable<string>> @this) { }
     }
     public class static NameValueCollectionExtensions

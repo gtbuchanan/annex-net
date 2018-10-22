@@ -1,3 +1,4 @@
+#if NETFRAMEWORK // TODO: Remove when ShouldMatchApproved supports in .NET Core
 using NUnit.Framework;
 using PublicApiGenerator;
 using Shouldly;
@@ -19,3 +20,4 @@ namespace Annex.Test
                         $"PublicApi.{fileType}.{extension}"));
     }
 }
+#endif

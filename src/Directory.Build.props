@@ -18,7 +18,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="Fody" Version="3.2.9" PrivateAssets="All" />
+    <PackageReference Include="Fody" Version="3.2.12" PrivateAssets="All" />
     <PackageReference Include="JetBrainsAnnotations.Fody" Version="2.5.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63127-02" PrivateAssets="All" /> 
     <PackageReference Include="Nerdbank.GitVersioning" Version="2.2.13" PrivateAssets="All" />
