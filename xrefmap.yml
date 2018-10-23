@@ -1,0 +1,1300 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Annex.Booleans.Global
+  name: Annex.Booleans.Global
+  href: api/Annex.Booleans.Global.html
+  commentId: N:Annex.Booleans.Global
+  fullName: Annex.Booleans.Global
+  nameWithType: Annex.Booleans.Global
+- uid: Annex.Booleans.Global.BoundType
+  name: BoundType
+  href: api/Annex.Booleans.Global.BoundType.html
+  commentId: T:Annex.Booleans.Global.BoundType
+  fullName: Annex.Booleans.Global.BoundType
+  nameWithType: BoundType
+- uid: Annex.Booleans.Global.BoundType.Exclude
+  name: Exclude
+  href: api/Annex.Booleans.Global.BoundType.html#Annex_Booleans_Global_BoundType_Exclude
+  commentId: F:Annex.Booleans.Global.BoundType.Exclude
+  fullName: Annex.Booleans.Global.BoundType.Exclude
+  nameWithType: BoundType.Exclude
+- uid: Annex.Booleans.Global.BoundType.ExcludeInclude
+  name: ExcludeInclude
+  href: api/Annex.Booleans.Global.BoundType.html#Annex_Booleans_Global_BoundType_ExcludeInclude
+  commentId: F:Annex.Booleans.Global.BoundType.ExcludeInclude
+  fullName: Annex.Booleans.Global.BoundType.ExcludeInclude
+  nameWithType: BoundType.ExcludeInclude
+- uid: Annex.Booleans.Global.BoundType.Include
+  name: Include
+  href: api/Annex.Booleans.Global.BoundType.html#Annex_Booleans_Global_BoundType_Include
+  commentId: F:Annex.Booleans.Global.BoundType.Include
+  fullName: Annex.Booleans.Global.BoundType.Include
+  nameWithType: BoundType.Include
+- uid: Annex.Booleans.Global.BoundType.IncludeExclude
+  name: IncludeExclude
+  href: api/Annex.Booleans.Global.BoundType.html#Annex_Booleans_Global_BoundType_IncludeExclude
+  commentId: F:Annex.Booleans.Global.BoundType.IncludeExclude
+  fullName: Annex.Booleans.Global.BoundType.IncludeExclude
+  nameWithType: BoundType.IncludeExclude
+- uid: Annex.Booleans.Global.GlobalBooleanExtensions
+  name: GlobalBooleanExtensions
+  href: api/Annex.Booleans.Global.GlobalBooleanExtensions.html
+  commentId: T:Annex.Booleans.Global.GlobalBooleanExtensions
+  fullName: Annex.Booleans.Global.GlobalBooleanExtensions
+  nameWithType: GlobalBooleanExtensions
+- uid: Annex.Booleans.Global.GlobalBooleanExtensions.In*
+  name: In
+  href: api/Annex.Booleans.Global.GlobalBooleanExtensions.html#Annex_Booleans_Global_GlobalBooleanExtensions_In_
+  commentId: Overload:Annex.Booleans.Global.GlobalBooleanExtensions.In
+  isSpec: "True"
+  fullName: Annex.Booleans.Global.GlobalBooleanExtensions.In
+  nameWithType: GlobalBooleanExtensions.In
+- uid: Annex.Booleans.Global.GlobalBooleanExtensions.In``2(``0,``1[])
+  name: In<TValue, TComparand>(TValue, TComparand[])
+  href: api/Annex.Booleans.Global.GlobalBooleanExtensions.html#Annex_Booleans_Global_GlobalBooleanExtensions_In__2___0___1___
+  commentId: M:Annex.Booleans.Global.GlobalBooleanExtensions.In``2(``0,``1[])
+  name.vb: In(Of TValue, TComparand)(TValue, TComparand())
+  fullName: Annex.Booleans.Global.GlobalBooleanExtensions.In<TValue, TComparand>(TValue, TComparand[])
+  fullName.vb: Annex.Booleans.Global.GlobalBooleanExtensions.In(Of TValue, TComparand)(TValue, TComparand())
+  nameWithType: GlobalBooleanExtensions.In<TValue, TComparand>(TValue, TComparand[])
+  nameWithType.vb: GlobalBooleanExtensions.In(Of TValue, TComparand)(TValue, TComparand())
+- uid: Annex.Booleans.Global.GlobalBooleanExtensions.In``2(``0,System.Collections.Generic.IEqualityComparer{``1},``1[])
+  name: In<TValue, TComparand>(TValue, IEqualityComparer<TComparand>, TComparand[])
+  href: api/Annex.Booleans.Global.GlobalBooleanExtensions.html#Annex_Booleans_Global_GlobalBooleanExtensions_In__2___0_System_Collections_Generic_IEqualityComparer___1____1___
+  commentId: M:Annex.Booleans.Global.GlobalBooleanExtensions.In``2(``0,System.Collections.Generic.IEqualityComparer{``1},``1[])
+  name.vb: In(Of TValue, TComparand)(TValue, IEqualityComparer(Of TComparand), TComparand())
+  fullName: Annex.Booleans.Global.GlobalBooleanExtensions.In<TValue, TComparand>(TValue, System.Collections.Generic.IEqualityComparer<TComparand>, TComparand[])
+  fullName.vb: Annex.Booleans.Global.GlobalBooleanExtensions.In(Of TValue, TComparand)(TValue, System.Collections.Generic.IEqualityComparer(Of TComparand), TComparand())
+  nameWithType: GlobalBooleanExtensions.In<TValue, TComparand>(TValue, IEqualityComparer<TComparand>, TComparand[])
+  nameWithType.vb: GlobalBooleanExtensions.In(Of TValue, TComparand)(TValue, IEqualityComparer(Of TComparand), TComparand())
+- uid: Annex.Booleans.Global.GlobalBooleanExtensions.InRange*
+  name: InRange
+  href: api/Annex.Booleans.Global.GlobalBooleanExtensions.html#Annex_Booleans_Global_GlobalBooleanExtensions_InRange_
+  commentId: Overload:Annex.Booleans.Global.GlobalBooleanExtensions.InRange
+  isSpec: "True"
+  fullName: Annex.Booleans.Global.GlobalBooleanExtensions.InRange
+  nameWithType: GlobalBooleanExtensions.InRange
+- uid: Annex.Booleans.Global.GlobalBooleanExtensions.InRange``1(``0,``0,``0)
+  name: InRange<T>(T, T, T)
+  href: api/Annex.Booleans.Global.GlobalBooleanExtensions.html#Annex_Booleans_Global_GlobalBooleanExtensions_InRange__1___0___0___0_
+  commentId: M:Annex.Booleans.Global.GlobalBooleanExtensions.InRange``1(``0,``0,``0)
+  name.vb: InRange(Of T)(T, T, T)
+  fullName: Annex.Booleans.Global.GlobalBooleanExtensions.InRange<T>(T, T, T)
+  fullName.vb: Annex.Booleans.Global.GlobalBooleanExtensions.InRange(Of T)(T, T, T)
+  nameWithType: GlobalBooleanExtensions.InRange<T>(T, T, T)
+  nameWithType.vb: GlobalBooleanExtensions.InRange(Of T)(T, T, T)
+- uid: Annex.Booleans.Global.GlobalBooleanExtensions.InRange``1(``0,``0,``0,Annex.Booleans.Global.BoundType)
+  name: InRange<T>(T, T, T, BoundType)
+  href: api/Annex.Booleans.Global.GlobalBooleanExtensions.html#Annex_Booleans_Global_GlobalBooleanExtensions_InRange__1___0___0___0_Annex_Booleans_Global_BoundType_
+  commentId: M:Annex.Booleans.Global.GlobalBooleanExtensions.InRange``1(``0,``0,``0,Annex.Booleans.Global.BoundType)
+  name.vb: InRange(Of T)(T, T, T, BoundType)
+  fullName: Annex.Booleans.Global.GlobalBooleanExtensions.InRange<T>(T, T, T, Annex.Booleans.Global.BoundType)
+  fullName.vb: Annex.Booleans.Global.GlobalBooleanExtensions.InRange(Of T)(T, T, T, Annex.Booleans.Global.BoundType)
+  nameWithType: GlobalBooleanExtensions.InRange<T>(T, T, T, BoundType)
+  nameWithType.vb: GlobalBooleanExtensions.InRange(Of T)(T, T, T, BoundType)
+- uid: Annex.Booleans.Global.GlobalBooleanExtensions.InRange``1(``0,``0,``0,Annex.Booleans.Global.BoundType,System.Collections.Generic.IComparer{``0})
+  name: InRange<T>(T, T, T, BoundType, IComparer<T>)
+  href: api/Annex.Booleans.Global.GlobalBooleanExtensions.html#Annex_Booleans_Global_GlobalBooleanExtensions_InRange__1___0___0___0_Annex_Booleans_Global_BoundType_System_Collections_Generic_IComparer___0__
+  commentId: M:Annex.Booleans.Global.GlobalBooleanExtensions.InRange``1(``0,``0,``0,Annex.Booleans.Global.BoundType,System.Collections.Generic.IComparer{``0})
+  name.vb: InRange(Of T)(T, T, T, BoundType, IComparer(Of T))
+  fullName: Annex.Booleans.Global.GlobalBooleanExtensions.InRange<T>(T, T, T, Annex.Booleans.Global.BoundType, System.Collections.Generic.IComparer<T>)
+  fullName.vb: Annex.Booleans.Global.GlobalBooleanExtensions.InRange(Of T)(T, T, T, Annex.Booleans.Global.BoundType, System.Collections.Generic.IComparer(Of T))
+  nameWithType: GlobalBooleanExtensions.InRange<T>(T, T, T, BoundType, IComparer<T>)
+  nameWithType.vb: GlobalBooleanExtensions.InRange(Of T)(T, T, T, BoundType, IComparer(Of T))
+- uid: Annex.Booleans.Global.GlobalBooleanExtensions.InRange``1(``0,``0,``0,System.Collections.Generic.IComparer{``0})
+  name: InRange<T>(T, T, T, IComparer<T>)
+  href: api/Annex.Booleans.Global.GlobalBooleanExtensions.html#Annex_Booleans_Global_GlobalBooleanExtensions_InRange__1___0___0___0_System_Collections_Generic_IComparer___0__
+  commentId: M:Annex.Booleans.Global.GlobalBooleanExtensions.InRange``1(``0,``0,``0,System.Collections.Generic.IComparer{``0})
+  name.vb: InRange(Of T)(T, T, T, IComparer(Of T))
+  fullName: Annex.Booleans.Global.GlobalBooleanExtensions.InRange<T>(T, T, T, System.Collections.Generic.IComparer<T>)
+  fullName.vb: Annex.Booleans.Global.GlobalBooleanExtensions.InRange(Of T)(T, T, T, System.Collections.Generic.IComparer(Of T))
+  nameWithType: GlobalBooleanExtensions.InRange<T>(T, T, T, IComparer<T>)
+  nameWithType.vb: GlobalBooleanExtensions.InRange(Of T)(T, T, T, IComparer(Of T))
+- uid: Annex.Collections
+  name: Annex.Collections
+  href: api/Annex.Collections.html
+  commentId: N:Annex.Collections
+  fullName: Annex.Collections
+  nameWithType: Annex.Collections
+- uid: Annex.Collections.CollectionExtensions
+  name: CollectionExtensions
+  href: api/Annex.Collections.CollectionExtensions.html
+  commentId: T:Annex.Collections.CollectionExtensions
+  fullName: Annex.Collections.CollectionExtensions
+  nameWithType: CollectionExtensions
+- uid: Annex.Collections.CollectionExtensions.AddRange*
+  name: AddRange
+  href: api/Annex.Collections.CollectionExtensions.html#Annex_Collections_CollectionExtensions_AddRange_
+  commentId: Overload:Annex.Collections.CollectionExtensions.AddRange
+  isSpec: "True"
+  fullName: Annex.Collections.CollectionExtensions.AddRange
+  nameWithType: CollectionExtensions.AddRange
+- uid: Annex.Collections.CollectionExtensions.AddRange``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})
+  name: AddRange<T>(ICollection<T>, IEnumerable<T>)
+  href: api/Annex.Collections.CollectionExtensions.html#Annex_Collections_CollectionExtensions_AddRange__1_System_Collections_Generic_ICollection___0__System_Collections_Generic_IEnumerable___0__
+  commentId: M:Annex.Collections.CollectionExtensions.AddRange``1(System.Collections.Generic.ICollection{``0},System.Collections.Generic.IEnumerable{``0})
+  name.vb: AddRange(Of T)(ICollection(Of T), IEnumerable(Of T))
+  fullName: Annex.Collections.CollectionExtensions.AddRange<T>(System.Collections.Generic.ICollection<T>, System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Annex.Collections.CollectionExtensions.AddRange(Of T)(System.Collections.Generic.ICollection(Of T), System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: CollectionExtensions.AddRange<T>(ICollection<T>, IEnumerable<T>)
+  nameWithType.vb: CollectionExtensions.AddRange(Of T)(ICollection(Of T), IEnumerable(Of T))
+- uid: Annex.Collections.DictionaryExtensions
+  name: DictionaryExtensions
+  href: api/Annex.Collections.DictionaryExtensions.html
+  commentId: T:Annex.Collections.DictionaryExtensions
+  fullName: Annex.Collections.DictionaryExtensions
+  nameWithType: DictionaryExtensions
+- uid: Annex.Collections.DictionaryExtensions.GetValueOrDefault*
+  name: GetValueOrDefault
+  href: api/Annex.Collections.DictionaryExtensions.html#Annex_Collections_DictionaryExtensions_GetValueOrDefault_
+  commentId: Overload:Annex.Collections.DictionaryExtensions.GetValueOrDefault
+  isSpec: "True"
+  fullName: Annex.Collections.DictionaryExtensions.GetValueOrDefault
+  nameWithType: DictionaryExtensions.GetValueOrDefault
+- uid: Annex.Collections.DictionaryExtensions.GetValueOrDefault``2(System.Collections.Generic.IDictionary{``0,``1},``0)
+  name: GetValueOrDefault<TKey, TValue>(IDictionary<TKey, TValue>, TKey)
+  href: api/Annex.Collections.DictionaryExtensions.html#Annex_Collections_DictionaryExtensions_GetValueOrDefault__2_System_Collections_Generic_IDictionary___0___1____0_
+  commentId: M:Annex.Collections.DictionaryExtensions.GetValueOrDefault``2(System.Collections.Generic.IDictionary{``0,``1},``0)
+  name.vb: GetValueOrDefault(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey)
+  fullName: Annex.Collections.DictionaryExtensions.GetValueOrDefault<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey)
+  fullName.vb: Annex.Collections.DictionaryExtensions.GetValueOrDefault(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey)
+  nameWithType: DictionaryExtensions.GetValueOrDefault<TKey, TValue>(IDictionary<TKey, TValue>, TKey)
+  nameWithType.vb: DictionaryExtensions.GetValueOrDefault(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey)
+- uid: Annex.Collections.DictionaryExtensions.GetValueOrDefault``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
+  name: GetValueOrDefault<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)
+  href: api/Annex.Collections.DictionaryExtensions.html#Annex_Collections_DictionaryExtensions_GetValueOrDefault__2_System_Collections_Generic_IDictionary___0___1____0___1_
+  commentId: M:Annex.Collections.DictionaryExtensions.GetValueOrDefault``2(System.Collections.Generic.IDictionary{``0,``1},``0,``1)
+  name.vb: GetValueOrDefault(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue)
+  fullName: Annex.Collections.DictionaryExtensions.GetValueOrDefault<TKey, TValue>(System.Collections.Generic.IDictionary<TKey, TValue>, TKey, TValue)
+  fullName.vb: Annex.Collections.DictionaryExtensions.GetValueOrDefault(Of TKey, TValue)(System.Collections.Generic.IDictionary(Of TKey, TValue), TKey, TValue)
+  nameWithType: DictionaryExtensions.GetValueOrDefault<TKey, TValue>(IDictionary<TKey, TValue>, TKey, TValue)
+  nameWithType.vb: DictionaryExtensions.GetValueOrDefault(Of TKey, TValue)(IDictionary(Of TKey, TValue), TKey, TValue)
+- uid: Annex.Collections.DictionaryExtensions.ToNameValueCollection(System.Collections.Generic.IDictionary{System.String,System.Collections.Generic.IEnumerable{System.String}})
+  name: ToNameValueCollection(IDictionary<String, IEnumerable<String>>)
+  href: api/Annex.Collections.DictionaryExtensions.html#Annex_Collections_DictionaryExtensions_ToNameValueCollection_System_Collections_Generic_IDictionary_System_String_System_Collections_Generic_IEnumerable_System_String___
+  commentId: M:Annex.Collections.DictionaryExtensions.ToNameValueCollection(System.Collections.Generic.IDictionary{System.String,System.Collections.Generic.IEnumerable{System.String}})
+  name.vb: ToNameValueCollection(IDictionary(Of String, IEnumerable(Of String)))
+  fullName: Annex.Collections.DictionaryExtensions.ToNameValueCollection(System.Collections.Generic.IDictionary<System.String, System.Collections.Generic.IEnumerable<System.String>>)
+  fullName.vb: Annex.Collections.DictionaryExtensions.ToNameValueCollection(System.Collections.Generic.IDictionary(Of System.String, System.Collections.Generic.IEnumerable(Of System.String)))
+  nameWithType: DictionaryExtensions.ToNameValueCollection(IDictionary<String, IEnumerable<String>>)
+  nameWithType.vb: DictionaryExtensions.ToNameValueCollection(IDictionary(Of String, IEnumerable(Of String)))
+- uid: Annex.Collections.DictionaryExtensions.ToNameValueCollection*
+  name: ToNameValueCollection
+  href: api/Annex.Collections.DictionaryExtensions.html#Annex_Collections_DictionaryExtensions_ToNameValueCollection_
+  commentId: Overload:Annex.Collections.DictionaryExtensions.ToNameValueCollection
+  isSpec: "True"
+  fullName: Annex.Collections.DictionaryExtensions.ToNameValueCollection
+  nameWithType: DictionaryExtensions.ToNameValueCollection
+- uid: Annex.Collections.Global
+  name: Annex.Collections.Global
+  href: api/Annex.Collections.Global.html
+  commentId: N:Annex.Collections.Global
+  fullName: Annex.Collections.Global
+  nameWithType: Annex.Collections.Global
+- uid: Annex.Collections.Global.GlobalCollectionExtensions
+  name: GlobalCollectionExtensions
+  href: api/Annex.Collections.Global.GlobalCollectionExtensions.html
+  commentId: T:Annex.Collections.Global.GlobalCollectionExtensions
+  fullName: Annex.Collections.Global.GlobalCollectionExtensions
+  nameWithType: GlobalCollectionExtensions
+- uid: Annex.Collections.Global.GlobalCollectionExtensions.AddTo*
+  name: AddTo
+  href: api/Annex.Collections.Global.GlobalCollectionExtensions.html#Annex_Collections_Global_GlobalCollectionExtensions_AddTo_
+  commentId: Overload:Annex.Collections.Global.GlobalCollectionExtensions.AddTo
+  isSpec: "True"
+  fullName: Annex.Collections.Global.GlobalCollectionExtensions.AddTo
+  nameWithType: GlobalCollectionExtensions.AddTo
+- uid: Annex.Collections.Global.GlobalCollectionExtensions.AddTo``2(``0,System.Collections.Generic.ICollection{``1})
+  name: AddTo<T, TElement>(T, ICollection<TElement>)
+  href: api/Annex.Collections.Global.GlobalCollectionExtensions.html#Annex_Collections_Global_GlobalCollectionExtensions_AddTo__2___0_System_Collections_Generic_ICollection___1__
+  commentId: M:Annex.Collections.Global.GlobalCollectionExtensions.AddTo``2(``0,System.Collections.Generic.ICollection{``1})
+  name.vb: AddTo(Of T, TElement)(T, ICollection(Of TElement))
+  fullName: Annex.Collections.Global.GlobalCollectionExtensions.AddTo<T, TElement>(T, System.Collections.Generic.ICollection<TElement>)
+  fullName.vb: Annex.Collections.Global.GlobalCollectionExtensions.AddTo(Of T, TElement)(T, System.Collections.Generic.ICollection(Of TElement))
+  nameWithType: GlobalCollectionExtensions.AddTo<T, TElement>(T, ICollection<TElement>)
+  nameWithType.vb: GlobalCollectionExtensions.AddTo(Of T, TElement)(T, ICollection(Of TElement))
+- uid: Annex.Collections.NameValueCollectionExtensions
+  name: NameValueCollectionExtensions
+  href: api/Annex.Collections.NameValueCollectionExtensions.html
+  commentId: T:Annex.Collections.NameValueCollectionExtensions
+  fullName: Annex.Collections.NameValueCollectionExtensions
+  nameWithType: NameValueCollectionExtensions
+- uid: Annex.Collections.NameValueCollectionExtensions.ToLookup(System.Collections.Specialized.NameValueCollection)
+  name: ToLookup(NameValueCollection)
+  href: api/Annex.Collections.NameValueCollectionExtensions.html#Annex_Collections_NameValueCollectionExtensions_ToLookup_System_Collections_Specialized_NameValueCollection_
+  commentId: M:Annex.Collections.NameValueCollectionExtensions.ToLookup(System.Collections.Specialized.NameValueCollection)
+  fullName: Annex.Collections.NameValueCollectionExtensions.ToLookup(System.Collections.Specialized.NameValueCollection)
+  nameWithType: NameValueCollectionExtensions.ToLookup(NameValueCollection)
+- uid: Annex.Collections.NameValueCollectionExtensions.ToLookup*
+  name: ToLookup
+  href: api/Annex.Collections.NameValueCollectionExtensions.html#Annex_Collections_NameValueCollectionExtensions_ToLookup_
+  commentId: Overload:Annex.Collections.NameValueCollectionExtensions.ToLookup
+  isSpec: "True"
+  fullName: Annex.Collections.NameValueCollectionExtensions.ToLookup
+  nameWithType: NameValueCollectionExtensions.ToLookup
+- uid: Annex.Delegates
+  name: Annex.Delegates
+  href: api/Annex.Delegates.html
+  commentId: N:Annex.Delegates
+  fullName: Annex.Delegates
+  nameWithType: Annex.Delegates
+- uid: Annex.Delegates.ActionEx
+  name: ActionEx
+  href: api/Annex.Delegates.ActionEx.html
+  commentId: T:Annex.Delegates.ActionEx
+  fullName: Annex.Delegates.ActionEx
+  nameWithType: ActionEx
+- uid: Annex.Delegates.ActionEx.Empty
+  name: Empty
+  href: api/Annex.Delegates.ActionEx.html#Annex_Delegates_ActionEx_Empty
+  commentId: P:Annex.Delegates.ActionEx.Empty
+  fullName: Annex.Delegates.ActionEx.Empty
+  nameWithType: ActionEx.Empty
+- uid: Annex.Delegates.ActionEx.Empty*
+  name: Empty
+  href: api/Annex.Delegates.ActionEx.html#Annex_Delegates_ActionEx_Empty_
+  commentId: Overload:Annex.Delegates.ActionEx.Empty
+  isSpec: "True"
+  fullName: Annex.Delegates.ActionEx.Empty
+  nameWithType: ActionEx.Empty
+- uid: Annex.Global
+  name: Annex.Global
+  href: api/Annex.Global.html
+  commentId: N:Annex.Global
+  fullName: Annex.Global
+  nameWithType: Annex.Global
+- uid: Annex.Global.GlobalClassExtensions
+  name: GlobalClassExtensions
+  href: api/Annex.Global.GlobalClassExtensions.html
+  commentId: T:Annex.Global.GlobalClassExtensions
+  fullName: Annex.Global.GlobalClassExtensions
+  nameWithType: GlobalClassExtensions
+- uid: Annex.Global.GlobalClassExtensions.NullIf*
+  name: NullIf
+  href: api/Annex.Global.GlobalClassExtensions.html#Annex_Global_GlobalClassExtensions_NullIf_
+  commentId: Overload:Annex.Global.GlobalClassExtensions.NullIf
+  isSpec: "True"
+  fullName: Annex.Global.GlobalClassExtensions.NullIf
+  nameWithType: GlobalClassExtensions.NullIf
+- uid: Annex.Global.GlobalClassExtensions.NullIf``1(``0,``0)
+  name: NullIf<T>(T, T)
+  href: api/Annex.Global.GlobalClassExtensions.html#Annex_Global_GlobalClassExtensions_NullIf__1___0___0_
+  commentId: M:Annex.Global.GlobalClassExtensions.NullIf``1(``0,``0)
+  name.vb: NullIf(Of T)(T, T)
+  fullName: Annex.Global.GlobalClassExtensions.NullIf<T>(T, T)
+  fullName.vb: Annex.Global.GlobalClassExtensions.NullIf(Of T)(T, T)
+  nameWithType: GlobalClassExtensions.NullIf<T>(T, T)
+  nameWithType.vb: GlobalClassExtensions.NullIf(Of T)(T, T)
+- uid: Annex.Global.GlobalClassExtensions.NullIf``1(``0,``0,System.Collections.Generic.IEqualityComparer{``0})
+  name: NullIf<T>(T, T, IEqualityComparer<T>)
+  href: api/Annex.Global.GlobalClassExtensions.html#Annex_Global_GlobalClassExtensions_NullIf__1___0___0_System_Collections_Generic_IEqualityComparer___0__
+  commentId: M:Annex.Global.GlobalClassExtensions.NullIf``1(``0,``0,System.Collections.Generic.IEqualityComparer{``0})
+  name.vb: NullIf(Of T)(T, T, IEqualityComparer(Of T))
+  fullName: Annex.Global.GlobalClassExtensions.NullIf<T>(T, T, System.Collections.Generic.IEqualityComparer<T>)
+  fullName.vb: Annex.Global.GlobalClassExtensions.NullIf(Of T)(T, T, System.Collections.Generic.IEqualityComparer(Of T))
+  nameWithType: GlobalClassExtensions.NullIf<T>(T, T, IEqualityComparer<T>)
+  nameWithType.vb: GlobalClassExtensions.NullIf(Of T)(T, T, IEqualityComparer(Of T))
+- uid: Annex.Global.GlobalStructExtensions
+  name: GlobalStructExtensions
+  href: api/Annex.Global.GlobalStructExtensions.html
+  commentId: T:Annex.Global.GlobalStructExtensions
+  fullName: Annex.Global.GlobalStructExtensions
+  nameWithType: GlobalStructExtensions
+- uid: Annex.Global.GlobalStructExtensions.NullIf*
+  name: NullIf
+  href: api/Annex.Global.GlobalStructExtensions.html#Annex_Global_GlobalStructExtensions_NullIf_
+  commentId: Overload:Annex.Global.GlobalStructExtensions.NullIf
+  isSpec: "True"
+  fullName: Annex.Global.GlobalStructExtensions.NullIf
+  nameWithType: GlobalStructExtensions.NullIf
+- uid: Annex.Global.GlobalStructExtensions.NullIf``1(``0,``0)
+  name: NullIf<T>(T, T)
+  href: api/Annex.Global.GlobalStructExtensions.html#Annex_Global_GlobalStructExtensions_NullIf__1___0___0_
+  commentId: M:Annex.Global.GlobalStructExtensions.NullIf``1(``0,``0)
+  name.vb: NullIf(Of T)(T, T)
+  fullName: Annex.Global.GlobalStructExtensions.NullIf<T>(T, T)
+  fullName.vb: Annex.Global.GlobalStructExtensions.NullIf(Of T)(T, T)
+  nameWithType: GlobalStructExtensions.NullIf<T>(T, T)
+  nameWithType.vb: GlobalStructExtensions.NullIf(Of T)(T, T)
+- uid: Annex.Global.GlobalStructExtensions.NullIf``1(``0,``0,System.Collections.Generic.IEqualityComparer{``0})
+  name: NullIf<T>(T, T, IEqualityComparer<T>)
+  href: api/Annex.Global.GlobalStructExtensions.html#Annex_Global_GlobalStructExtensions_NullIf__1___0___0_System_Collections_Generic_IEqualityComparer___0__
+  commentId: M:Annex.Global.GlobalStructExtensions.NullIf``1(``0,``0,System.Collections.Generic.IEqualityComparer{``0})
+  name.vb: NullIf(Of T)(T, T, IEqualityComparer(Of T))
+  fullName: Annex.Global.GlobalStructExtensions.NullIf<T>(T, T, System.Collections.Generic.IEqualityComparer<T>)
+  fullName.vb: Annex.Global.GlobalStructExtensions.NullIf(Of T)(T, T, System.Collections.Generic.IEqualityComparer(Of T))
+  nameWithType: GlobalStructExtensions.NullIf<T>(T, T, IEqualityComparer<T>)
+  nameWithType.vb: GlobalStructExtensions.NullIf(Of T)(T, T, IEqualityComparer(Of T))
+- uid: Annex.Global.GlobalStructExtensions.NullIfDefault*
+  name: NullIfDefault
+  href: api/Annex.Global.GlobalStructExtensions.html#Annex_Global_GlobalStructExtensions_NullIfDefault_
+  commentId: Overload:Annex.Global.GlobalStructExtensions.NullIfDefault
+  isSpec: "True"
+  fullName: Annex.Global.GlobalStructExtensions.NullIfDefault
+  nameWithType: GlobalStructExtensions.NullIfDefault
+- uid: Annex.Global.GlobalStructExtensions.NullIfDefault``1(``0)
+  name: NullIfDefault<T>(T)
+  href: api/Annex.Global.GlobalStructExtensions.html#Annex_Global_GlobalStructExtensions_NullIfDefault__1___0_
+  commentId: M:Annex.Global.GlobalStructExtensions.NullIfDefault``1(``0)
+  name.vb: NullIfDefault(Of T)(T)
+  fullName: Annex.Global.GlobalStructExtensions.NullIfDefault<T>(T)
+  fullName.vb: Annex.Global.GlobalStructExtensions.NullIfDefault(Of T)(T)
+  nameWithType: GlobalStructExtensions.NullIfDefault<T>(T)
+  nameWithType.vb: GlobalStructExtensions.NullIfDefault(Of T)(T)
+- uid: Annex.Linq
+  name: Annex.Linq
+  href: api/Annex.Linq.html
+  commentId: N:Annex.Linq
+  fullName: Annex.Linq
+  nameWithType: Annex.Linq
+- uid: Annex.Linq.EnumerableComparer`1
+  name: EnumerableComparer<T>
+  href: api/Annex.Linq.EnumerableComparer-1.html
+  commentId: T:Annex.Linq.EnumerableComparer`1
+  name.vb: EnumerableComparer(Of T)
+  fullName: Annex.Linq.EnumerableComparer<T>
+  fullName.vb: Annex.Linq.EnumerableComparer(Of T)
+  nameWithType: EnumerableComparer<T>
+  nameWithType.vb: EnumerableComparer(Of T)
+- uid: Annex.Linq.EnumerableComparer`1.Default
+  name: Default
+  href: api/Annex.Linq.EnumerableComparer-1.html#Annex_Linq_EnumerableComparer_1_Default
+  commentId: P:Annex.Linq.EnumerableComparer`1.Default
+  fullName: Annex.Linq.EnumerableComparer<T>.Default
+  fullName.vb: Annex.Linq.EnumerableComparer(Of T).Default
+  nameWithType: EnumerableComparer<T>.Default
+  nameWithType.vb: EnumerableComparer(Of T).Default
+- uid: Annex.Linq.EnumerableComparer`1.Default*
+  name: Default
+  href: api/Annex.Linq.EnumerableComparer-1.html#Annex_Linq_EnumerableComparer_1_Default_
+  commentId: Overload:Annex.Linq.EnumerableComparer`1.Default
+  isSpec: "True"
+  fullName: Annex.Linq.EnumerableComparer<T>.Default
+  fullName.vb: Annex.Linq.EnumerableComparer(Of T).Default
+  nameWithType: EnumerableComparer<T>.Default
+  nameWithType.vb: EnumerableComparer(Of T).Default
+- uid: Annex.Linq.EnumerableComparer`1.Equals(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEnumerable{`0})
+  name: Equals(IEnumerable<T>, IEnumerable<T>)
+  href: api/Annex.Linq.EnumerableComparer-1.html#Annex_Linq_EnumerableComparer_1_Equals_System_Collections_Generic_IEnumerable__0__System_Collections_Generic_IEnumerable__0__
+  commentId: M:Annex.Linq.EnumerableComparer`1.Equals(System.Collections.Generic.IEnumerable{`0},System.Collections.Generic.IEnumerable{`0})
+  name.vb: Equals(IEnumerable(Of T), IEnumerable(Of T))
+  fullName: Annex.Linq.EnumerableComparer<T>.Equals(System.Collections.Generic.IEnumerable<T>, System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Annex.Linq.EnumerableComparer(Of T).Equals(System.Collections.Generic.IEnumerable(Of T), System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: EnumerableComparer<T>.Equals(IEnumerable<T>, IEnumerable<T>)
+  nameWithType.vb: EnumerableComparer(Of T).Equals(IEnumerable(Of T), IEnumerable(Of T))
+- uid: Annex.Linq.EnumerableComparer`1.Equals*
+  name: Equals
+  href: api/Annex.Linq.EnumerableComparer-1.html#Annex_Linq_EnumerableComparer_1_Equals_
+  commentId: Overload:Annex.Linq.EnumerableComparer`1.Equals
+  isSpec: "True"
+  fullName: Annex.Linq.EnumerableComparer<T>.Equals
+  fullName.vb: Annex.Linq.EnumerableComparer(Of T).Equals
+  nameWithType: EnumerableComparer<T>.Equals
+  nameWithType.vb: EnumerableComparer(Of T).Equals
+- uid: Annex.Linq.EnumerableComparer`1.GetHashCode(System.Collections.Generic.IEnumerable{`0})
+  name: GetHashCode(IEnumerable<T>)
+  href: api/Annex.Linq.EnumerableComparer-1.html#Annex_Linq_EnumerableComparer_1_GetHashCode_System_Collections_Generic_IEnumerable__0__
+  commentId: M:Annex.Linq.EnumerableComparer`1.GetHashCode(System.Collections.Generic.IEnumerable{`0})
+  name.vb: GetHashCode(IEnumerable(Of T))
+  fullName: Annex.Linq.EnumerableComparer<T>.GetHashCode(System.Collections.Generic.IEnumerable<T>)
+  fullName.vb: Annex.Linq.EnumerableComparer(Of T).GetHashCode(System.Collections.Generic.IEnumerable(Of T))
+  nameWithType: EnumerableComparer<T>.GetHashCode(IEnumerable<T>)
+  nameWithType.vb: EnumerableComparer(Of T).GetHashCode(IEnumerable(Of T))
+- uid: Annex.Linq.EnumerableComparer`1.GetHashCode*
+  name: GetHashCode
+  href: api/Annex.Linq.EnumerableComparer-1.html#Annex_Linq_EnumerableComparer_1_GetHashCode_
+  commentId: Overload:Annex.Linq.EnumerableComparer`1.GetHashCode
+  isSpec: "True"
+  fullName: Annex.Linq.EnumerableComparer<T>.GetHashCode
+  fullName.vb: Annex.Linq.EnumerableComparer(Of T).GetHashCode
+  nameWithType: EnumerableComparer<T>.GetHashCode
+  nameWithType.vb: EnumerableComparer(Of T).GetHashCode
+- uid: Annex.Linq.EnumerableExtensions
+  name: EnumerableExtensions
+  href: api/Annex.Linq.EnumerableExtensions.html
+  commentId: T:Annex.Linq.EnumerableExtensions
+  fullName: Annex.Linq.EnumerableExtensions
+  nameWithType: EnumerableExtensions
+- uid: Annex.Linq.EnumerableExtensions.RandomElement*
+  name: RandomElement
+  href: api/Annex.Linq.EnumerableExtensions.html#Annex_Linq_EnumerableExtensions_RandomElement_
+  commentId: Overload:Annex.Linq.EnumerableExtensions.RandomElement
+  isSpec: "True"
+  fullName: Annex.Linq.EnumerableExtensions.RandomElement
+  nameWithType: EnumerableExtensions.RandomElement
+- uid: Annex.Linq.EnumerableExtensions.RandomElement``1(System.Collections.Generic.IEnumerable{``0},System.Random)
+  name: RandomElement<T>(IEnumerable<T>, Random)
+  href: api/Annex.Linq.EnumerableExtensions.html#Annex_Linq_EnumerableExtensions_RandomElement__1_System_Collections_Generic_IEnumerable___0__System_Random_
+  commentId: M:Annex.Linq.EnumerableExtensions.RandomElement``1(System.Collections.Generic.IEnumerable{``0},System.Random)
+  name.vb: RandomElement(Of T)(IEnumerable(Of T), Random)
+  fullName: Annex.Linq.EnumerableExtensions.RandomElement<T>(System.Collections.Generic.IEnumerable<T>, System.Random)
+  fullName.vb: Annex.Linq.EnumerableExtensions.RandomElement(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Random)
+  nameWithType: EnumerableExtensions.RandomElement<T>(IEnumerable<T>, Random)
+  nameWithType.vb: EnumerableExtensions.RandomElement(Of T)(IEnumerable(Of T), Random)
+- uid: Annex.Linq.EnumerableExtensions.Shuffle*
+  name: Shuffle
+  href: api/Annex.Linq.EnumerableExtensions.html#Annex_Linq_EnumerableExtensions_Shuffle_
+  commentId: Overload:Annex.Linq.EnumerableExtensions.Shuffle
+  isSpec: "True"
+  fullName: Annex.Linq.EnumerableExtensions.Shuffle
+  nameWithType: EnumerableExtensions.Shuffle
+- uid: Annex.Linq.EnumerableExtensions.Shuffle``1(System.Collections.Generic.IEnumerable{``0},System.Random)
+  name: Shuffle<T>(IEnumerable<T>, Random)
+  href: api/Annex.Linq.EnumerableExtensions.html#Annex_Linq_EnumerableExtensions_Shuffle__1_System_Collections_Generic_IEnumerable___0__System_Random_
+  commentId: M:Annex.Linq.EnumerableExtensions.Shuffle``1(System.Collections.Generic.IEnumerable{``0},System.Random)
+  name.vb: Shuffle(Of T)(IEnumerable(Of T), Random)
+  fullName: Annex.Linq.EnumerableExtensions.Shuffle<T>(System.Collections.Generic.IEnumerable<T>, System.Random)
+  fullName.vb: Annex.Linq.EnumerableExtensions.Shuffle(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Random)
+  nameWithType: EnumerableExtensions.Shuffle<T>(IEnumerable<T>, Random)
+  nameWithType.vb: EnumerableExtensions.Shuffle(Of T)(IEnumerable(Of T), Random)
+- uid: Annex.Linq.EnumerableExtensions.TakeRandom*
+  name: TakeRandom
+  href: api/Annex.Linq.EnumerableExtensions.html#Annex_Linq_EnumerableExtensions_TakeRandom_
+  commentId: Overload:Annex.Linq.EnumerableExtensions.TakeRandom
+  isSpec: "True"
+  fullName: Annex.Linq.EnumerableExtensions.TakeRandom
+  nameWithType: EnumerableExtensions.TakeRandom
+- uid: Annex.Linq.EnumerableExtensions.TakeRandom``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Random)
+  name: TakeRandom<T>(IEnumerable<T>, Int32, Random)
+  href: api/Annex.Linq.EnumerableExtensions.html#Annex_Linq_EnumerableExtensions_TakeRandom__1_System_Collections_Generic_IEnumerable___0__System_Int32_System_Random_
+  commentId: M:Annex.Linq.EnumerableExtensions.TakeRandom``1(System.Collections.Generic.IEnumerable{``0},System.Int32,System.Random)
+  name.vb: TakeRandom(Of T)(IEnumerable(Of T), Int32, Random)
+  fullName: Annex.Linq.EnumerableExtensions.TakeRandom<T>(System.Collections.Generic.IEnumerable<T>, System.Int32, System.Random)
+  fullName.vb: Annex.Linq.EnumerableExtensions.TakeRandom(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Int32, System.Random)
+  nameWithType: EnumerableExtensions.TakeRandom<T>(IEnumerable<T>, Int32, Random)
+  nameWithType.vb: EnumerableExtensions.TakeRandom(Of T)(IEnumerable(Of T), Int32, Random)
+- uid: Annex.Linq.Grouping
+  name: Grouping
+  href: api/Annex.Linq.Grouping.html
+  commentId: T:Annex.Linq.Grouping
+  fullName: Annex.Linq.Grouping
+  nameWithType: Grouping
+- uid: Annex.Linq.Grouping.Create*
+  name: Create
+  href: api/Annex.Linq.Grouping.html#Annex_Linq_Grouping_Create_
+  commentId: Overload:Annex.Linq.Grouping.Create
+  isSpec: "True"
+  fullName: Annex.Linq.Grouping.Create
+  nameWithType: Grouping.Create
+- uid: Annex.Linq.Grouping.Create``2(``0,System.Collections.Generic.IEnumerable{``1})
+  name: Create<TKey, TElement>(TKey, IEnumerable<TElement>)
+  href: api/Annex.Linq.Grouping.html#Annex_Linq_Grouping_Create__2___0_System_Collections_Generic_IEnumerable___1__
+  commentId: M:Annex.Linq.Grouping.Create``2(``0,System.Collections.Generic.IEnumerable{``1})
+  name.vb: Create(Of TKey, TElement)(TKey, IEnumerable(Of TElement))
+  fullName: Annex.Linq.Grouping.Create<TKey, TElement>(TKey, System.Collections.Generic.IEnumerable<TElement>)
+  fullName.vb: Annex.Linq.Grouping.Create(Of TKey, TElement)(TKey, System.Collections.Generic.IEnumerable(Of TElement))
+  nameWithType: Grouping.Create<TKey, TElement>(TKey, IEnumerable<TElement>)
+  nameWithType.vb: Grouping.Create(Of TKey, TElement)(TKey, IEnumerable(Of TElement))
+- uid: Annex.Linq.Grouping.Empty*
+  name: Empty
+  href: api/Annex.Linq.Grouping.html#Annex_Linq_Grouping_Empty_
+  commentId: Overload:Annex.Linq.Grouping.Empty
+  isSpec: "True"
+  fullName: Annex.Linq.Grouping.Empty
+  nameWithType: Grouping.Empty
+- uid: Annex.Linq.Grouping.Empty``2(``0)
+  name: Empty<TKey, TElement>(TKey)
+  href: api/Annex.Linq.Grouping.html#Annex_Linq_Grouping_Empty__2___0_
+  commentId: M:Annex.Linq.Grouping.Empty``2(``0)
+  name.vb: Empty(Of TKey, TElement)(TKey)
+  fullName: Annex.Linq.Grouping.Empty<TKey, TElement>(TKey)
+  fullName.vb: Annex.Linq.Grouping.Empty(Of TKey, TElement)(TKey)
+  nameWithType: Grouping.Empty<TKey, TElement>(TKey)
+  nameWithType.vb: Grouping.Empty(Of TKey, TElement)(TKey)
+- uid: Annex.Linq.LookupExtensions
+  name: LookupExtensions
+  href: api/Annex.Linq.LookupExtensions.html
+  commentId: T:Annex.Linq.LookupExtensions
+  fullName: Annex.Linq.LookupExtensions
+  nameWithType: LookupExtensions
+- uid: Annex.Linq.LookupExtensions.ToDictionary*
+  name: ToDictionary
+  href: api/Annex.Linq.LookupExtensions.html#Annex_Linq_LookupExtensions_ToDictionary_
+  commentId: Overload:Annex.Linq.LookupExtensions.ToDictionary
+  isSpec: "True"
+  fullName: Annex.Linq.LookupExtensions.ToDictionary
+  nameWithType: LookupExtensions.ToDictionary
+- uid: Annex.Linq.LookupExtensions.ToDictionary``2(System.Linq.ILookup{``0,``1})
+  name: ToDictionary<TKey, TElement>(ILookup<TKey, TElement>)
+  href: api/Annex.Linq.LookupExtensions.html#Annex_Linq_LookupExtensions_ToDictionary__2_System_Linq_ILookup___0___1__
+  commentId: M:Annex.Linq.LookupExtensions.ToDictionary``2(System.Linq.ILookup{``0,``1})
+  name.vb: ToDictionary(Of TKey, TElement)(ILookup(Of TKey, TElement))
+  fullName: Annex.Linq.LookupExtensions.ToDictionary<TKey, TElement>(System.Linq.ILookup<TKey, TElement>)
+  fullName.vb: Annex.Linq.LookupExtensions.ToDictionary(Of TKey, TElement)(System.Linq.ILookup(Of TKey, TElement))
+  nameWithType: LookupExtensions.ToDictionary<TKey, TElement>(ILookup<TKey, TElement>)
+  nameWithType.vb: LookupExtensions.ToDictionary(Of TKey, TElement)(ILookup(Of TKey, TElement))
+- uid: Annex.Numerics
+  name: Annex.Numerics
+  href: api/Annex.Numerics.html
+  commentId: N:Annex.Numerics
+  fullName: Annex.Numerics
+  nameWithType: Annex.Numerics
+- uid: Annex.Numerics.DoubleEx
+  name: DoubleEx
+  href: api/Annex.Numerics.DoubleEx.html
+  commentId: T:Annex.Numerics.DoubleEx
+  fullName: Annex.Numerics.DoubleEx
+  nameWithType: DoubleEx
+- uid: Annex.Numerics.DoubleEx.MinNormal
+  name: MinNormal
+  href: api/Annex.Numerics.DoubleEx.html#Annex_Numerics_DoubleEx_MinNormal
+  commentId: F:Annex.Numerics.DoubleEx.MinNormal
+  fullName: Annex.Numerics.DoubleEx.MinNormal
+  nameWithType: DoubleEx.MinNormal
+- uid: Annex.Numerics.DoubleExtensions
+  name: DoubleExtensions
+  href: api/Annex.Numerics.DoubleExtensions.html
+  commentId: T:Annex.Numerics.DoubleExtensions
+  fullName: Annex.Numerics.DoubleExtensions
+  nameWithType: DoubleExtensions
+- uid: Annex.Numerics.DoubleExtensions.NearlyEquals(System.Double,System.Double,System.Double)
+  name: NearlyEquals(Double, Double, Double)
+  href: api/Annex.Numerics.DoubleExtensions.html#Annex_Numerics_DoubleExtensions_NearlyEquals_System_Double_System_Double_System_Double_
+  commentId: M:Annex.Numerics.DoubleExtensions.NearlyEquals(System.Double,System.Double,System.Double)
+  fullName: Annex.Numerics.DoubleExtensions.NearlyEquals(System.Double, System.Double, System.Double)
+  nameWithType: DoubleExtensions.NearlyEquals(Double, Double, Double)
+- uid: Annex.Numerics.DoubleExtensions.NearlyEquals*
+  name: NearlyEquals
+  href: api/Annex.Numerics.DoubleExtensions.html#Annex_Numerics_DoubleExtensions_NearlyEquals_
+  commentId: Overload:Annex.Numerics.DoubleExtensions.NearlyEquals
+  isSpec: "True"
+  fullName: Annex.Numerics.DoubleExtensions.NearlyEquals
+  nameWithType: DoubleExtensions.NearlyEquals
+- uid: Annex.Numerics.DoubleExtensions.ToExactString(System.Double)
+  name: ToExactString(Double)
+  href: api/Annex.Numerics.DoubleExtensions.html#Annex_Numerics_DoubleExtensions_ToExactString_System_Double_
+  commentId: M:Annex.Numerics.DoubleExtensions.ToExactString(System.Double)
+  fullName: Annex.Numerics.DoubleExtensions.ToExactString(System.Double)
+  nameWithType: DoubleExtensions.ToExactString(Double)
+- uid: Annex.Numerics.DoubleExtensions.ToExactString*
+  name: ToExactString
+  href: api/Annex.Numerics.DoubleExtensions.html#Annex_Numerics_DoubleExtensions_ToExactString_
+  commentId: Overload:Annex.Numerics.DoubleExtensions.ToExactString
+  isSpec: "True"
+  fullName: Annex.Numerics.DoubleExtensions.ToExactString
+  nameWithType: DoubleExtensions.ToExactString
+- uid: Annex.Numerics.FloatEx
+  name: FloatEx
+  href: api/Annex.Numerics.FloatEx.html
+  commentId: T:Annex.Numerics.FloatEx
+  fullName: Annex.Numerics.FloatEx
+  nameWithType: FloatEx
+- uid: Annex.Numerics.FloatEx.MinNormal
+  name: MinNormal
+  href: api/Annex.Numerics.FloatEx.html#Annex_Numerics_FloatEx_MinNormal
+  commentId: F:Annex.Numerics.FloatEx.MinNormal
+  fullName: Annex.Numerics.FloatEx.MinNormal
+  nameWithType: FloatEx.MinNormal
+- uid: Annex.Numerics.FloatExtensions
+  name: FloatExtensions
+  href: api/Annex.Numerics.FloatExtensions.html
+  commentId: T:Annex.Numerics.FloatExtensions
+  fullName: Annex.Numerics.FloatExtensions
+  nameWithType: FloatExtensions
+- uid: Annex.Numerics.FloatExtensions.NearlyEquals(System.Single,System.Single,System.Double)
+  name: NearlyEquals(Single, Single, Double)
+  href: api/Annex.Numerics.FloatExtensions.html#Annex_Numerics_FloatExtensions_NearlyEquals_System_Single_System_Single_System_Double_
+  commentId: M:Annex.Numerics.FloatExtensions.NearlyEquals(System.Single,System.Single,System.Double)
+  fullName: Annex.Numerics.FloatExtensions.NearlyEquals(System.Single, System.Single, System.Double)
+  nameWithType: FloatExtensions.NearlyEquals(Single, Single, Double)
+- uid: Annex.Numerics.FloatExtensions.NearlyEquals*
+  name: NearlyEquals
+  href: api/Annex.Numerics.FloatExtensions.html#Annex_Numerics_FloatExtensions_NearlyEquals_
+  commentId: Overload:Annex.Numerics.FloatExtensions.NearlyEquals
+  isSpec: "True"
+  fullName: Annex.Numerics.FloatExtensions.NearlyEquals
+  nameWithType: FloatExtensions.NearlyEquals
+- uid: Annex.Numerics.FloatExtensions.ToExactString(System.Single)
+  name: ToExactString(Single)
+  href: api/Annex.Numerics.FloatExtensions.html#Annex_Numerics_FloatExtensions_ToExactString_System_Single_
+  commentId: M:Annex.Numerics.FloatExtensions.ToExactString(System.Single)
+  fullName: Annex.Numerics.FloatExtensions.ToExactString(System.Single)
+  nameWithType: FloatExtensions.ToExactString(Single)
+- uid: Annex.Numerics.FloatExtensions.ToExactString*
+  name: ToExactString
+  href: api/Annex.Numerics.FloatExtensions.html#Annex_Numerics_FloatExtensions_ToExactString_
+  commentId: Overload:Annex.Numerics.FloatExtensions.ToExactString
+  isSpec: "True"
+  fullName: Annex.Numerics.FloatExtensions.ToExactString
+  nameWithType: FloatExtensions.ToExactString
+- uid: Annex.Numerics.NumericClass
+  name: NumericClass
+  href: api/Annex.Numerics.NumericClass.html
+  commentId: T:Annex.Numerics.NumericClass
+  fullName: Annex.Numerics.NumericClass
+  nameWithType: NumericClass
+- uid: Annex.Numerics.NumericClass.All
+  name: All
+  href: api/Annex.Numerics.NumericClass.html#Annex_Numerics_NumericClass_All
+  commentId: F:Annex.Numerics.NumericClass.All
+  fullName: Annex.Numerics.NumericClass.All
+  nameWithType: NumericClass.All
+- uid: Annex.Numerics.NumericClass.Complex
+  name: Complex
+  href: api/Annex.Numerics.NumericClass.html#Annex_Numerics_NumericClass_Complex
+  commentId: F:Annex.Numerics.NumericClass.Complex
+  fullName: Annex.Numerics.NumericClass.Complex
+  nameWithType: NumericClass.Complex
+- uid: Annex.Numerics.NumericClass.FloatingPoint
+  name: FloatingPoint
+  href: api/Annex.Numerics.NumericClass.html#Annex_Numerics_NumericClass_FloatingPoint
+  commentId: F:Annex.Numerics.NumericClass.FloatingPoint
+  fullName: Annex.Numerics.NumericClass.FloatingPoint
+  nameWithType: NumericClass.FloatingPoint
+- uid: Annex.Numerics.NumericClass.Integral
+  name: Integral
+  href: api/Annex.Numerics.NumericClass.html#Annex_Numerics_NumericClass_Integral
+  commentId: F:Annex.Numerics.NumericClass.Integral
+  fullName: Annex.Numerics.NumericClass.Integral
+  nameWithType: NumericClass.Integral
+- uid: Annex.Numerics.NumericClass.Vector
+  name: Vector
+  href: api/Annex.Numerics.NumericClass.html#Annex_Numerics_NumericClass_Vector
+  commentId: F:Annex.Numerics.NumericClass.Vector
+  fullName: Annex.Numerics.NumericClass.Vector
+  nameWithType: NumericClass.Vector
+- uid: Annex.Reactive
+  name: Annex.Reactive
+  href: api/Annex.Reactive.html
+  commentId: N:Annex.Reactive
+  fullName: Annex.Reactive
+  nameWithType: Annex.Reactive
+- uid: Annex.Reactive.Linq
+  name: Annex.Reactive.Linq
+  href: api/Annex.Reactive.Linq.html
+  commentId: N:Annex.Reactive.Linq
+  fullName: Annex.Reactive.Linq
+  nameWithType: Annex.Reactive.Linq
+- uid: Annex.Reactive.Linq.ObservableExtensions
+  name: ObservableExtensions
+  href: api/Annex.Reactive.Linq.ObservableExtensions.html
+  commentId: T:Annex.Reactive.Linq.ObservableExtensions
+  fullName: Annex.Reactive.Linq.ObservableExtensions
+  nameWithType: ObservableExtensions
+- uid: Annex.Reactive.Linq.ObservableExtensions.Inverse(System.IObservable{System.Boolean})
+  name: Inverse(IObservable<Boolean>)
+  href: api/Annex.Reactive.Linq.ObservableExtensions.html#Annex_Reactive_Linq_ObservableExtensions_Inverse_System_IObservable_System_Boolean__
+  commentId: M:Annex.Reactive.Linq.ObservableExtensions.Inverse(System.IObservable{System.Boolean})
+  name.vb: Inverse(IObservable(Of Boolean))
+  fullName: Annex.Reactive.Linq.ObservableExtensions.Inverse(System.IObservable<System.Boolean>)
+  fullName.vb: Annex.Reactive.Linq.ObservableExtensions.Inverse(System.IObservable(Of System.Boolean))
+  nameWithType: ObservableExtensions.Inverse(IObservable<Boolean>)
+  nameWithType.vb: ObservableExtensions.Inverse(IObservable(Of Boolean))
+- uid: Annex.Reactive.Linq.ObservableExtensions.Inverse*
+  name: Inverse
+  href: api/Annex.Reactive.Linq.ObservableExtensions.html#Annex_Reactive_Linq_ObservableExtensions_Inverse_
+  commentId: Overload:Annex.Reactive.Linq.ObservableExtensions.Inverse
+  isSpec: "True"
+  fullName: Annex.Reactive.Linq.ObservableExtensions.Inverse
+  nameWithType: ObservableExtensions.Inverse
+- uid: Annex.Reactive.Linq.ObservableExtensions.RepeatAfterDelay*
+  name: RepeatAfterDelay
+  href: api/Annex.Reactive.Linq.ObservableExtensions.html#Annex_Reactive_Linq_ObservableExtensions_RepeatAfterDelay_
+  commentId: Overload:Annex.Reactive.Linq.ObservableExtensions.RepeatAfterDelay
+  isSpec: "True"
+  fullName: Annex.Reactive.Linq.ObservableExtensions.RepeatAfterDelay
+  nameWithType: ObservableExtensions.RepeatAfterDelay
+- uid: Annex.Reactive.Linq.ObservableExtensions.RepeatAfterDelay``1(System.IObservable{``0},System.TimeSpan,System.Reactive.Concurrency.IScheduler)
+  name: RepeatAfterDelay<T>(IObservable<T>, TimeSpan, IScheduler)
+  href: api/Annex.Reactive.Linq.ObservableExtensions.html#Annex_Reactive_Linq_ObservableExtensions_RepeatAfterDelay__1_System_IObservable___0__System_TimeSpan_System_Reactive_Concurrency_IScheduler_
+  commentId: M:Annex.Reactive.Linq.ObservableExtensions.RepeatAfterDelay``1(System.IObservable{``0},System.TimeSpan,System.Reactive.Concurrency.IScheduler)
+  name.vb: RepeatAfterDelay(Of T)(IObservable(Of T), TimeSpan, IScheduler)
+  fullName: Annex.Reactive.Linq.ObservableExtensions.RepeatAfterDelay<T>(System.IObservable<T>, System.TimeSpan, System.Reactive.Concurrency.IScheduler)
+  fullName.vb: Annex.Reactive.Linq.ObservableExtensions.RepeatAfterDelay(Of T)(System.IObservable(Of T), System.TimeSpan, System.Reactive.Concurrency.IScheduler)
+  nameWithType: ObservableExtensions.RepeatAfterDelay<T>(IObservable<T>, TimeSpan, IScheduler)
+  nameWithType.vb: ObservableExtensions.RepeatAfterDelay(Of T)(IObservable(Of T), TimeSpan, IScheduler)
+- uid: Annex.Reactive.Linq.ObservableExtensions.SwitchIfEmpty*
+  name: SwitchIfEmpty
+  href: api/Annex.Reactive.Linq.ObservableExtensions.html#Annex_Reactive_Linq_ObservableExtensions_SwitchIfEmpty_
+  commentId: Overload:Annex.Reactive.Linq.ObservableExtensions.SwitchIfEmpty
+  isSpec: "True"
+  fullName: Annex.Reactive.Linq.ObservableExtensions.SwitchIfEmpty
+  nameWithType: ObservableExtensions.SwitchIfEmpty
+- uid: Annex.Reactive.Linq.ObservableExtensions.SwitchIfEmpty``1(System.IObservable{``0},System.IObservable{``0})
+  name: SwitchIfEmpty<T>(IObservable<T>, IObservable<T>)
+  href: api/Annex.Reactive.Linq.ObservableExtensions.html#Annex_Reactive_Linq_ObservableExtensions_SwitchIfEmpty__1_System_IObservable___0__System_IObservable___0__
+  commentId: M:Annex.Reactive.Linq.ObservableExtensions.SwitchIfEmpty``1(System.IObservable{``0},System.IObservable{``0})
+  name.vb: SwitchIfEmpty(Of T)(IObservable(Of T), IObservable(Of T))
+  fullName: Annex.Reactive.Linq.ObservableExtensions.SwitchIfEmpty<T>(System.IObservable<T>, System.IObservable<T>)
+  fullName.vb: Annex.Reactive.Linq.ObservableExtensions.SwitchIfEmpty(Of T)(System.IObservable(Of T), System.IObservable(Of T))
+  nameWithType: ObservableExtensions.SwitchIfEmpty<T>(IObservable<T>, IObservable<T>)
+  nameWithType.vb: ObservableExtensions.SwitchIfEmpty(Of T)(IObservable(Of T), IObservable(Of T))
+- uid: Annex.Reactive.Linq.ObservableExtensions.ToDictionary*
+  name: ToDictionary
+  href: api/Annex.Reactive.Linq.ObservableExtensions.html#Annex_Reactive_Linq_ObservableExtensions_ToDictionary_
+  commentId: Overload:Annex.Reactive.Linq.ObservableExtensions.ToDictionary
+  isSpec: "True"
+  fullName: Annex.Reactive.Linq.ObservableExtensions.ToDictionary
+  nameWithType: ObservableExtensions.ToDictionary
+- uid: Annex.Reactive.Linq.ObservableExtensions.ToDictionary``2(System.IObservable{System.ValueTuple{``0,``1}})
+  name: ToDictionary<TKey, TValue>(IObservable<(TKey Key, TValue Value)>)
+  href: api/Annex.Reactive.Linq.ObservableExtensions.html#Annex_Reactive_Linq_ObservableExtensions_ToDictionary__2_System_IObservable_System_ValueTuple___0___1___
+  commentId: M:Annex.Reactive.Linq.ObservableExtensions.ToDictionary``2(System.IObservable{System.ValueTuple{``0,``1}})
+  name.vb: ToDictionary(Of TKey, TValue)(IObservable(Of (Key As TKey, Value As TValue)))
+  fullName: Annex.Reactive.Linq.ObservableExtensions.ToDictionary<TKey, TValue>(System.IObservable<System.ValueTuple<TKey, TValue>>)
+  fullName.vb: Annex.Reactive.Linq.ObservableExtensions.ToDictionary(Of TKey, TValue)(System.IObservable(Of System.ValueTuple(Of TKey, TValue)))
+  nameWithType: ObservableExtensions.ToDictionary<TKey, TValue>(IObservable<(TKey Key, TValue Value)>)
+  nameWithType.vb: ObservableExtensions.ToDictionary(Of TKey, TValue)(IObservable(Of (Key As TKey, Value As TValue)))
+- uid: Annex.Reactive.Linq.ObservableExtensions.VoidElements*
+  name: VoidElements
+  href: api/Annex.Reactive.Linq.ObservableExtensions.html#Annex_Reactive_Linq_ObservableExtensions_VoidElements_
+  commentId: Overload:Annex.Reactive.Linq.ObservableExtensions.VoidElements
+  isSpec: "True"
+  fullName: Annex.Reactive.Linq.ObservableExtensions.VoidElements
+  nameWithType: ObservableExtensions.VoidElements
+- uid: Annex.Reactive.Linq.ObservableExtensions.VoidElements``1(System.IObservable{``0})
+  name: VoidElements<T>(IObservable<T>)
+  href: api/Annex.Reactive.Linq.ObservableExtensions.html#Annex_Reactive_Linq_ObservableExtensions_VoidElements__1_System_IObservable___0__
+  commentId: M:Annex.Reactive.Linq.ObservableExtensions.VoidElements``1(System.IObservable{``0})
+  name.vb: VoidElements(Of T)(IObservable(Of T))
+  fullName: Annex.Reactive.Linq.ObservableExtensions.VoidElements<T>(System.IObservable<T>)
+  fullName.vb: Annex.Reactive.Linq.ObservableExtensions.VoidElements(Of T)(System.IObservable(Of T))
+  nameWithType: ObservableExtensions.VoidElements<T>(IObservable<T>)
+  nameWithType.vb: ObservableExtensions.VoidElements(Of T)(IObservable(Of T))
+- uid: Annex.Reactive.Linq.ObservableExtensions.VoidTerminations*
+  name: VoidTerminations
+  href: api/Annex.Reactive.Linq.ObservableExtensions.html#Annex_Reactive_Linq_ObservableExtensions_VoidTerminations_
+  commentId: Overload:Annex.Reactive.Linq.ObservableExtensions.VoidTerminations
+  isSpec: "True"
+  fullName: Annex.Reactive.Linq.ObservableExtensions.VoidTerminations
+  nameWithType: ObservableExtensions.VoidTerminations
+- uid: Annex.Reactive.Linq.ObservableExtensions.VoidTerminations``1(System.IObservable{``0})
+  name: VoidTerminations<T>(IObservable<T>)
+  href: api/Annex.Reactive.Linq.ObservableExtensions.html#Annex_Reactive_Linq_ObservableExtensions_VoidTerminations__1_System_IObservable___0__
+  commentId: M:Annex.Reactive.Linq.ObservableExtensions.VoidTerminations``1(System.IObservable{``0})
+  name.vb: VoidTerminations(Of T)(IObservable(Of T))
+  fullName: Annex.Reactive.Linq.ObservableExtensions.VoidTerminations<T>(System.IObservable<T>)
+  fullName.vb: Annex.Reactive.Linq.ObservableExtensions.VoidTerminations(Of T)(System.IObservable(Of T))
+  nameWithType: ObservableExtensions.VoidTerminations<T>(IObservable<T>)
+  nameWithType.vb: ObservableExtensions.VoidTerminations(Of T)(IObservable(Of T))
+- uid: Annex.Reactive.ObservableEx
+  name: ObservableEx
+  href: api/Annex.Reactive.ObservableEx.html
+  commentId: T:Annex.Reactive.ObservableEx
+  fullName: Annex.Reactive.ObservableEx
+  nameWithType: ObservableEx
+- uid: Annex.Reactive.ObservableEx.Using*
+  name: Using
+  href: api/Annex.Reactive.ObservableEx.html#Annex_Reactive_ObservableEx_Using_
+  commentId: Overload:Annex.Reactive.ObservableEx.Using
+  isSpec: "True"
+  fullName: Annex.Reactive.ObservableEx.Using
+  nameWithType: ObservableEx.Using
+- uid: Annex.Reactive.ObservableEx.Using``2(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{``1}},System.Func{``1,System.IObservable{``0}})
+  name: Using<TSource, TResource>(Func<CancellationToken, Task<TResource>>, Func<TResource, IObservable<TSource>>)
+  href: api/Annex.Reactive.ObservableEx.html#Annex_Reactive_ObservableEx_Using__2_System_Func_System_Threading_CancellationToken_System_Threading_Tasks_Task___1___System_Func___1_System_IObservable___0___
+  commentId: M:Annex.Reactive.ObservableEx.Using``2(System.Func{System.Threading.CancellationToken,System.Threading.Tasks.Task{``1}},System.Func{``1,System.IObservable{``0}})
+  name.vb: Using(Of TSource, TResource)(Func(Of CancellationToken, Task(Of TResource)), Func(Of TResource, IObservable(Of TSource)))
+  fullName: Annex.Reactive.ObservableEx.Using<TSource, TResource>(System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<TResource>>, System.Func<TResource, System.IObservable<TSource>>)
+  fullName.vb: Annex.Reactive.ObservableEx.Using(Of TSource, TResource)(System.Func(Of System.Threading.CancellationToken, System.Threading.Tasks.Task(Of TResource)), System.Func(Of TResource, System.IObservable(Of TSource)))
+  nameWithType: ObservableEx.Using<TSource, TResource>(Func<CancellationToken, Task<TResource>>, Func<TResource, IObservable<TSource>>)
+  nameWithType.vb: ObservableEx.Using(Of TSource, TResource)(Func(Of CancellationToken, Task(Of TResource)), Func(Of TResource, IObservable(Of TSource)))
+- uid: Annex.Reactive.ObservableEx.Void
+  name: Void
+  href: api/Annex.Reactive.ObservableEx.html#Annex_Reactive_ObservableEx_Void
+  commentId: P:Annex.Reactive.ObservableEx.Void
+  fullName: Annex.Reactive.ObservableEx.Void
+  nameWithType: ObservableEx.Void
+- uid: Annex.Reactive.ObservableEx.Void*
+  name: Void
+  href: api/Annex.Reactive.ObservableEx.html#Annex_Reactive_ObservableEx_Void_
+  commentId: Overload:Annex.Reactive.ObservableEx.Void
+  isSpec: "True"
+  fullName: Annex.Reactive.ObservableEx.Void
+  nameWithType: ObservableEx.Void
+- uid: Annex.Reflection
+  name: Annex.Reflection
+  href: api/Annex.Reflection.html
+  commentId: N:Annex.Reflection
+  fullName: Annex.Reflection
+  nameWithType: Annex.Reflection
+- uid: Annex.Reflection.TypeExtensions
+  name: TypeExtensions
+  href: api/Annex.Reflection.TypeExtensions.html
+  commentId: T:Annex.Reflection.TypeExtensions
+  fullName: Annex.Reflection.TypeExtensions
+  nameWithType: TypeExtensions
+- uid: Annex.Reflection.TypeExtensions.IsNumeric(System.Type)
+  name: IsNumeric(Type)
+  href: api/Annex.Reflection.TypeExtensions.html#Annex_Reflection_TypeExtensions_IsNumeric_System_Type_
+  commentId: M:Annex.Reflection.TypeExtensions.IsNumeric(System.Type)
+  fullName: Annex.Reflection.TypeExtensions.IsNumeric(System.Type)
+  nameWithType: TypeExtensions.IsNumeric(Type)
+- uid: Annex.Reflection.TypeExtensions.IsNumeric(System.Type,Annex.Numerics.NumericClass)
+  name: IsNumeric(Type, NumericClass)
+  href: api/Annex.Reflection.TypeExtensions.html#Annex_Reflection_TypeExtensions_IsNumeric_System_Type_Annex_Numerics_NumericClass_
+  commentId: M:Annex.Reflection.TypeExtensions.IsNumeric(System.Type,Annex.Numerics.NumericClass)
+  fullName: Annex.Reflection.TypeExtensions.IsNumeric(System.Type, Annex.Numerics.NumericClass)
+  nameWithType: TypeExtensions.IsNumeric(Type, NumericClass)
+- uid: Annex.Reflection.TypeExtensions.IsNumeric*
+  name: IsNumeric
+  href: api/Annex.Reflection.TypeExtensions.html#Annex_Reflection_TypeExtensions_IsNumeric_
+  commentId: Overload:Annex.Reflection.TypeExtensions.IsNumeric
+  isSpec: "True"
+  fullName: Annex.Reflection.TypeExtensions.IsNumeric
+  nameWithType: TypeExtensions.IsNumeric
+- uid: Annex.Reflection.TypeExtensions.UnwrapNullable(System.Type)
+  name: UnwrapNullable(Type)
+  href: api/Annex.Reflection.TypeExtensions.html#Annex_Reflection_TypeExtensions_UnwrapNullable_System_Type_
+  commentId: M:Annex.Reflection.TypeExtensions.UnwrapNullable(System.Type)
+  fullName: Annex.Reflection.TypeExtensions.UnwrapNullable(System.Type)
+  nameWithType: TypeExtensions.UnwrapNullable(Type)
+- uid: Annex.Reflection.TypeExtensions.UnwrapNullable*
+  name: UnwrapNullable
+  href: api/Annex.Reflection.TypeExtensions.html#Annex_Reflection_TypeExtensions_UnwrapNullable_
+  commentId: Overload:Annex.Reflection.TypeExtensions.UnwrapNullable
+  isSpec: "True"
+  fullName: Annex.Reflection.TypeExtensions.UnwrapNullable
+  nameWithType: TypeExtensions.UnwrapNullable
+- uid: Annex.Security
+  name: Annex.Security
+  href: api/Annex.Security.html
+  commentId: N:Annex.Security
+  fullName: Annex.Security
+  nameWithType: Annex.Security
+- uid: Annex.Security.CryptoRandom
+  name: CryptoRandom
+  href: api/Annex.Security.CryptoRandom.html
+  commentId: T:Annex.Security.CryptoRandom
+  fullName: Annex.Security.CryptoRandom
+  nameWithType: CryptoRandom
+- uid: Annex.Security.CryptoRandom.#ctor
+  name: CryptoRandom()
+  href: api/Annex.Security.CryptoRandom.html#Annex_Security_CryptoRandom__ctor
+  commentId: M:Annex.Security.CryptoRandom.#ctor
+  fullName: Annex.Security.CryptoRandom.CryptoRandom()
+  nameWithType: CryptoRandom.CryptoRandom()
+- uid: Annex.Security.CryptoRandom.#ctor(System.Security.Cryptography.RandomNumberGenerator)
+  name: CryptoRandom(RandomNumberGenerator)
+  href: api/Annex.Security.CryptoRandom.html#Annex_Security_CryptoRandom__ctor_System_Security_Cryptography_RandomNumberGenerator_
+  commentId: M:Annex.Security.CryptoRandom.#ctor(System.Security.Cryptography.RandomNumberGenerator)
+  fullName: Annex.Security.CryptoRandom.CryptoRandom(System.Security.Cryptography.RandomNumberGenerator)
+  nameWithType: CryptoRandom.CryptoRandom(RandomNumberGenerator)
+- uid: Annex.Security.CryptoRandom.#ctor*
+  name: CryptoRandom
+  href: api/Annex.Security.CryptoRandom.html#Annex_Security_CryptoRandom__ctor_
+  commentId: Overload:Annex.Security.CryptoRandom.#ctor
+  isSpec: "True"
+  fullName: Annex.Security.CryptoRandom.CryptoRandom
+  nameWithType: CryptoRandom.CryptoRandom
+- uid: Annex.Security.CryptoRandom.Dispose
+  name: Dispose()
+  href: api/Annex.Security.CryptoRandom.html#Annex_Security_CryptoRandom_Dispose
+  commentId: M:Annex.Security.CryptoRandom.Dispose
+  fullName: Annex.Security.CryptoRandom.Dispose()
+  nameWithType: CryptoRandom.Dispose()
+- uid: Annex.Security.CryptoRandom.Dispose*
+  name: Dispose
+  href: api/Annex.Security.CryptoRandom.html#Annex_Security_CryptoRandom_Dispose_
+  commentId: Overload:Annex.Security.CryptoRandom.Dispose
+  isSpec: "True"
+  fullName: Annex.Security.CryptoRandom.Dispose
+  nameWithType: CryptoRandom.Dispose
+- uid: Annex.Security.CryptoRandom.Next
+  name: Next()
+  href: api/Annex.Security.CryptoRandom.html#Annex_Security_CryptoRandom_Next
+  commentId: M:Annex.Security.CryptoRandom.Next
+  fullName: Annex.Security.CryptoRandom.Next()
+  nameWithType: CryptoRandom.Next()
+- uid: Annex.Security.CryptoRandom.Next(System.Int32)
+  name: Next(Int32)
+  href: api/Annex.Security.CryptoRandom.html#Annex_Security_CryptoRandom_Next_System_Int32_
+  commentId: M:Annex.Security.CryptoRandom.Next(System.Int32)
+  fullName: Annex.Security.CryptoRandom.Next(System.Int32)
+  nameWithType: CryptoRandom.Next(Int32)
+- uid: Annex.Security.CryptoRandom.Next(System.Int32,System.Int32)
+  name: Next(Int32, Int32)
+  href: api/Annex.Security.CryptoRandom.html#Annex_Security_CryptoRandom_Next_System_Int32_System_Int32_
+  commentId: M:Annex.Security.CryptoRandom.Next(System.Int32,System.Int32)
+  fullName: Annex.Security.CryptoRandom.Next(System.Int32, System.Int32)
+  nameWithType: CryptoRandom.Next(Int32, Int32)
+- uid: Annex.Security.CryptoRandom.Next*
+  name: Next
+  href: api/Annex.Security.CryptoRandom.html#Annex_Security_CryptoRandom_Next_
+  commentId: Overload:Annex.Security.CryptoRandom.Next
+  isSpec: "True"
+  fullName: Annex.Security.CryptoRandom.Next
+  nameWithType: CryptoRandom.Next
+- uid: Annex.Security.CryptoRandom.NextBytes(System.Byte[])
+  name: NextBytes(Byte[])
+  href: api/Annex.Security.CryptoRandom.html#Annex_Security_CryptoRandom_NextBytes_System_Byte___
+  commentId: M:Annex.Security.CryptoRandom.NextBytes(System.Byte[])
+  name.vb: NextBytes(Byte())
+  fullName: Annex.Security.CryptoRandom.NextBytes(System.Byte[])
+  fullName.vb: Annex.Security.CryptoRandom.NextBytes(System.Byte())
+  nameWithType: CryptoRandom.NextBytes(Byte[])
+  nameWithType.vb: CryptoRandom.NextBytes(Byte())
+- uid: Annex.Security.CryptoRandom.NextBytes*
+  name: NextBytes
+  href: api/Annex.Security.CryptoRandom.html#Annex_Security_CryptoRandom_NextBytes_
+  commentId: Overload:Annex.Security.CryptoRandom.NextBytes
+  isSpec: "True"
+  fullName: Annex.Security.CryptoRandom.NextBytes
+  nameWithType: CryptoRandom.NextBytes
+- uid: Annex.Security.CryptoRandom.NextDouble
+  name: NextDouble()
+  href: api/Annex.Security.CryptoRandom.html#Annex_Security_CryptoRandom_NextDouble
+  commentId: M:Annex.Security.CryptoRandom.NextDouble
+  fullName: Annex.Security.CryptoRandom.NextDouble()
+  nameWithType: CryptoRandom.NextDouble()
+- uid: Annex.Security.CryptoRandom.NextDouble*
+  name: NextDouble
+  href: api/Annex.Security.CryptoRandom.html#Annex_Security_CryptoRandom_NextDouble_
+  commentId: Overload:Annex.Security.CryptoRandom.NextDouble
+  isSpec: "True"
+  fullName: Annex.Security.CryptoRandom.NextDouble
+  nameWithType: CryptoRandom.NextDouble
+- uid: Annex.Strings
+  name: Annex.Strings
+  href: api/Annex.Strings.html
+  commentId: N:Annex.Strings
+  fullName: Annex.Strings
+  nameWithType: Annex.Strings
+- uid: Annex.Strings.StringExtensions
+  name: StringExtensions
+  href: api/Annex.Strings.StringExtensions.html
+  commentId: T:Annex.Strings.StringExtensions
+  fullName: Annex.Strings.StringExtensions
+  nameWithType: StringExtensions
+- uid: Annex.Strings.StringExtensions.Contains(System.String,System.String,System.StringComparison)
+  name: Contains(String, String, StringComparison)
+  href: api/Annex.Strings.StringExtensions.html#Annex_Strings_StringExtensions_Contains_System_String_System_String_System_StringComparison_
+  commentId: M:Annex.Strings.StringExtensions.Contains(System.String,System.String,System.StringComparison)
+  fullName: Annex.Strings.StringExtensions.Contains(System.String, System.String, System.StringComparison)
+  nameWithType: StringExtensions.Contains(String, String, StringComparison)
+- uid: Annex.Strings.StringExtensions.Contains*
+  name: Contains
+  href: api/Annex.Strings.StringExtensions.html#Annex_Strings_StringExtensions_Contains_
+  commentId: Overload:Annex.Strings.StringExtensions.Contains
+  isSpec: "True"
+  fullName: Annex.Strings.StringExtensions.Contains
+  nameWithType: StringExtensions.Contains
+- uid: Annex.Strings.StringExtensions.NullIfEmpty(System.String)
+  name: NullIfEmpty(String)
+  href: api/Annex.Strings.StringExtensions.html#Annex_Strings_StringExtensions_NullIfEmpty_System_String_
+  commentId: M:Annex.Strings.StringExtensions.NullIfEmpty(System.String)
+  fullName: Annex.Strings.StringExtensions.NullIfEmpty(System.String)
+  nameWithType: StringExtensions.NullIfEmpty(String)
+- uid: Annex.Strings.StringExtensions.NullIfEmpty*
+  name: NullIfEmpty
+  href: api/Annex.Strings.StringExtensions.html#Annex_Strings_StringExtensions_NullIfEmpty_
+  commentId: Overload:Annex.Strings.StringExtensions.NullIfEmpty
+  isSpec: "True"
+  fullName: Annex.Strings.StringExtensions.NullIfEmpty
+  nameWithType: StringExtensions.NullIfEmpty
+- uid: Annex.Strings.StringExtensions.NullIfWhiteSpace(System.String)
+  name: NullIfWhiteSpace(String)
+  href: api/Annex.Strings.StringExtensions.html#Annex_Strings_StringExtensions_NullIfWhiteSpace_System_String_
+  commentId: M:Annex.Strings.StringExtensions.NullIfWhiteSpace(System.String)
+  fullName: Annex.Strings.StringExtensions.NullIfWhiteSpace(System.String)
+  nameWithType: StringExtensions.NullIfWhiteSpace(String)
+- uid: Annex.Strings.StringExtensions.NullIfWhiteSpace*
+  name: NullIfWhiteSpace
+  href: api/Annex.Strings.StringExtensions.html#Annex_Strings_StringExtensions_NullIfWhiteSpace_
+  commentId: Overload:Annex.Strings.StringExtensions.NullIfWhiteSpace
+  isSpec: "True"
+  fullName: Annex.Strings.StringExtensions.NullIfWhiteSpace
+  nameWithType: StringExtensions.NullIfWhiteSpace
+- uid: Annex.Threading
+  name: Annex.Threading
+  href: api/Annex.Threading.html
+  commentId: N:Annex.Threading
+  fullName: Annex.Threading
+  nameWithType: Annex.Threading
+- uid: Annex.Threading.CancellationTokenEx
+  name: CancellationTokenEx
+  href: api/Annex.Threading.CancellationTokenEx.html
+  commentId: T:Annex.Threading.CancellationTokenEx
+  fullName: Annex.Threading.CancellationTokenEx
+  nameWithType: CancellationTokenEx
+- uid: Annex.Threading.CancellationTokenEx.Canceled
+  name: Canceled
+  href: api/Annex.Threading.CancellationTokenEx.html#Annex_Threading_CancellationTokenEx_Canceled
+  commentId: P:Annex.Threading.CancellationTokenEx.Canceled
+  fullName: Annex.Threading.CancellationTokenEx.Canceled
+  nameWithType: CancellationTokenEx.Canceled
+- uid: Annex.Threading.CancellationTokenEx.Canceled*
+  name: Canceled
+  href: api/Annex.Threading.CancellationTokenEx.html#Annex_Threading_CancellationTokenEx_Canceled_
+  commentId: Overload:Annex.Threading.CancellationTokenEx.Canceled
+  isSpec: "True"
+  fullName: Annex.Threading.CancellationTokenEx.Canceled
+  nameWithType: CancellationTokenEx.Canceled
+- uid: Annex.Time.Global
+  name: Annex.Time.Global
+  href: api/Annex.Time.Global.html
+  commentId: N:Annex.Time.Global
+  fullName: Annex.Time.Global
+  nameWithType: Annex.Time.Global
+- uid: Annex.Time.Global.GlobalDateTimeExtensions
+  name: GlobalDateTimeExtensions
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html
+  commentId: T:Annex.Time.Global.GlobalDateTimeExtensions
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions
+  nameWithType: GlobalDateTimeExtensions
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.April(System.Int32,System.Int32)
+  name: April(Int32, Int32)
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_April_System_Int32_System_Int32_
+  commentId: M:Annex.Time.Global.GlobalDateTimeExtensions.April(System.Int32,System.Int32)
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.April(System.Int32, System.Int32)
+  nameWithType: GlobalDateTimeExtensions.April(Int32, Int32)
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.April*
+  name: April
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_April_
+  commentId: Overload:Annex.Time.Global.GlobalDateTimeExtensions.April
+  isSpec: "True"
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.April
+  nameWithType: GlobalDateTimeExtensions.April
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.August(System.Int32,System.Int32)
+  name: August(Int32, Int32)
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_August_System_Int32_System_Int32_
+  commentId: M:Annex.Time.Global.GlobalDateTimeExtensions.August(System.Int32,System.Int32)
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.August(System.Int32, System.Int32)
+  nameWithType: GlobalDateTimeExtensions.August(Int32, Int32)
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.August*
+  name: August
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_August_
+  commentId: Overload:Annex.Time.Global.GlobalDateTimeExtensions.August
+  isSpec: "True"
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.August
+  nameWithType: GlobalDateTimeExtensions.August
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.December(System.Int32,System.Int32)
+  name: December(Int32, Int32)
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_December_System_Int32_System_Int32_
+  commentId: M:Annex.Time.Global.GlobalDateTimeExtensions.December(System.Int32,System.Int32)
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.December(System.Int32, System.Int32)
+  nameWithType: GlobalDateTimeExtensions.December(Int32, Int32)
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.December*
+  name: December
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_December_
+  commentId: Overload:Annex.Time.Global.GlobalDateTimeExtensions.December
+  isSpec: "True"
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.December
+  nameWithType: GlobalDateTimeExtensions.December
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.February(System.Int32,System.Int32)
+  name: February(Int32, Int32)
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_February_System_Int32_System_Int32_
+  commentId: M:Annex.Time.Global.GlobalDateTimeExtensions.February(System.Int32,System.Int32)
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.February(System.Int32, System.Int32)
+  nameWithType: GlobalDateTimeExtensions.February(Int32, Int32)
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.February*
+  name: February
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_February_
+  commentId: Overload:Annex.Time.Global.GlobalDateTimeExtensions.February
+  isSpec: "True"
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.February
+  nameWithType: GlobalDateTimeExtensions.February
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.January(System.Int32,System.Int32)
+  name: January(Int32, Int32)
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_January_System_Int32_System_Int32_
+  commentId: M:Annex.Time.Global.GlobalDateTimeExtensions.January(System.Int32,System.Int32)
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.January(System.Int32, System.Int32)
+  nameWithType: GlobalDateTimeExtensions.January(Int32, Int32)
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.January*
+  name: January
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_January_
+  commentId: Overload:Annex.Time.Global.GlobalDateTimeExtensions.January
+  isSpec: "True"
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.January
+  nameWithType: GlobalDateTimeExtensions.January
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.July(System.Int32,System.Int32)
+  name: July(Int32, Int32)
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_July_System_Int32_System_Int32_
+  commentId: M:Annex.Time.Global.GlobalDateTimeExtensions.July(System.Int32,System.Int32)
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.July(System.Int32, System.Int32)
+  nameWithType: GlobalDateTimeExtensions.July(Int32, Int32)
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.July*
+  name: July
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_July_
+  commentId: Overload:Annex.Time.Global.GlobalDateTimeExtensions.July
+  isSpec: "True"
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.July
+  nameWithType: GlobalDateTimeExtensions.July
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.June(System.Int32,System.Int32)
+  name: June(Int32, Int32)
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_June_System_Int32_System_Int32_
+  commentId: M:Annex.Time.Global.GlobalDateTimeExtensions.June(System.Int32,System.Int32)
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.June(System.Int32, System.Int32)
+  nameWithType: GlobalDateTimeExtensions.June(Int32, Int32)
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.June*
+  name: June
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_June_
+  commentId: Overload:Annex.Time.Global.GlobalDateTimeExtensions.June
+  isSpec: "True"
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.June
+  nameWithType: GlobalDateTimeExtensions.June
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.March(System.Int32,System.Int32)
+  name: March(Int32, Int32)
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_March_System_Int32_System_Int32_
+  commentId: M:Annex.Time.Global.GlobalDateTimeExtensions.March(System.Int32,System.Int32)
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.March(System.Int32, System.Int32)
+  nameWithType: GlobalDateTimeExtensions.March(Int32, Int32)
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.March*
+  name: March
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_March_
+  commentId: Overload:Annex.Time.Global.GlobalDateTimeExtensions.March
+  isSpec: "True"
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.March
+  nameWithType: GlobalDateTimeExtensions.March
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.May(System.Int32,System.Int32)
+  name: May(Int32, Int32)
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_May_System_Int32_System_Int32_
+  commentId: M:Annex.Time.Global.GlobalDateTimeExtensions.May(System.Int32,System.Int32)
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.May(System.Int32, System.Int32)
+  nameWithType: GlobalDateTimeExtensions.May(Int32, Int32)
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.May*
+  name: May
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_May_
+  commentId: Overload:Annex.Time.Global.GlobalDateTimeExtensions.May
+  isSpec: "True"
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.May
+  nameWithType: GlobalDateTimeExtensions.May
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.November(System.Int32,System.Int32)
+  name: November(Int32, Int32)
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_November_System_Int32_System_Int32_
+  commentId: M:Annex.Time.Global.GlobalDateTimeExtensions.November(System.Int32,System.Int32)
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.November(System.Int32, System.Int32)
+  nameWithType: GlobalDateTimeExtensions.November(Int32, Int32)
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.November*
+  name: November
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_November_
+  commentId: Overload:Annex.Time.Global.GlobalDateTimeExtensions.November
+  isSpec: "True"
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.November
+  nameWithType: GlobalDateTimeExtensions.November
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.October(System.Int32,System.Int32)
+  name: October(Int32, Int32)
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_October_System_Int32_System_Int32_
+  commentId: M:Annex.Time.Global.GlobalDateTimeExtensions.October(System.Int32,System.Int32)
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.October(System.Int32, System.Int32)
+  nameWithType: GlobalDateTimeExtensions.October(Int32, Int32)
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.October*
+  name: October
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_October_
+  commentId: Overload:Annex.Time.Global.GlobalDateTimeExtensions.October
+  isSpec: "True"
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.October
+  nameWithType: GlobalDateTimeExtensions.October
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.September(System.Int32,System.Int32)
+  name: September(Int32, Int32)
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_September_System_Int32_System_Int32_
+  commentId: M:Annex.Time.Global.GlobalDateTimeExtensions.September(System.Int32,System.Int32)
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.September(System.Int32, System.Int32)
+  nameWithType: GlobalDateTimeExtensions.September(Int32, Int32)
+- uid: Annex.Time.Global.GlobalDateTimeExtensions.September*
+  name: September
+  href: api/Annex.Time.Global.GlobalDateTimeExtensions.html#Annex_Time_Global_GlobalDateTimeExtensions_September_
+  commentId: Overload:Annex.Time.Global.GlobalDateTimeExtensions.September
+  isSpec: "True"
+  fullName: Annex.Time.Global.GlobalDateTimeExtensions.September
+  nameWithType: GlobalDateTimeExtensions.September
+- uid: Annex.Time.Global.GlobalTimeSpanExtensions
+  name: GlobalTimeSpanExtensions
+  href: api/Annex.Time.Global.GlobalTimeSpanExtensions.html
+  commentId: T:Annex.Time.Global.GlobalTimeSpanExtensions
+  fullName: Annex.Time.Global.GlobalTimeSpanExtensions
+  nameWithType: GlobalTimeSpanExtensions
+- uid: Annex.Time.Global.GlobalTimeSpanExtensions.Days(System.Int32)
+  name: Days(Int32)
+  href: api/Annex.Time.Global.GlobalTimeSpanExtensions.html#Annex_Time_Global_GlobalTimeSpanExtensions_Days_System_Int32_
+  commentId: M:Annex.Time.Global.GlobalTimeSpanExtensions.Days(System.Int32)
+  fullName: Annex.Time.Global.GlobalTimeSpanExtensions.Days(System.Int32)
+  nameWithType: GlobalTimeSpanExtensions.Days(Int32)
+- uid: Annex.Time.Global.GlobalTimeSpanExtensions.Days*
+  name: Days
+  href: api/Annex.Time.Global.GlobalTimeSpanExtensions.html#Annex_Time_Global_GlobalTimeSpanExtensions_Days_
+  commentId: Overload:Annex.Time.Global.GlobalTimeSpanExtensions.Days
+  isSpec: "True"
+  fullName: Annex.Time.Global.GlobalTimeSpanExtensions.Days
+  nameWithType: GlobalTimeSpanExtensions.Days
+- uid: Annex.Time.Global.GlobalTimeSpanExtensions.Hours(System.Int32)
+  name: Hours(Int32)
+  href: api/Annex.Time.Global.GlobalTimeSpanExtensions.html#Annex_Time_Global_GlobalTimeSpanExtensions_Hours_System_Int32_
+  commentId: M:Annex.Time.Global.GlobalTimeSpanExtensions.Hours(System.Int32)
+  fullName: Annex.Time.Global.GlobalTimeSpanExtensions.Hours(System.Int32)
+  nameWithType: GlobalTimeSpanExtensions.Hours(Int32)
+- uid: Annex.Time.Global.GlobalTimeSpanExtensions.Hours*
+  name: Hours
+  href: api/Annex.Time.Global.GlobalTimeSpanExtensions.html#Annex_Time_Global_GlobalTimeSpanExtensions_Hours_
+  commentId: Overload:Annex.Time.Global.GlobalTimeSpanExtensions.Hours
+  isSpec: "True"
+  fullName: Annex.Time.Global.GlobalTimeSpanExtensions.Hours
+  nameWithType: GlobalTimeSpanExtensions.Hours
+- uid: Annex.Time.Global.GlobalTimeSpanExtensions.Milliseconds(System.Int32)
+  name: Milliseconds(Int32)
+  href: api/Annex.Time.Global.GlobalTimeSpanExtensions.html#Annex_Time_Global_GlobalTimeSpanExtensions_Milliseconds_System_Int32_
+  commentId: M:Annex.Time.Global.GlobalTimeSpanExtensions.Milliseconds(System.Int32)
+  fullName: Annex.Time.Global.GlobalTimeSpanExtensions.Milliseconds(System.Int32)
+  nameWithType: GlobalTimeSpanExtensions.Milliseconds(Int32)
+- uid: Annex.Time.Global.GlobalTimeSpanExtensions.Milliseconds*
+  name: Milliseconds
+  href: api/Annex.Time.Global.GlobalTimeSpanExtensions.html#Annex_Time_Global_GlobalTimeSpanExtensions_Milliseconds_
+  commentId: Overload:Annex.Time.Global.GlobalTimeSpanExtensions.Milliseconds
+  isSpec: "True"
+  fullName: Annex.Time.Global.GlobalTimeSpanExtensions.Milliseconds
+  nameWithType: GlobalTimeSpanExtensions.Milliseconds
+- uid: Annex.Time.Global.GlobalTimeSpanExtensions.Minutes(System.Int32)
+  name: Minutes(Int32)
+  href: api/Annex.Time.Global.GlobalTimeSpanExtensions.html#Annex_Time_Global_GlobalTimeSpanExtensions_Minutes_System_Int32_
+  commentId: M:Annex.Time.Global.GlobalTimeSpanExtensions.Minutes(System.Int32)
+  fullName: Annex.Time.Global.GlobalTimeSpanExtensions.Minutes(System.Int32)
+  nameWithType: GlobalTimeSpanExtensions.Minutes(Int32)
+- uid: Annex.Time.Global.GlobalTimeSpanExtensions.Minutes*
+  name: Minutes
+  href: api/Annex.Time.Global.GlobalTimeSpanExtensions.html#Annex_Time_Global_GlobalTimeSpanExtensions_Minutes_
+  commentId: Overload:Annex.Time.Global.GlobalTimeSpanExtensions.Minutes
+  isSpec: "True"
+  fullName: Annex.Time.Global.GlobalTimeSpanExtensions.Minutes
+  nameWithType: GlobalTimeSpanExtensions.Minutes
+- uid: Annex.Time.Global.GlobalTimeSpanExtensions.Seconds(System.Int32)
+  name: Seconds(Int32)
+  href: api/Annex.Time.Global.GlobalTimeSpanExtensions.html#Annex_Time_Global_GlobalTimeSpanExtensions_Seconds_System_Int32_
+  commentId: M:Annex.Time.Global.GlobalTimeSpanExtensions.Seconds(System.Int32)
+  fullName: Annex.Time.Global.GlobalTimeSpanExtensions.Seconds(System.Int32)
+  nameWithType: GlobalTimeSpanExtensions.Seconds(Int32)
+- uid: Annex.Time.Global.GlobalTimeSpanExtensions.Seconds*
+  name: Seconds
+  href: api/Annex.Time.Global.GlobalTimeSpanExtensions.html#Annex_Time_Global_GlobalTimeSpanExtensions_Seconds_
+  commentId: Overload:Annex.Time.Global.GlobalTimeSpanExtensions.Seconds
+  isSpec: "True"
+  fullName: Annex.Time.Global.GlobalTimeSpanExtensions.Seconds
+  nameWithType: GlobalTimeSpanExtensions.Seconds
+- uid: Annex.Time.Global.GlobalTimeSpanExtensions.Ticks(System.Int32)
+  name: Ticks(Int32)
+  href: api/Annex.Time.Global.GlobalTimeSpanExtensions.html#Annex_Time_Global_GlobalTimeSpanExtensions_Ticks_System_Int32_
+  commentId: M:Annex.Time.Global.GlobalTimeSpanExtensions.Ticks(System.Int32)
+  fullName: Annex.Time.Global.GlobalTimeSpanExtensions.Ticks(System.Int32)
+  nameWithType: GlobalTimeSpanExtensions.Ticks(Int32)
+- uid: Annex.Time.Global.GlobalTimeSpanExtensions.Ticks*
+  name: Ticks
+  href: api/Annex.Time.Global.GlobalTimeSpanExtensions.html#Annex_Time_Global_GlobalTimeSpanExtensions_Ticks_
+  commentId: Overload:Annex.Time.Global.GlobalTimeSpanExtensions.Ticks
+  isSpec: "True"
+  fullName: Annex.Time.Global.GlobalTimeSpanExtensions.Ticks
+  nameWithType: GlobalTimeSpanExtensions.Ticks
+- uid: Annex.Uris
+  name: Annex.Uris
+  href: api/Annex.Uris.html
+  commentId: N:Annex.Uris
+  fullName: Annex.Uris
+  nameWithType: Annex.Uris
+- uid: Annex.Uris.UriExtensions
+  name: UriExtensions
+  href: api/Annex.Uris.UriExtensions.html
+  commentId: T:Annex.Uris.UriExtensions
+  fullName: Annex.Uris.UriExtensions
+  nameWithType: UriExtensions
+- uid: Annex.Uris.UriExtensions.ParseQueryString(System.Uri)
+  name: ParseQueryString(Uri)
+  href: api/Annex.Uris.UriExtensions.html#Annex_Uris_UriExtensions_ParseQueryString_System_Uri_
+  commentId: M:Annex.Uris.UriExtensions.ParseQueryString(System.Uri)
+  fullName: Annex.Uris.UriExtensions.ParseQueryString(System.Uri)
+  nameWithType: UriExtensions.ParseQueryString(Uri)
+- uid: Annex.Uris.UriExtensions.ParseQueryString*
+  name: ParseQueryString
+  href: api/Annex.Uris.UriExtensions.html#Annex_Uris_UriExtensions_ParseQueryString_
+  commentId: Overload:Annex.Uris.UriExtensions.ParseQueryString
+  isSpec: "True"
+  fullName: Annex.Uris.UriExtensions.ParseQueryString
+  nameWithType: UriExtensions.ParseQueryString
