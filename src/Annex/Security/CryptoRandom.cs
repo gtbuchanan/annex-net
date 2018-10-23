@@ -5,12 +5,20 @@ using System.Security.Cryptography;
 namespace Annex.Security
 {
     /// <summary>
-    ///     Represents a cryptographically secure random number generator.
+    /// Represents a cryptographically secure random number generator.
     /// </summary>
-    /// <see href="http://download.microsoft.com/download/3/A/7/3A7FA450-1F33-41F7-9E6D-3AA95B5A6AEA/MSDNMagazineSeptember2007en-us.chm">
-    ///     Adapted from MSDN Magazine September 2007 "Tales from the CryptoRandom"
-    /// </see>
-    /// <seealso href="http://download.microsoft.com/download/f/2/7/f279e71e-efb0-4155-873d-5554a0608523/NETMatters2007_09.exe" />
+    /// <example>
+    /// <code language="csharp">
+    /// using (var cryptoRandom = new CryptoRandom())
+    ///     Enumerable.Range(1, 100).Shuffle(cryptoRandom).ToArray(); // Cryptographically random shuffle
+    /// </code>
+    /// </example>
+    /// <seealso href="http://download.microsoft.com/download/3/A/7/3A7FA450-1F33-41F7-9E6D-3AA95B5A6AEA/MSDNMagazineSeptember2007en-us.chm">
+    /// Adapted from MSDN Magazine September 2007 &quot;Tales from the CryptoRandom&quot;
+    /// </seealso>
+    /// <seealso href="http://download.microsoft.com/download/f/2/7/f279e71e-efb0-4155-873d-5554a0608523/NETMatters2007_09.exe">
+    /// Tales from the CryptoRandom Source
+    /// </seealso>
     [PublicAPI]
     public sealed class CryptoRandom : Random, IDisposable
     {
@@ -21,15 +29,16 @@ namespace Annex.Security
         private IDisposable Disposable { get; }
 
         /// <summary>
-        ///     Creates a new instance of the <see cref="CryptoRandom"/> class. Defaults to <see cref="RandomNumberGenerator.Create()"/>.
+        /// Creates a new instance of the <see cref="CryptoRandom"/> class. Defaults to <see cref="RandomNumberGenerator.Create()"/>.
         /// </summary>
         public CryptoRandom() : this(RandomNumberGenerator.Create()) => Disposable = Generator;
 
         /// <summary>
-        ///     Creates a new instance of the <see cref="CryptoRandom"/> class with the specified <see cref="RandomNumberGenerator"/>
+        /// Creates a new instance of the <see cref="CryptoRandom"/> class with the specified <see cref="RandomNumberGenerator"/>
         /// </summary>
         /// <param name="generator">The source random number generator.</param>
-        public CryptoRandom([NotNull]RandomNumberGenerator generator) => Generator = generator;
+        /// <exception cref="ArgumentNullException"><paramref name="generator"/> is <c>null</c>.</exception>
+        public CryptoRandom([NotNull] RandomNumberGenerator generator) => Generator = generator;
 
         /// <inheritdoc />
         public override int Next()

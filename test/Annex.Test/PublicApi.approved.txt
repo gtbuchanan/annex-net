@@ -13,7 +13,10 @@ namespace Annex.Booleans.Global
             where TValue : TComparand { }
         public static bool In<TValue, TComparand>(this TValue @this, System.Collections.Generic.IEqualityComparer<TComparand> comparer, params TComparand[] comparands)
             where TValue : TComparand { }
-        public static bool InRange<T>(this T @this, T bound1, T bound2, Annex.Booleans.Global.BoundType boundType = 0, System.Collections.Generic.IComparer<T> comparer = null) { }
+        public static bool InRange<T>(this T @this, T bound1, T bound2) { }
+        public static bool InRange<T>(this T @this, T bound1, T bound2, Annex.Booleans.Global.BoundType boundType) { }
+        public static bool InRange<T>(this T @this, T bound1, T bound2, System.Collections.Generic.IComparer<T> comparer) { }
+        public static bool InRange<T>(this T @this, T bound1, T bound2, Annex.Booleans.Global.BoundType boundType, System.Collections.Generic.IComparer<T> comparer) { }
     }
 }
 namespace Annex.Collections

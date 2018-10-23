@@ -4,16 +4,16 @@ using System.Globalization;
 namespace Annex.Numerics
 {
     /// <summary>
-    ///     A class to allow the conversion of doubles to string representations of
-    ///     their exact decimal values. The implementation aims for readability over
-    ///     efficiency.
+    /// A class to allow the conversion of doubles to string representations of
+    /// their exact decimal values. The implementation aims for readability over
+    /// efficiency.
     /// </summary>
-    /// <see href="http://jonskeet.uk/csharp/DoubleConverter.cs">Adapted from Jon Skeet</see>
-    /// <see href="http://csharpindepth.com/Articles/General/FloatingPoint.aspx">C# in Depth: Binary floating point and .NET</see>
+    /// <seealso href="http://jonskeet.uk/csharp/DoubleConverter.cs">Adapted from Jon Skeet</seealso>
+    /// <seealso href="http://csharpindepth.com/Articles/General/FloatingPoint.aspx">C# in Depth: Binary floating point and .NET</seealso>
     internal static class DoubleConverter
     {
         /// <summary>
-        ///     Converts the given double to a string representation of its exact decimal value.
+        /// Converts the given double to a string representation of its exact decimal value.
         /// </summary>
         /// <param name="d">The double to convert.</param>
         /// <returns>A string representation of the double's exact decimal value.</returns>
@@ -85,8 +85,8 @@ namespace Annex.Numerics
             private int _decimalPoint;
 
             /// <summary> 
-            ///     Constructs an arbitrary decimal expansion from the given long.
-            ///     The long must not be negative.
+            /// Constructs an arbitrary decimal expansion from the given long.
+            /// The long must not be negative.
             /// </summary>
             internal ArbitraryDecimal(long x)
             {
@@ -98,8 +98,8 @@ namespace Annex.Numerics
             }
 
             /// <summary>
-            ///     Multiplies the current expansion by the given amount, which should
-            ///     only be 2 or 5.
+            /// Multiplies the current expansion by the given amount, which should
+            /// only be 2 or 5.
             /// </summary>
             internal void MultiplyBy(int amount)
             {
@@ -120,15 +120,14 @@ namespace Annex.Numerics
             }
 
             /// <summary>
-            ///     Shifts the decimal point; a negative value makes
-            ///     the decimal expansion bigger (as fewer digits come after the
-            ///     decimal place) and a positive value makes the decimal
-            ///     expansion smaller.
+            /// Shifts the decimal point; a negative value makes the decimal expansion
+            /// bigger (as fewer digits come after the decimal place) and a positive
+            /// value makes the decimal expansion smaller.
             /// </summary>
             internal void Shift(int amount) => _decimalPoint += amount;
 
             /// <summary>
-            ///     Removes leading/trailing zeroes from the expansion.
+            /// Removes leading/trailing zeroes from the expansion.
             /// </summary>
             private void Normalize()
             {
@@ -153,7 +152,7 @@ namespace Annex.Numerics
             }
 
             /// <summary>
-            ///     Converts the value to a proper decimal string representation.
+            /// Converts the value to a proper decimal string representation.
             /// </summary>
             public override string ToString()
             {

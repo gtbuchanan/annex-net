@@ -1,5 +1,6 @@
 // Add-ins
 #addin "nuget:?package=Cake.Codecov&version=0.4.0"
+#addin "nuget:?package=Cake.DocFx&version=0.9.0"
 #addin "nuget:?package=Cake.Git&version=0.19.0"
 #addin "nuget:?package=Cake.GitVersioning&version=2.2.13"
 #addin "nuget:?package=Cake.Http&version=0.5.0"
@@ -8,6 +9,7 @@
 
 // Tools
 #tool "nuget:?package=Codecov&version=1.1.0"
+#tool "nuget:?package=docfx.console&version=2.40.0"
 #tool "nuget:?package=OpenCover&version=4.6.519"
 #tool "nuget:?package=ReportGenerator&version=4.0.0-rc4"
 #tool "nuget:?package=vswhere&version=2.5.2"
@@ -42,6 +44,7 @@ Information(msBuildPath);
 
 // Paths
 var solutionFile = File("./Annex.sln");
+var docFxConfigFile = File("./docs/docfx.json");
 var testResultDirectory = artifactDirectory + Directory("TestResults");
 var testResultFileName = "TestResults.trx";
 var testResultFile = testResultDirectory + File(testResultFileName);
@@ -49,6 +52,7 @@ var testCoverageFile = testResultDirectory + File("TestCoverage.OpenCover.xml");
 var testCoverageCoberturaFile = testResultDirectory + File("TestCoverage.Cobertura.xml");
 var testCoverageReportDirectory = artifactDirectory + Directory("TestCoverageReport");
 var testCoverageReportFile = testCoverageReportDirectory + File("index.htm");
+var documentationDirectory = artifactDirectory + Directory("Documentation");
 var packageDirectory = artifactDirectory + Directory("Packages");
 var binaryDirectory = artifactDirectory + Directory("Binaries");
 
@@ -137,6 +141,14 @@ Task("LaunchTestCoverageReport")
         });
     });
 
+Task("BuildDocumentation")
+    .Does(() => {
+        DocFxMetadata(docFxConfigFile);
+        DocFxBuild(docFxConfigFile, new DocFxBuildSettings {
+            OutputPath = documentationDirectory
+        });
+    });
+
 Task("UploadTestCoverage")
     .WithCriteria(!isLocal, "Local environment")
     .WithCriteria(!string.IsNullOrEmpty(codecovToken), "Missing Codecov token")
@@ -182,6 +194,14 @@ Task("PublishTestArtifacts")
         Information($"##vso[artifact.upload containerfolder={artifactName};artifactname={artifactName}]{testResultDirectory}");
     });
 
+Task("PublishDocumentationArtifacts")
+    .WithCriteria(isAzurePipelines, "Not Azure Pipelines")
+    .IsDependentOn("BuildDocumentation")
+    .Does(() => {
+        var artifactName = "Documentation";
+        Information($"##vso[artifact.upload containerfolder={artifactName};artifactname={artifactName}]{documentationDirectory}");
+    });
+
 Task("PublishPackageArtifacts")
     .WithCriteria(isAzurePipelines, "Not Azure Pipelines")
     .WithCriteria(!isFork, "Fork")
@@ -191,13 +211,18 @@ Task("PublishPackageArtifacts")
         Information($"##vso[artifact.upload containerfolder={artifactName};artifactname={artifactName}]{packageDirectory}");
     });
 
-Task("Default")
-    .IsDependentOn("LaunchTestCoverageReport")
-    .IsDependentOn("UploadTestCoverage")
+Task("PublishAzurePipeline")
+    .WithCriteria(isAzurePipelines, "Not Azure Pipelines")
     .IsDependentOn("PublishTestResults")
     .IsDependentOn("PublishTestCoverageResults")
     .IsDependentOn("PublishTestArtifacts")
+    .IsDependentOn("PublishDocumentationArtifacts")
     .IsDependentOn("PublishPackageArtifacts");
+
+Task("Default")
+    .IsDependentOn("LaunchTestCoverageReport")
+    .IsDependentOn("UploadTestCoverage")
+    .IsDependentOn("PublishAzurePipeline");
 
 ///////////////////////////////////////////
 

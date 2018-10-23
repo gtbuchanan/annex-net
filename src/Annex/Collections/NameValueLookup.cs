@@ -17,7 +17,7 @@ namespace Annex.Collections
 
         public NameValueLookup([NotNull]NameValueCollection nvc) => Nvc = nvc;
 
-        /// <see href="https://stackoverflow.com/a/9869070/1409101">Adapted from StackOverflow</see>
+        /// <seealso href="https://stackoverflow.com/a/9869070/1409101">Adapted from StackOverflow</seealso>
         public bool Contains(string key) =>
             Nvc.Get(key) != null || Nvc.AllKeys.Contains(key);
 

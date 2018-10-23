@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,12 +32,12 @@ namespace Annex.Linq
     }
 
     /// <summary>
-    ///     Initialization helpers for <see cref="Grouping{TKey, TElement}"/>.
+    /// Initialization helpers for <see cref="Grouping{TKey, TElement}"/>.
     /// </summary>
     public static class Grouping
     {
         /// <summary>
-        ///     Creates a new instance of the <see cref="Grouping{TKey, TElement}"/> class with no values.
+        /// Create a new instance of the <see cref="Grouping{TKey, TElement}"/> class with no values.
         /// </summary>
         /// <typeparam name="TKey">The type of key for the grouping.</typeparam>
         /// <typeparam name="TElement">The type of element in the grouping.</typeparam>
@@ -46,13 +47,14 @@ namespace Annex.Linq
             new Grouping<TKey, TElement>(key, null);
 
         /// <summary>
-        ///     Creates a new instance of the <see cref="Grouping{TKey, TElement}"/> class.
+        /// Create a new instance of the <see cref="Grouping{TKey, TElement}"/> class.
         /// </summary>
         /// <typeparam name="TKey">The type of key for the grouping.</typeparam>
         /// <typeparam name="TElement">The type of element in the grouping.</typeparam>
         /// <param name="key">The key for the grouping.</param>
         /// <param name="values">The values for the grouping.</param>
         /// <returns>A grouping with the specified key and values.</returns>
+        /// <exception cref="ArgumentNullException"><paramref name="values"/> is <c>null</c>.</exception>
         public static IGrouping<TKey, TElement> Create<TKey, TElement>(
             [CanBeNull]TKey key, [NotNull]IEnumerable<TElement> values) =>
             new Grouping<TKey, TElement>(key, values);

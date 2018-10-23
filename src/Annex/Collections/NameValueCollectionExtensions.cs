@@ -6,7 +6,7 @@ using System.Linq;
 namespace Annex.Collections
 {
     /// <summary>
-    ///     Extensions for <see cref="NameValueCollection"/>.
+    /// Extension methods for <see cref="NameValueCollection"/>.
     /// </summary>
     [PublicAPI]
     public static partial class NameValueCollectionExtensions

@@ -7,15 +7,15 @@ namespace Annex.Numerics
     public static partial class FloatExtensions
     {
         /// <summary>
-        ///     Returns a value indicating whether this instance and a specified <see cref="float"/>
-        ///     object represent nearly the same value. A more reliable version of <see cref="float.Equals(float)"/>.
+        /// Returns a value indicating if this instance and a specified <see cref="float"/>
+        /// object represent nearly the same value. A more reliable version of <see cref="float.Equals(float)"/>.
         /// </summary>
-        /// <param name="this">The target <see cref="float"/>.</param>
+        /// <param name="this">The source <see cref="float"/>.</param>
         /// <param name="value">The <see cref="float"/> to compare.</param>
         /// <param name="epsilon">The precision of the comparison.</param>
         /// <returns><c>true</c> if the value is nearly equal to the target, otherwise <c>false</c>.</returns>
-        /// <see href="https://stackoverflow.com/a/44355368/1409101">Adapted from StackOverflow</see>
-        /// <see href="http://csharpindepth.com/Articles/General/FloatingPoint.aspx">C# in Depth: Binary floating point and .NET</see>
+        /// <seealso href="https://stackoverflow.com/a/44355368/1409101">Adapted from StackOverflow</seealso>
+        /// <seealso href="http://csharpindepth.com/Articles/General/FloatingPoint.aspx">C# in Depth: Binary floating point and .NET</seealso>
         [Pure]
         [SuppressMessage("ReSharper", "CompareOfFloatsByEqualityOperator",
             Justification = "Purpose of method is to compare floats.")]
