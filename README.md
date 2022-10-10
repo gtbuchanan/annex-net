@@ -24,13 +24,15 @@ Useful additions to the .NET Framework and:
 
 ### Don't reinvent the wheel
 
+* [akarnokd's Reactive Extensions](https://github.com/akarnokd/reactive-extensions) - More reactive extensions
 * [AsyncEx](https://github.com/StephenCleary/AsyncEx) - A helper library for async/await
-* [Enums.NET](https://github.com/TylerBrinkley/Enums.NET) - Like `Enum`, but better ([CoreFX Proposal](https://github.com/dotnet/corefx/issues/15453))
+* [Enums.NET](https://github.com/TylerBrinkley/Enums.NET) - Like `Enum`, but better ([Rejected Runtime Proposal](https://github.com/dotnet/runtime/issues/20008))
 * [Humanizer](https://github.com/Humanizr/Humanizer) - String formatting done right
-* [Interactive Extensions](https://github.com/dotnet/reactive/tree/master/Ix.NET/Source/System.Interactive) - Familiar "Reactive Extensions" for `IEnumerable`
+* [Interactive Extensions](https://github.com/dotnet/reactive/tree/main/Ix.NET/Source/System.Interactive) - Familiar "reactive extensions" for `IEnumerable`
 * [MoreLINQ](https://github.com/morelinq/MoreLINQ) - All the LINQ you could ask for
+* [MoreRx](https://github.com/quinmars/MoreRx) - More reactive extensions
 * [NodaTime](https://github.com/nodatime/nodatime) - A better date and time API
-* [Rxx](https://github.com/RxDave/Rxx) - More Reactive Extensions _(Outdated)_
+* [Rxx](https://github.com/RxDave/Rxx) - More reactive extensions _(Outdated)_
 
 ## Contribute
 
