@@ -1,6 +1,5 @@
 # Cake
 tools/*
-!tools/packages.config
 
 # KDiff3
 *.orig

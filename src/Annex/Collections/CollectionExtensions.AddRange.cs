@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -27,8 +26,8 @@ namespace Annex.Collections
         /// <seealso href="https://stackoverflow.com/a/26360010/1409101">Adapted from StackOverflow</seealso>
         [SuppressMessage("ReSharper", "ConvertIfStatementToSwitchStatement")]
         public static void AddRange<T>(
-            [NotNull] this ICollection<T> @this,
-            [NotNull] IEnumerable<T> collection)
+            [JetBrains.Annotations.NotNull] this ICollection<T> @this,
+            [JetBrains.Annotations.NotNull] IEnumerable<T> collection)
         {
             if (@this is List<T> list)
                 list.AddRange(collection);

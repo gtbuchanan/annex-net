@@ -2,9 +2,6 @@ using Annex.Numerics;
 using EnumsNET;
 using JetBrains.Annotations;
 using System;
-#if NETSTANDARD1_4
-using System.Reflection;
-#endif
 
 namespace Annex.Reflection
 {
@@ -51,12 +48,8 @@ namespace Annex.Reflection
         {
             if (!numericClass.IsValid())
                 throw new ArgumentOutOfRangeException(nameof(numericClass), numericClass, null);
-#if NETSTANDARD1_4
-            var typeInfo = @this.GetTypeInfo();
-            var type = typeInfo.IsGenericType ? typeInfo.GetGenericTypeDefinition() : @this;
-#else
+
             var type = @this.IsGenericType ? @this.GetGenericTypeDefinition() : @this;
-#endif
             return NumericEx.TypeMap.TryGetValue(type, out var actualClass) &&
                    numericClass.HasAnyFlags(actualClass);
         }

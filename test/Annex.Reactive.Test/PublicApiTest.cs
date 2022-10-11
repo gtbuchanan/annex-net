@@ -14,7 +14,10 @@ namespace Annex.Reactive.Test
             ApiGenerator
                 .GeneratePublicApi(
                     typeof(ThisAssembly).Assembly,
-                    shouldIncludeAssemblyAttributes: false)
+                    new ApiGeneratorOptions
+                    {
+                        IncludeAssemblyAttributes = false
+                    })
                 .ShouldMatchApproved(c => c
                     .WithFilenameGenerator((_, __, fileType, extension) =>
                         $"PublicApi.{fileType}.{extension}"));

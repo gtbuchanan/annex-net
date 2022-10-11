@@ -20,10 +20,6 @@ namespace Annex.Test.Security
             Should.Throw<ArgumentNullException>(() => new CryptoRandom(null))
                 .ParamName.ShouldBe("generator");
 
-        [Test]
-        public void Constructor_DefaultUsesRNGCryptoServiceProvider() =>
-            new CryptoRandom().Generator.ShouldBeOfType<RNGCryptoServiceProvider>();
-
         [Test, AutoDomainData]
         [SuppressMessage("ReSharper", "ReturnValueOfPureMethodIsNotUsed")]
         public void Next_NegativeMaxValueThrowsArgumentOutOfRangeException(CryptoRandom sut) =>

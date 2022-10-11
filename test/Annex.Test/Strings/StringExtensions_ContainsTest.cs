@@ -1,3 +1,4 @@
+#if !NET6_0_OR_GREATER
 using Annex.Strings;
 using AutoFixture;
 using NUnit.Framework;
@@ -40,3 +41,4 @@ namespace Annex.Test.Strings
             sut.Contains(value, comparisonType);
     }
 }
+#endif

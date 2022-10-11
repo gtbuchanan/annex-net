@@ -2,12 +2,12 @@
 
   <PropertyGroup>
     <Copyright>Copyright (c) George Taylor Buchanan and Contributors</Copyright>
-    <PackageLicenseUrl>https://opensource.org/licenses/mit</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/gtbuchanan/annex-net</PackageProjectUrl>
     <Authors>George Taylor Buchanan and Contributors</Authors>
     <Owners>gtbuchanan</Owners>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/gtbuchanan/annex-net.git</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <LangVersion>latest</LangVersion>
@@ -16,7 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="JetBrains.Annotations" Version="2018.2.1" PrivateAssets="All" />
+    <PackageReference Include="JetBrains.Annotations" Version="2022.1.0" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>

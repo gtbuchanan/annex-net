@@ -10,7 +10,7 @@
       ],
       "dest": "obj/temp/api",
       "properties": {
-        "TargetFramework": "net461"
+        "TargetFramework": "net6.0"
       },
       "shouldSkipMarkup": true
     }

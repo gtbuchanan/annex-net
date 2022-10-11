@@ -14,9 +14,12 @@ namespace Annex.Test
             ApiGenerator
                 .GeneratePublicApi(
                     typeof(ThisAssembly).Assembly,
-                    shouldIncludeAssemblyAttributes: false)
+                    new ApiGeneratorOptions
+                    {
+                        IncludeAssemblyAttributes = false
+                    })
                 .ShouldMatchApproved(c => c
-                    .WithFilenameGenerator((_, __, fileType, extension) =>
+                    .WithFilenameGenerator((_, _, fileType, extension) =>
                         $"PublicApi.{fileType}.{extension}"));
     }
 }

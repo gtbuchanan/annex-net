@@ -1,7 +1,7 @@
-using JetBrains.Annotations;
 using Shouldly;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.Contracts;
 using System.Linq;
 
 namespace Annex.Reactive.Test
@@ -10,7 +10,9 @@ namespace Annex.Reactive.Test
     internal static class ShouldlyExtensions
     {
         [Pure]
-        public static void ShouldBe<T>([NotNull]this IEnumerable<T> @this, [NotNull]params T[] args) =>
+        public static void ShouldBe<T>(
+            [JetBrains.Annotations.NotNull] this IEnumerable<T> @this,
+            [JetBrains.Annotations.NotNull] params T[] args) =>
             @this.ShouldBe(args.AsEnumerable());
     }
 }

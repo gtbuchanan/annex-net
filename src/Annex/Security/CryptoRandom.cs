@@ -22,7 +22,7 @@ namespace Annex.Security
     [PublicAPI]
     public sealed class CryptoRandom : Random, IDisposable
     {
-        internal RandomNumberGenerator Generator { get; }
+        private RandomNumberGenerator Generator { get; }
 
         private byte[] Buffer { get; } = new byte[4];
 

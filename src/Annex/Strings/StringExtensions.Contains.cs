@@ -1,3 +1,4 @@
+#if !NET6_0_OR_GREATER
 using EnumsNET;
 using JetBrains.Annotations;
 using System;
@@ -31,3 +32,4 @@ namespace Annex.Strings
         }
     }
 }
+#endif
