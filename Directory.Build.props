@@ -1,22 +1,41 @@
 <Project>
 
   <PropertyGroup>
-    <Copyright>Copyright (c) George Taylor Buchanan and Contributors</Copyright>
-    <PackageProjectUrl>https://github.com/gtbuchanan/annex-net</PackageProjectUrl>
+    <AnalysisLevel>latest-all</AnalysisLevel>
     <Authors>George Taylor Buchanan and Contributors</Authors>
+    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+    <Copyright>Copyright (c) George Taylor Buchanan and Contributors</Copyright>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>enable</Nullable>
     <Owners>gtbuchanan</Owners>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/gtbuchanan/annex-net</PackageProjectUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/gtbuchanan/annex-net.git</RepositoryUrl>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <LangVersion>latest</LangVersion>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsAsErrors />
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" Version="2022.1.0" PrivateAssets="All" />
+    <PackageReference Include="Menees.Analyzers" Version="3.0.10" PrivateAssets="All" />
+    <PackageReference Include="Roslynator.Analyzers" Version="4.1.1" PrivateAssets="All" />
+    <PackageReference Include="Roslynator.Formatting.Analyzers" Version="4.1.1" PrivateAssets="All" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.435" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)Menees.Analyzers.Settings.xml" Visible="false" />
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" Visible="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="JetBrains.Annotations" />
   </ItemGroup>
 
 </Project>

@@ -1,31 +1,28 @@
-using Annex.Linq;
-using JetBrains.Annotations;
+namespace Annex.Collections;
+
 using System.Collections;
-using System.Collections.Generic;
 using System.Collections.Specialized;
-using System.Linq;
+using Annex.Linq;
 
-namespace Annex.Collections
+internal sealed class NameValueLookup : ILookup<string?, string>
 {
-    internal sealed class NameValueLookup : ILookup<string, string>
-    {
-        internal NameValueCollection Nvc { get; }
+    public NameValueLookup(NameValueCollection nvc) => this.Nvc = nvc;
 
-        public IEnumerable<string> this[string key] => Nvc.GetValuesSafe(key);
+    public int Count => this.Nvc.Count;
 
-        public int Count => Nvc.Count;
+    internal NameValueCollection Nvc { get; }
 
-        public NameValueLookup([NotNull]NameValueCollection nvc) => Nvc = nvc;
+    public IEnumerable<string> this[string? key] => this.Nvc.GetValuesSafe(key);
 
-        /// <seealso href="https://stackoverflow.com/a/9869070/1409101">Adapted from StackOverflow</seealso>
-        public bool Contains(string key) =>
-            Nvc.Get(key) != null || Nvc.AllKeys.Contains(key);
+    /// <inheritdoc />
+    /// <seealso href="https://stackoverflow.com/a/9869070/1409101">Adapted from StackOverflow</seealso>
+    public bool Contains(string? key) =>
+        this.Nvc.Get(key) != null || this.Nvc.AllKeys.Contains(key);
 
-        public IEnumerator<IGrouping<string, string>> GetEnumerator() =>
-            Nvc.AllKeys
-                .Select(key => Grouping.Create(key, Nvc.GetValuesSafe(key)))
-                .GetEnumerator();
+    public IEnumerator<IGrouping<string?, string>> GetEnumerator() =>
+        this.Nvc.AllKeys
+            .Select(key => Grouping.Create(key, this.Nvc.GetValuesSafe(key)))
+            .GetEnumerator();
 
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
-    }
+    IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
 }

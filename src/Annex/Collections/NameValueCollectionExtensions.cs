@@ -1,19 +1,15 @@
-using JetBrains.Annotations;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.Linq;
+namespace Annex.Collections;
 
-namespace Annex.Collections
+using System.Collections.Specialized;
+
+/// <summary>
+/// Extension methods for <see cref="NameValueCollection"/>.
+/// </summary>
+[PublicAPI]
+public static partial class NameValueCollectionExtensions
 {
-    /// <summary>
-    /// Extension methods for <see cref="NameValueCollection"/>.
-    /// </summary>
-    [PublicAPI]
-    public static partial class NameValueCollectionExtensions
-    {
-        [Pure, NotNull]
-        internal static IEnumerable<string> GetValuesSafe(
-            [NotNull]this NameValueCollection @this, [NotNull]string key) =>
-            @this.GetValues(key) ?? Enumerable.Empty<string>(); 
-    }
+    [Pure]
+    internal static IEnumerable<string> GetValuesSafe(
+        this NameValueCollection @this, string? key) =>
+        @this.GetValues(key) ?? Enumerable.Empty<string>();
 }

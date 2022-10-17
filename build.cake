@@ -120,9 +120,10 @@ Task("Test")
             .WithFilter("-[*]Microsoft.*")
             .WithFilter("-[*]System.*")
             .WithFilter("-[DiffEngine]*")
-            .WithFilter("-[Shouldly]*")
+            .WithFilter("-[EmptyFiles]*")
             .WithFilter("-[Microsoft.Reactive.Testing]*")
-            .WithFilter("-[NUnit3.TestAdapter]*"));
+            .WithFilter("-[NUnit3.TestAdapter]*")
+            .WithFilter("-[Shouldly]*"));
     });
 
 Task("ReportTestCoverage")

@@ -1,44 +1,59 @@
 #if !NET6_0_OR_GREATER
-using Annex.Strings;
-using AutoFixture;
-using NUnit.Framework;
-using Shouldly;
-using System;
+namespace Annex.Test.Strings;
+
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
+using Annex.Strings;
 
-namespace Annex.Test.Strings
+public sealed class StringExtensions_ContainsTest
 {
-    public sealed class StringExtensions_ContainsTest
+    [Theory]
+    [AutoDomainData]
+    public void NullThisThrowsArgumentNullException(string value) =>
+        Should.Throw<ArgumentNullException>(() => default(string?)!
+            .Contains(value, StringComparison.InvariantCultureIgnoreCase));
+
+    [Theory]
+    [AutoDomainData]
+    public void NullValueThrowsArgumentNullException(string sut) =>
+        Should.Throw<ArgumentNullException>(() => sut
+            .Contains(null!, StringComparison.InvariantCultureIgnoreCase));
+
+    [Theory]
+    [AutoDomainData]
+    public void InvalidComparisonTypeThrowsArgumentOutOfRangeException(
+        string sut, string value, Generator<int> g)
     {
-        [Test, AutoDomainData]
-        [SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
-        [SuppressMessage("ReSharper", "ReturnValueOfPureMethodIsNotUsed")]
-        public void NullThisThrowsArgumentNullException(string value) =>
-            Should.Throw<ArgumentNullException>(() => default(string).Contains(value, StringComparison.InvariantCultureIgnoreCase));
+        var stringComparison = (StringComparison)g.First(n => n > 1000);
 
-        [Test, AutoDomainData]
-        [SuppressMessage("ReSharper", "ReturnValueOfPureMethodIsNotUsed")]
-        public void NullValueThrowsArgumentNullException(string sut) =>
-            Should.Throw<ArgumentNullException>(() => sut.Contains(null, StringComparison.InvariantCultureIgnoreCase));
+        var ex = Should.Throw<ArgumentOutOfRangeException>(
+            () => sut.Contains(value, stringComparison));
 
-        [Test, AutoDomainData]
-        public void InvalidComparisonTypeThrowsArgumentOutOfRangeException(string sut, string value, Generator<int> g)
-        {
-            var stringComparison = (StringComparison)g.First(n => n > 1000);
-
-            var ex = Should.Throw<ArgumentOutOfRangeException>(() => sut.Contains(value, stringComparison));
-
-            ex.ShouldSatisfyAllConditions(
-                () => ex.ParamName.ShouldBe("comparisonType"),
-                () => ex.ActualValue.ShouldBe(stringComparison));
-        }
-
-        [TestCase("ThIs HaS sOmE CRAZY text", "has some", StringComparison.InvariantCultureIgnoreCase, ExpectedResult = true)]
-        [TestCase("ThIs HaS sOmE CRAZY text", "what?", StringComparison.InvariantCultureIgnoreCase, ExpectedResult = false)]
-        [TestCase("ThIs HaS sOmE CRAZY text", "has some", StringComparison.InvariantCulture, ExpectedResult = false)]
-        public bool Contains(string sut, string value, StringComparison comparisonType) =>
-            sut.Contains(value, comparisonType);
+        ex.ShouldSatisfyAllConditions(
+            () => ex.ParamName.ShouldBe("comparisonType"),
+            () => ex.ActualValue.ShouldBe(stringComparison));
     }
+
+    [Theory]
+    [TestCase(
+        "ThIs HaS sOmE CRAZY text",
+        "has some",
+        StringComparison.InvariantCultureIgnoreCase,
+        true)]
+    [TestCase(
+        "ThIs HaS sOmE CRAZY text",
+        "what?",
+        StringComparison.InvariantCultureIgnoreCase,
+        false)]
+    [TestCase(
+        "ThIs HaS sOmE CRAZY text",
+        "has some",
+        StringComparison.InvariantCulture,
+        false)]
+    public void Contains(
+        string sut,
+        string value,
+        StringComparison comparisonType,
+        bool expected) =>
+        sut.Contains(value, comparisonType).ShouldBe(expected);
 }
 #endif

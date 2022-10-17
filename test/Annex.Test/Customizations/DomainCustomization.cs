@@ -1,12 +1,13 @@
-using AutoFixture;
+namespace Annex.Test.Customizations;
+
 using AutoFixture.AutoNSubstitute;
 
-namespace Annex.Test.Customizations
+internal sealed class DomainCustomization : CompositeCustomization
 {
-    internal sealed class DomainCustomization : CompositeCustomization
+    public DomainCustomization()
+        : base(
+        new AutoNSubstituteCustomization { GenerateDelegates = true },
+        new NameValueCollectionCustomization())
     {
-        public DomainCustomization() : base(
-            new AutoNSubstituteCustomization { GenerateDelegates = true },
-            new NameValueCollectionCustomization()) { }
     }
 }

@@ -7,16 +7,17 @@ namespace Annex.Reactive.Linq
         public static System.IObservable<T> SwitchIfEmpty<T>(this System.IObservable<T> @this, System.IObservable<T> switchTo) { }
         public static System.IObservable<System.Collections.Generic.IDictionary<TKey, TValue>> ToDictionary<TKey, TValue>([System.Runtime.CompilerServices.TupleElementNames(new string[] {
                 "Key",
-                "Value"})] this System.IObservable<System.ValueTuple<TKey, TValue>> @this) { }
+                "Value"})] this System.IObservable<System.ValueTuple<TKey, TValue>> @this)
+            where TKey :  notnull { }
         public static System.IObservable<System.Reactive.Unit> VoidElements<T>(this System.IObservable<T> @this) { }
         public static System.IObservable<System.Reactive.Unit> VoidTerminations<T>(this System.IObservable<T> @this) { }
     }
 }
 namespace Annex.Reactive
 {
-    public static class ObservableEx
+    public static class ObservableAnnex
     {
-        public static System.IObservable<System.Reactive.Unit> Void { get; }
+        public static readonly System.IObservable<System.Reactive.Unit> Void;
         public static System.IObservable<TSource> Using<TSource, TResource>(System.Func<System.Threading.CancellationToken, System.Threading.Tasks.Task<TResource>> resourceFactory, System.Func<TResource, System.IObservable<TSource>> observableFactory)
             where TResource : System.IDisposable { }
     }

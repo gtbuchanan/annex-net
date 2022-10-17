@@ -11,243 +11,8 @@ insert_final_newline = true
 indent_style = space
 indent_size = 4
 trim_trailing_whitespace = true
-
-###############################
-# .NET Coding Conventions     #
-###############################
-# https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-code-style-settings-reference
-[*.{cs,vb}]
-
-# "This." and "Me." qualifiers
-dotnet_style_qualification_for_field = false:suggestion
-dotnet_style_qualification_for_property = false:suggestion
-dotnet_style_qualification_for_method = false:suggestion
-dotnet_style_qualification_for_event = false:suggestion
-
-# Language keywords instead of framework type names for type references
-dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
-dotnet_style_predefined_type_for_member_access = true:suggestion
-
-# Modifier preferences
-dotnet_style_require_accessibility_modifiers = for_non_interface_members:suggestion
-dotnet_style_readonly_field = true:warning
-
-# Parentheses preferences
-dotnet_style_parentheses_in_arithmetic_binary_operators = never_if_unnecessary:suggestion
-dotnet_style_parentheses_in_other_binary_operators = never_if_unnecessary:suggestion
-dotnet_style_parentheses_in_other_operators = never_if_unnecessary:warning
-dotnet_style_parentheses_in_relational_binary_operators = never_if_unnecessary:suggestion
-
-# Expression-level preferences
-dotnet_style_object_initializer = true:suggestion
-dotnet_style_collection_initializer = true:suggestion
-dotnet_style_explicit_tuple_names = true:suggestion
-dotnet_style_prefer_inferred_tuple_names = true:suggestion
-dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion
-dotnet_style_prefer_auto_properties = true:suggestion
-dotnet_style_prefer_is_null_check_over_reference_equality_method = true:suggestion
-dotnet_style_prefer_conditional_expression_over_assignment = true:suggestion
-dotnet_style_prefer_conditional_expression_over_return = true:suggestion
-
-# "Null" checking preferences
-dotnet_style_coalesce_expression = true:suggestion
-dotnet_style_null_propagation = true:suggestion
-
-# Expression-level preferences
-dotnet_style_object_initializer = true:suggestion
-dotnet_style_collection_initializer = true:suggestion
-dotnet_style_explicit_tuple_names = true:suggestion
-dotnet_style_coalesce_expression = true:suggestion
-dotnet_style_null_propagation = true:suggestion
-
-# Organize usings
-dotnet_sort_system_directives_first = false
-
-###############################
-# .NET Naming Conventions     #
-###############################
-# https://docs.microsoft.com/en-us/visualstudio/ide/editorconfig-naming-conventions
-
-# Naming Symbols
-# constant_fields - Define constant fields
-dotnet_naming_symbols.constant_fields.applicable_kinds = field
-dotnet_naming_symbols.constant_fields.required_modifiers = const
-# non_private_readonly_fields - Define public, internal and protected readonly fields
-dotnet_naming_symbols.non_private_readonly_fields.applicable_accessibilities = public, internal, protected
-dotnet_naming_symbols.non_private_readonly_fields.applicable_kinds = field
-dotnet_naming_symbols.non_private_readonly_fields.required_modifiers = readonly
-# static_readonly_fields - Define static and readonly fields
-dotnet_naming_symbols.static_readonly_fields.applicable_kinds = field
-dotnet_naming_symbols.static_readonly_fields.required_modifiers = static, readonly
-# private_readonly_fields - Define private readonly fields
-dotnet_naming_symbols.private_readonly_fields.applicable_accessibilities = private
-dotnet_naming_symbols.private_readonly_fields.applicable_kinds = field
-dotnet_naming_symbols.private_readonly_fields.required_modifiers = readonly
-# public_internal_fields - Define public and internal fields
-dotnet_naming_symbols.public_internal_fields.applicable_accessibilities = public, internal
-dotnet_naming_symbols.public_internal_fields.applicable_kinds = field
-# private_protected_fields - Define private and protected fields
-dotnet_naming_symbols.private_protected_fields.applicable_accessibilities = private, protected
-dotnet_naming_symbols.private_protected_fields.applicable_kinds = field
-# public_symbols - Define any public symbol
-dotnet_naming_symbols.public_symbols.applicable_accessibilities = public, internal, protected, protected_internal
-dotnet_naming_symbols.public_symbols.applicable_kinds = method, property, event, delegate
-# parameters - Defines any parameter
-dotnet_naming_symbols.parameters.applicable_kinds = parameter
-# non_interface_types - Defines class, struct, enum and delegate types
-dotnet_naming_symbols.non_interface_types.applicable_kinds = class, struct, enum, delegate
-# interface_types - Defines interfaces
-dotnet_naming_symbols.interface_types.applicable_kinds = interface
-
-# Naming Styles
-# camel_case - Define the camelCase style
-dotnet_naming_style.camel_case.capitalization = camel_case
-# pascal_case - Define the Pascal_case style
-dotnet_naming_style.pascal_case.capitalization = pascal_case
-# first_upper - The first character must start with an upper-case character
-dotnet_naming_style.first_upper.capitalization = first_word_upper
-# prefix_interface_interface_with_i - Interfaces must be PascalCase and the first character of an interface must be an 'I'
-dotnet_naming_style.prefix_interface_interface_with_i.capitalization = pascal_case
-dotnet_naming_style.prefix_interface_interface_with_i.required_prefix = I
-# camel_case_underscore
-dotnet_naming_style.camel_case_underscore.required_prefix = _
-dotnet_naming_style.camel_case_underscore.capitalization = camel_case
-
-# Naming Rules
-# Constant fields must be PascalCase
-dotnet_naming_rule.constant_fields_must_be_pascal_case.severity = warning
-dotnet_naming_rule.constant_fields_must_be_pascal_case.symbols = constant_fields
-dotnet_naming_rule.constant_fields_must_be_pascal_case.style = pascal_case
-# Public, internal and protected readonly fields must be PascalCase
-dotnet_naming_rule.non_private_readonly_fields_must_be_pascal_case.severity = warning
-dotnet_naming_rule.non_private_readonly_fields_must_be_pascal_case.symbols = non_private_readonly_fields
-dotnet_naming_rule.non_private_readonly_fields_must_be_pascal_case.style = pascal_case
-# Static readonly fields must be PascalCase
-dotnet_naming_rule.static_readonly_fields_must_be_pascal_case.severity = warning
-dotnet_naming_rule.static_readonly_fields_must_be_pascal_case.symbols = static_readonly_fields
-dotnet_naming_rule.static_readonly_fields_must_be_pascal_case.style = pascal_case
-# Private readonly fields must be _camelCase
-dotnet_naming_rule.private_readonly_fields_must_be_camel_case.severity = warning
-dotnet_naming_rule.private_readonly_fields_must_be_camel_case.symbols = private_readonly_fields
-dotnet_naming_rule.private_readonly_fields_must_be_camel_case.style = camel_case_underscore
-# Public and internal fields must be PascalCase
-dotnet_naming_rule.public_internal_fields_must_be_pascal_case.severity = warning
-dotnet_naming_rule.public_internal_fields_must_be_pascal_case.symbols = public_internal_fields
-dotnet_naming_rule.public_internal_fields_must_be_pascal_case.style = pascal_case
-# Private and protected fields must be _camelCase
-dotnet_naming_rule.private_protected_fields_must_be_camel_case.severity = warning
-dotnet_naming_rule.private_protected_fields_must_be_camel_case.symbols = private_protected_fields
-dotnet_naming_rule.private_protected_fields_must_be_camel_case.style = camel_case_underscore
-# Public members must be capitalized
-dotnet_naming_rule.public_members_must_be_capitalized.severity = warning
-dotnet_naming_rule.public_members_must_be_capitalized.symbols = public_symbols
-dotnet_naming_rule.public_members_must_be_capitalized.style = first_upper
-# Parameters must be camelCase
-dotnet_naming_rule.parameters_must_be_camel_case.severity = warning
-dotnet_naming_rule.parameters_must_be_camel_case.symbols = parameters
-dotnet_naming_rule.parameters_must_be_camel_case.style = camel_case
-# Class, struct, enum and delegates must be PascalCase
-dotnet_naming_rule.non_interface_types_must_be_pascal_case.severity = warning
-dotnet_naming_rule.non_interface_types_must_be_pascal_case.symbols = non_interface_types
-dotnet_naming_rule.non_interface_types_must_be_pascal_case.style = pascal_case
-# Interfaces must be PascalCase and start with an 'I'
-dotnet_naming_rule.interface_types_must_be_prefixed_with_i.severity = warning
-dotnet_naming_rule.interface_types_must_be_prefixed_with_i.symbols = interface_types
-dotnet_naming_rule.interface_types_must_be_prefixed_with_i.style = prefix_interface_interface_with_i
-
-###############################
-# C# Coding Conventions       #
-###############################
-[*.cs]
-
-# Modifier preferences
-csharp_preferred_modifier_order = public, private, protected, internal, static, extern, new, virtual, abstract, sealed, override, readonly, unsafe, volatile, async:suggestion
-
-# Implicit and explicit types
-csharp_style_var_for_built_in_types = true:suggestion
-csharp_style_var_when_type_is_apparent = true:suggestion
-csharp_style_var_elsewhere = true:suggestion
-
-# Expression-bodied members
-csharp_style_expression_bodied_methods = true:suggestion
-csharp_style_expression_bodied_constructors = when_on_single_line:suggestion
-csharp_style_expression_bodied_operators = true:suggestion
-csharp_style_expression_bodied_properties = true:suggestion
-csharp_style_expression_bodied_indexers = true:suggestion
-csharp_style_expression_bodied_accessors = true:suggestion
-
-# Pattern matching
-csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
-csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
-
-# Inlined variable declarations
-csharp_style_inlined_variable_declaration = true:suggestion
-
-# "Null" checking preferences
-csharp_style_throw_expression = true:suggestion
-csharp_style_conditional_delegate_call = true:suggestion
-
-# Code block preferences
-csharp_prefer_braces = false:suggestion
-
-# Newline options
-csharp_new_line_before_open_brace = all
-csharp_new_line_before_else = true
-csharp_new_line_before_catch = true
-csharp_new_line_before_finally = true
-csharp_new_line_before_members_in_object_initializers = true
-csharp_new_line_before_members_in_anonymous_types = true
-csharp_new_line_between_query_expression_clauses = true
-
-# Indentation preferences
-csharp_indent_block_contents = true
-csharp_indent_braces = false
-csharp_indent_case_contents = true
-csharp_indent_switch_labels = true
-csharp_indent_labels = one_less_than_current
-
-# Spacing options
-csharp_space_after_cast = false
-csharp_space_after_colon_in_inheritance_clause = true
-csharp_space_after_comma = true
-csharp_space_after_dot = false
-csharp_space_after_keywords_in_control_flow_statements = true
-csharp_space_after_semicolon_in_for_statement = true
-csharp_space_around_binary_operators = before_and_after
-csharp_space_around_declaration_statements = do_not_ignore
-csharp_space_before_colon_in_inheritance_clause = true
-csharp_space_before_comma = false
-csharp_space_before_dot = false
-csharp_space_before_open_square_brackets = false
-csharp_space_before_semicolon_in_for_statement = false
-csharp_space_between_empty_square_brackets = false
-csharp_space_between_method_call_empty_parameter_list_parentheses = false
-csharp_space_between_method_call_name_and_opening_parenthesis = false
-csharp_space_between_method_call_parameter_list_parentheses = false
-csharp_space_between_method_declaration_empty_parameter_list_parentheses = false
-csharp_space_between_method_declaration_name_and_open_parenthesis = false
-csharp_space_between_method_declaration_parameter_list_parentheses = false
-csharp_space_between_parentheses = false
-csharp_space_between_square_brackets = false
-
-# Wrapping options
-csharp_preserve_single_line_blocks = true
-csharp_preserve_single_line_statements = false
-
-###############################
-# VB Coding Conventions       #
-###############################
-[*.vb]
-
-# Modifier preferences
-visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public,Friend,NotOverridable,Overridable,MustOverride,Overloads,Overrides,MustInherit,NotInheritable,Static,Shared,Shadows,ReadOnly,WriteOnly,Dim,Const,WithEvents,Widening,Narrowing,Custom,Async:suggestion
-
-###############################
-# C++ Coding Conventions      #
-###############################
-[*.{cpp,h,in}]
-curly_bracket_next_line = true
-indent_brace_style = Allman
+# https://marketplace.visualstudio.com/items?itemName=PaulHarrington.EditorGuidelines
+guidelines = 100 1px solid 40ff0000
 
 # JSON Options
 [*.json]
@@ -278,3 +43,877 @@ indent_size = 2
 # YAML Files
 [*.{yml,yaml}]
 indent_size = 2
+
+[*.cs]
+# Configure all rules as errors by default
+# Justification: Improves code quality
+# NOTE: This does not enable rules that are marked as "disabled by default":
+# https://github.com/dotnet/roslyn-analyzers/issues/5077#issuecomment-830023545
+# https://github.com/dotnet/roslyn/issues/47046#issuecomment-678474546
+dotnet_analyzer_diagnostic.severity = error
+
+##############################################################################################
+# Built-in Code Style Analyzers                                                              #
+# https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/code-style-rule-options #
+##############################################################################################
+
+# IDE0003/IDE0009: this and Me preferences
+# Justification: Handled by StyleCop SA1101, which is more descriptive
+dotnet_style_qualification_for_field = true
+dotnet_style_qualification_for_property = true
+dotnet_style_qualification_for_method = true
+dotnet_style_qualification_for_event = true
+dotnet_naming_symbols.fields.applicable_kinds = field
+dotnet_naming_style.camel_case.capitalization = camel_case
+dotnet_naming_rule.fields_camel_case.style = camel_case
+dotnet_naming_rule.fields_camel_case.symbols = fields
+dotnet_diagnostic.IDE0003.severity = none
+dotnet_diagnostic.IDE0009.severity = none
+
+# IDE0007/IDE0008: 'var' preferences
+# Justification: Removes unnecessary code
+csharp_style_var_for_built_in_types = true
+csharp_style_var_when_type_is_apparent = true
+csharp_style_var_elsewhere = true
+dotnet_diagnostic.IDE0008.severity = none
+
+# IDE0010: Add missing cases to switch statement
+# Justification: This can cause a lot of bloat. We may consider enabling
+# this later but right now it is not needed.
+dotnet_diagnostic.IDE0010.severity = suggestion
+
+# IDE0011: Add braces
+# Justification: Handled by StyleCop SA1519, which is more descriptive
+csharp_prefer_braces = when_multiline
+dotnet_diagnostic.IDE0011.severity = none
+
+# IDE0016: Use throw expression
+# Justification: Improves readability
+csharp_style_throw_expression = true
+
+# IDE0017: Use object initializers
+# Justification: Improves readability
+dotnet_style_object_initializer = true
+
+# IDE0018: Inline variable declaration
+# Justification: Improves readability
+csharp_style_inlined_variable_declaration = true
+
+# IDE0019: Use pattern matching to avoid 'as' followed by a 'null' check
+# Justification: Improves readability
+csharp_style_pattern_matching_over_as_with_null_check = true
+
+# IDE0020/IDE0038: Use pattern matching to avoid 'is' check followed by a cast
+# Justification: Improves readability
+csharp_style_pattern_matching_over_is_with_cast_check = true
+dotnet_diagnostic.IDE0038.severity = none
+
+# IDE0021: Use expression body for constructors
+# Justification: Improves readability
+csharp_style_expression_bodied_constructors = true
+
+# IDE0022: Use expression body for methods
+# Justification: Improves readability
+csharp_style_expression_bodied_methods = true
+
+# IDE0023/IDE0024: Use expression body for operators
+# Justification: Improves readability
+csharp_style_expression_bodied_operators = true
+
+# IDE0025: Use expression body for properties
+# Justification: Improves readability
+csharp_style_expression_bodied_properties = true
+
+# IDE0026: Use expression body for indexers
+# Justification: Improves readability
+csharp_style_expression_bodied_indexers = true
+
+# IDE0027: Use expression body for accessors
+# Justification: Improves readability
+csharp_style_expression_bodied_accessors = true
+
+# IDE0028: Use collection initializers
+# Justification: Improves readability
+dotnet_style_collection_initializer = true
+
+# IDE0029/IDE0030: Use coalesce expression
+# Justification: Improves readability
+dotnet_style_coalesce_expression = true
+
+# IDE0031: Use null propagation
+# Justification: Improves readability
+dotnet_style_null_propagation = true
+
+# IDE0032: Use auto property
+# Justification: Improves readability
+dotnet_style_prefer_auto_properties = true
+
+# IDE0033: Use explicitly provided tuple name
+# Justification: Improves readability
+dotnet_style_explicit_tuple_names = true
+
+# IDE0034: Simplify 'default' expression
+# Justification: Improves readability
+csharp_prefer_simple_default_expression = true
+
+# IDE0036: Order modifiers
+# Justification: Handled by StyleCop SA1206 and we want to avoid duplicating the configuration
+dotnet_diagnostic.IDE0036.severity = none
+
+# IDE0037: Use inferred member name
+# Justification: Reduces redundancy
+dotnet_style_prefer_inferred_tuple_names = true
+dotnet_style_prefer_inferred_anonymous_type_member_names = true
+
+# IDE0039: Use local function instead of lambda
+# Justification: Improves readability
+csharp_style_pattern_local_over_anonymous_function = true
+
+# IDE0040: Add accessibility modifiers
+# Justification: Handled by StyleCop SA1400, which is more descriptive
+dotnet_style_require_accessibility_modifiers = for_non_interface_members
+dotnet_diagnostic.IDE0040.severity = none
+
+# IDE0041: Use is null check
+# Justification: Improves readability
+dotnet_style_prefer_is_null_check_over_reference_equality_method = true
+
+# IDE0042: Deconstruct variable declaration
+# Justification: Not smart enough (sometimes reduces readability)
+csharp_style_deconstructed_variable_declaration = true
+dotnet_diagnostic.IDE0042.severity = suggestion
+
+# IDE0044: Add readonly modifier
+# Justification: There is no reason not to use readonly in this instance
+dotnet_style_readonly_field = true
+
+# IDE0045: Use conditional expression for assignment
+# Justification: Improves readability in some cases but can be a little too aggressive. For example,
+# this rule might suggest a method with a dozen `if else` statements be converted to a dozen nested
+# conditional expressions (see also Roslynator RCS1238)
+dotnet_style_prefer_conditional_expression_over_assignment = true
+dotnet_diagnostic.IDE0045.severity = suggestion
+
+# IDE0046: Use conditional expression for return
+# Justification: Improves readability in some cases but can be a little too aggressive. For example,
+# this rule might suggest a method with a dozen `if` statements be converted to an expression-bodied
+# method with a dozen nested conditional expressions (see also Roslynator RCS1238)
+dotnet_style_prefer_conditional_expression_over_return = true
+dotnet_diagnostic.IDE0046.severity = suggestion
+
+# IDE0047/IDE0048: Parentheses preferences
+# Justification: Matches StyleCop SA1407, SA1408, & SA1119
+dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity # SA1407
+dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity # Not covered by StyleCop
+dotnet_style_parentheses_in_other_binary_operators = always_for_clarity # SA1408
+dotnet_style_parentheses_in_other_operators = never_if_unnecessary # SA1119
+
+# IDE0049: Use language keywords instead of framework type names for type references
+# Justification: Handled by StyleCop SA1121
+dotnet_style_predefined_type_for_locals_parameters_members = true
+dotnet_style_predefined_type_for_member_access = true
+dotnet_diagnostic.IDE0049.severity = none
+
+# IDE0053: Use expression body for lambdas
+# Justification: Improves readability
+csharp_style_expression_bodied_lambdas = true
+
+# IDE0054/IDE0074: Use compound assignment
+# Justification: Improves readability
+dotnet_style_prefer_compound_assignment = true
+
+# IDE0055: Fix formatting
+# Justification: Matches StyleCop SA1028 and SA1208
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = false
+#dotnet_style_namespace_match_folder = true
+csharp_new_line_before_else = true
+csharp_new_line_before_catch = true
+csharp_new_line_before_finally = true
+csharp_new_line_before_members_in_object_initializers = true
+csharp_new_line_before_members_in_anonymous_types = true
+csharp_new_line_between_query_expression_clauses = true
+csharp_indent_case_contents = true
+csharp_indent_switch_labels = true
+csharp_indent_block_contents = true
+csharp_indent_braces = false
+csharp_indent_case_contents_when_block = false
+csharp_space_after_cast = false
+csharp_space_after_keywords_in_control_flow_statements = true
+csharp_space_between_parentheses = false
+csharp_space_before_colon_in_inheritance_clause = true
+csharp_space_after_colon_in_inheritance_clause = true
+csharp_space_around_binary_operators = true
+csharp_space_between_method_declaration_parameter_list_parentheses = false
+csharp_space_between_method_declaration_empty_parameter_list_parentheses = false
+csharp_space_between_method_declaration_name_and_open_parenthesis = false
+csharp_space_between_method_call_parameter_list_parentheses = false
+csharp_space_between_method_call_empty_parameter_list_parentheses = false
+csharp_space_between_method_call_name_and_opening_parenthesis = false
+csharp_space_after_comma = true
+csharp_space_before_comma = false
+csharp_space_after_dot = false
+csharp_space_before_dot = false
+csharp_space_after_semicolon_in_for_statement = true
+csharp_space_before_semicolon_in_for_statement = false
+csharp_space_around_declaration_statements = false
+csharp_space_before_open_square_brackets = false
+csharp_space_between_empty_square_brackets = false
+csharp_space_between_square_brackets = false
+#csharp_preserve_single_line_statements = false
+csharp_preserve_single_line_blocks = true
+
+# IDE0056: Use index operator
+# Justification: Improves readability
+csharp_style_prefer_index_operator = true
+
+# IDE0057: Use range operator
+csharp_style_prefer_range_operator = true
+
+# IDE0058: Unused value expression statement
+# Justification: Too noisy for `*Builder` types. Reconsider when certain types may be excluded.
+# https://github.com/dotnet/roslyn/issues/47832
+dotnet_diagnostic.IDE0058.severity = suggestion
+
+# IDE0059: Remove unnecessary value assignment
+csharp_style_unused_value_assignment_preference = discard_variable
+
+# IDE0060: Remove unused parameter
+# Justification: Handled by RCS1163. Normally we would prefer the built-in rules,
+# but IDE0060 does not cover unused parameters in lambda expressions.
+# TODO: Consider re-enabling when a code fix is available since RCS1163 does not provide one.
+# We would have to write our own analyzer to handle the lambda expression case.
+# https://github.com/dotnet/roslyn/issues/49868#issuecomment-761024176
+dotnet_code_quality_unused_parameters = all
+dotnet_diagnostic.IDE0060.severity = none
+
+# IDE0061: Use expression body for local functions
+# Justification: Improves readability
+csharp_style_expression_bodied_local_functions = true
+
+# IDE0062: Make local function static
+# Justification: Improves performance
+csharp_prefer_static_local_function = true
+
+# IDE0063: Use simple 'using' statement
+# Justification: Improves readability; Reduces nesting
+csharp_prefer_simple_using_statement = true
+
+# IDE0065: 'using' directive placement
+# Justification: Handled by StyleCop SA1200, which is more descriptive
+csharp_using_directive_placement = inside_namespace
+dotnet_diagnostic.IDE0065.severity = none
+
+# IDE0066: Use switch expression
+# Justification: This can cause a lot of bloat. We may consider enabling
+# this later but right now it is not needed.
+csharp_style_prefer_switch_expression = true
+dotnet_diagnostic.IDE0066.severity = suggestion
+
+# IDE0071: Simplify interpolation
+# Justification: Improves readability
+dotnet_style_prefer_simplified_interpolation = true
+
+# IDE0072: Populate switch
+# Justification: This can cause a lot of bloat. We may consider enabling
+# this later but right now it is not needed.
+dotnet_diagnostic.IDE0072.severity = suggestion
+
+# IDE0073: The file header is missing or not located at the top of the file
+# Justification: Not required by company
+file_header_template = unset
+dotnet_diagnostic.IDE0073.severity = none
+
+# IDE0075: Simplify conditional expression
+# Justification: Improves readability
+dotnet_style_prefer_simplified_boolean_expressions = true
+
+# IDE0078: Use pattern matching
+# Justification: Improves readability
+csharp_style_prefer_pattern_matching = true
+
+# IDE0079: Remove unnecessary suppressions
+# Justification: Removes unnecessary code; Prevent false positive warnings for ReSharper suppressions
+# https://github.com/dotnet/roslyn/issues/47288
+dotnet_remove_unnecessary_suppression_exclusions = category: ReSharper
+
+# IDE0083: Use pattern matching (not operator)
+# Justification: Improves readability
+csharp_style_prefer_not_pattern = true
+
+# IDE0090: Simplify new expression
+# Justification: Removes unnecessary code
+csharp_style_implicit_object_creation_when_type_is_apparent = true
+
+# IDE0160: Convert to block scoped namespace
+# Justification: Reduced nesting
+csharp_style_namespace_declarations = file_scoped
+
+# IDE1005: Use conditional delegate call
+# Justification: Improves readability
+csharp_style_conditional_delegate_call = true
+
+##########################################################################################################
+# Built-in Code Quality Analyzers                                                                        #
+# https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/quality-rules/                      #
+# https://github.com/dotnet/roslyn-analyzers/blob/main/src/NetAnalyzers/Core/AnalyzerReleases.Shipped.md #
+##########################################################################################################
+
+# CA1002: Do not expose generic lists
+# Justification: Disabled by default
+dotnet_diagnostic.CA1002.severity = error
+
+# CA1003: Use generic event handler instances
+# Justification: Disabled by default
+dotnet_diagnostic.CA1003.severity = error
+
+# CA1005: Avoid excessive parameters on generic types
+# Justification: Disabled by default
+dotnet_diagnostic.CA1005.severity = error
+
+# CA1008: Enums should have zero value
+# Justification: Disabled by default
+dotnet_diagnostic.CA1008.severity = error
+
+# CA1012: Abstract types should not have public constructors
+# Justification: Disabled by default
+dotnet_diagnostic.CA1012.severity = error
+
+# CA1014: Mark assemblies with CLSCompliantAttribute
+# Justification: Not applicable to us
+dotnet_diagnostic.CA1014.severity = none
+
+# CA1017: Mark assemblies with ComVisibleAttribute
+# Justification: Not applicable to us
+dotnet_diagnostic.CA1017.severity = none
+
+# CA1019: Define accessors for attribute arguments
+# Justification: Triggers for arguments passed to base constructor. If the
+# argument is used in some way, I don't see a reason it needs to have an attribute.
+dotnet_diagnostic.CA1019.severity = suggestion
+
+# CA1021: Avoid out parameters
+# Justification: Disabled by default
+dotnet_diagnostic.CA1021.severity = error
+
+# CA1024: Use properties where appropriate
+# Justification: Disabled by default
+dotnet_diagnostic.CA1024.severity = error
+
+# CA1027: Mark enums with FlagsAttribute
+# Justification: Disabled by default
+dotnet_diagnostic.CA1027.severity = error
+
+# CA1028: Enum storage should be Int32
+# Justification: Disabled by default
+dotnet_diagnostic.CA1028.severity = error
+
+# CA1030: Use events where appropriate
+# Justification: Disabled by default
+dotnet_diagnostic.CA1030.severity = error
+
+# CA1031: Do not catch general exception types
+# Justification: Disabled by default
+dotnet_diagnostic.CA1031.severity = error
+
+# CA1032: Implement standard exception constructors
+# Justification: Disabled by Default
+dotnet_diagnostic.CA1032.severity = error
+
+# CA1033: Interface methods should be callable by child types
+# Justification: Disabled by default
+dotnet_diagnostic.CA1033.severity = error
+
+# CA1034: Nested types should not be visible
+# Justification: Disabled by default; Avoids proliferation of similar classes
+dotnet_diagnostic.CA1034.severity = none
+
+# CA1040: Avoid empty interfaces
+# Justification: Disabled by default
+dotnet_diagnostic.CA1040.severity = suggestion
+
+# CA1043: Use integral or string argument for indexers
+# Justification: Disabled by default
+dotnet_diagnostic.CA1043.severity = error
+
+# CA1044: Properties should not be write only
+# Justification: Disabled by default; Not a big deal
+dotnet_diagnostic.CA1044.severity = suggestion
+
+# CA1045: Do not pass types by reference
+# Justification: Disabled by default
+dotnet_diagnostic.CA1045.severity = error
+
+# CA1046: Do not overload operator equals on reference types
+# Justification: Disabled by default
+dotnet_diagnostic.CA1046.severity = none
+
+# CA1052: Static holder types should be Static or NotInheritable
+# Justification: Disabled by default
+dotnet_diagnostic.CA1052.severity = error
+
+# CA1054: URI parameters should not be strings
+# Justification: Disabled by default; Not a big deal
+dotnet_diagnostic.CA1054.severity = suggestion
+
+# CA1055: URI return values should not be strings
+# Justification: Disabled by default; Not a big deal
+dotnet_diagnostic.CA1055.severity = suggestion
+
+# CA1056: URI properties should not be strings
+# Justification: Disabled by default; Not a big deal
+dotnet_diagnostic.CA1056.severity = suggestion
+
+# CA1058: Types should not extend certain base types
+# Justification: Disabled by default
+dotnet_diagnostic.CA1058.severity = error
+
+# CA1060: Move P/Invokes to NativeMethods class
+# Justification: Disabled by default
+dotnet_diagnostic.CA1060.severity = error
+
+# CA1062: Validate arguments of public methods
+# Justification: Disabled by default; Handled by NullGuard.Fody; Expensive analysis
+dotnet_diagnostic.CA1062.severity = none
+
+# CA1063: Implement IDisposable correctly
+# Justification: Disabled by default
+dotnet_diagnostic.CA1063.severity = error
+
+# CA1064: Exceptions should be public
+# Justification: Disabled by default
+dotnet_diagnostic.CA1064.severity = error
+
+# CA1065: Do not raise exceptions in unexpected locations
+# Justification: Disabled by default
+dotnet_diagnostic.CA1065.severity = error
+
+# CA1066: Implement IEquatable when overriding equals
+# Justification: Disabled by default
+dotnet_diagnostic.CA1066.severity = error
+
+# CA1303: Do not pass literals as localized parameters
+# Justification: Disabled by default; Expensive analysis
+dotnet_diagnostic.CA1303.severity = none
+
+# CA1307: Specify StringComparison for clarity
+# Justification: Disabled by default
+dotnet_diagnostic.CA1307.severity = none
+
+# CA1308: Normalize strings to uppercase
+# Justification: Disabled by default
+dotnet_diagnostic.CA1308.severity = suggestion
+
+# CA1501: Avoid excessive inheritence
+# Justification: Disabled by default
+dotnet_diagnostic.CA1501.severity = error
+
+# CA1502: Avoid excessive complexity
+# Justification: Disabled by default
+dotnet_diagnostic.CA1502.severity = error
+
+# CA1505: Avoid unmaintainable code
+# Justification: Disabled by default
+dotnet_diagnostic.CA1505.severity = error
+
+# CA1506: Avoid excessive class coupling
+# Justification: Disabled by default
+dotnet_diagnostic.CA1506.severity = error
+
+# CA1508: Avoid dead conditional code
+# Justification: Disabled by default: Expensive analysis
+dotnet_diagnostic.CA1508.severity = none
+
+# CA1509: Invalid entry in code metrics configuration file
+# Justification: Disabled by default
+dotnet_diagnostic.CA1509.severity = error
+
+# CA1700: Do not name enum values 'Reserved'
+# Justification: Disabled by default
+dotnet_diagnostic.CA1700.severity = error
+
+# CA1713: Events should not have before or after prefix
+# Justification: Disabled by default
+dotnet_diagnostic.CA1713.severity = error
+
+# CA1721: Property names should not match get methods
+# Justification: Disabled by default
+dotnet_diagnostic.CA1721.severity = error
+
+# CA1724: Type names should not match namespaces
+# Justification: Disabled by default
+dotnet_diagnostic.CA1724.severity = error
+
+# CA1801: Review unused parameters
+# Justification: Disabled by default; Deprecated in favor of IDE0060
+dotnet_diagnostic.CA1801.severity = none
+
+# CA1802: Use Literals Where appropriate
+# Justification: Disabled by default
+dotnet_diagnostic.CA1802.severity = error
+
+# CA1810: Initialize reference type static fields inline
+# Justification: Disabled by default
+dotnet_diagnostic.CA1810.severity = error
+
+# CA1812: Avoid uninstantiated internal classes
+# Justification: Disabled by default; InternalsVisibleToAttribute is used for every assembly so this
+# rule would not apply; False positives for implicit use via dependency injection
+dotnet_diagnostic.CA1812.severity = none
+
+# CA1813: Avoid unsealed attributes
+# Justification: Disabled by default
+dotnet_diagnostic.CA1813.severity = error
+
+# CA1814: Prefer jagged arrays over multidimensional
+# Justification: Disabled by default
+dotnet_diagnostic.CA1814.severity = error
+
+# CA1815: Override equals and operator equals on value types
+# Justification: Disabled by default
+dotnet_diagnostic.CA1815.severity = error
+
+# CA1819: Properties should not return arrays
+# Justification: Disabled by default; False positives for data transfer objects
+dotnet_diagnostic.CA1819.severity = suggestion
+
+# CA1820: Test for empty strings using string length
+# Justification: Disabled by default
+dotnet_diagnostic.CA1820.severity = error
+
+# CA1823: Avoid unused private fields
+# Justification: Disabled by default
+dotnet_diagnostic.CA1823.severity = error
+
+# TODO: Consider only reducing severity for mobile projects
+# CA2000: Dispose objects before losing scope
+# Justification: Not all disposable objects require disposal (e.g. some Observable subscriptions);
+# Potentially expensive analysis
+dotnet_diagnostic.CA2000.severity = suggestion
+
+# CA2002: Do not lock on objects with weak identity
+# Justification: Disabled by default
+dotnet_diagnostic.CA2002.severity = error
+
+# TODO: Consider enabling for libraries only
+# CA2007: Do not directly await a Task
+# Justification: Disabled by default (see also Roslynator RCS1090)
+dotnet_diagnostic.CA2007.severity = none
+
+# TODO: Consider enabling for libraries only
+# CA2008: Do not create tasks without passing a TaskScheduler
+# Justification: Disabled by default (see also VSTHRD105)
+dotnet_diagnostic.CA2008.severity = none
+
+# CA2100: Review SQL queries for security vulnerabilities
+# Justification: Disabled by default; Only really applicable to Ewn.FluentDb
+dotnet_diagnostic.CA2100.severity = error
+
+# CA2109: Review visible event handlers
+# Justification: Disabled by default; Out of scope for our work
+dotnet_diagnostic.CA2109.severity = none
+
+# CA2119: Seal methods that satisfy private interfaces
+# Justification: Disabled by default; Unnecessary
+dotnet_diagnostic.CA2119.severity = none
+
+# CA2153: Avoid handling Corrupted State exceptions
+# Justification: Disabled by default
+dotnet_diagnostic.CA2153.severity = error
+
+# CA2201: Do not raise reserved exception types
+# Justification: We may rethrow `Exception` to add context to caught exceptions. However,
+# we should prefer adding information to `Exception.Data` instead.
+dotnet_diagnostic.CA2201.severity = suggestion
+
+# CA2207: Initialize value type static fields inline
+# Justification: Disabled by default
+dotnet_diagnostic.CA2207.severity = error
+
+# TODO: Consider only reducing severity for mobile projects
+# CA2213: Disposable fields should be disposed
+# Justification: Disabled by default; Not all disposable objects require disposal (e.g. some
+# Observable subscriptions); Potentially expensive analysis
+dotnet_diagnostic.CA2213.severity = suggestion
+
+# CA2214: Do not call overridable methods in constructors
+# Justification: Disabled by default
+dotnet_diagnostic.CA2214.severity = error
+
+# CA2216: Disposable types should declare finalizer
+# Justification: Disabled by default
+dotnet_diagnostic.CA2216.severity = error
+
+# CA2217: Do not mark enums with FlagsAttribute
+# Justification: Disabled by default
+dotnet_diagnostic.CA2217.severity = error
+
+# CA2225: Operator overloads have named alternates
+# Justification: Disabled by default; Out of scope for our work
+dotnet_diagnostic.CA2225.severity = none
+
+# CA2226: Operators should have symmetrical overloads
+# Justification: Disabled by default; Not always desirable
+dotnet_diagnostic.CA2226.severity = suggestion
+
+# CA2227: Collection properties should be read only
+# Justification: Disabled by default; False positives for data transfer objects
+dotnet_diagnostic.CA2227.severity = suggestion
+
+# CA2234: Pass System.Uri objects instead of strings
+# Justification: Disabled by default; Not a big deal
+dotnet_diagnostic.CA2234.severity = suggestion
+
+# CA2235: Mark all non-serializable fields
+# Justification: Disabled by default
+dotnet_diagnostic.CA2235.severity = error
+
+# CA2237: Mark ISerializable types with SerializableAttribute
+# Justification: Disabled by default
+dotnet_diagnostic.CA2237.severity = error
+
+# CA2243: Attribute string literals should parse correctly
+# Justification: Disabled by default
+dotnet_diagnostic.CA2243.severity = error
+
+# TODO: Review CA2300-CA3012 as they might be performance intensive
+
+# TODO: Review CA5358-CA5403 as they might not be applicable to us
+
+########################################################
+# StyleCop Analyzers                                   #
+# https://github.com/DotNetAnalyzers/StyleCopAnalyzers #
+########################################################
+
+# SA1028: Code should not contain trailing whitespace
+# This is handled by IDE0055 but that rule can't be disabled because it covers many other
+# formatting rules. This rule is intentionally left enabled because it is more descriptive.
+
+# SA1134: Each attribute should be placed on its own line of code
+# Justification: Property accessors are included in this and it greatly mucks up the code
+# https://github.com/DotNetAnalyzers/StyleCopAnalyzers/issues/1938
+dotnet_diagnostic.SA1134.severity = suggestion
+
+# SA1135: Using directives must be qualified
+# Justification: Conflicts with IDE0001, which is more beneficial than this rule.
+# There also doesn't appear to be a way to disable IDE0001 for "inside namespace" only.
+dotnet_diagnostic.SA1135.severity = none
+
+# SA1408: Conditional expressions should declare precedence
+# This is handled by IDE0048 but that rule can't be disabled because it covers a few other
+# parentheses rules that StyleCop doesn't. This rule is intentionally left enabled because
+# it is more descriptive in regards to reasoning.
+
+# SA1503: Braces should not be omitted
+# Justification: This rule is too verbose for things like argument error handling and returns.
+# Multi-line statements are covered by SA1137 and SA1519 to prevent the bugs addressed by this.
+# Reconsider when options are added:
+# https://github.com/DotNetAnalyzers/StyleCopAnalyzers/issues/2252
+dotnet_diagnostic.SA1503.severity = none
+
+# SA1633: File should have header
+# Justification: Not required by our company
+dotnet_diagnostic.SA1633.severity = none
+
+############################################
+# Roslynator Analyzers                     #
+# https://github.com/JosefPihrt/Roslynator #
+############################################
+
+#dotnet_analyzer_diagnostic.category-Roslynator.severity = error
+
+# RCS0006: Add empty line before using directive list
+# Justification: Disabled by default; Consistency
+dotnet_diagnostics.RCS0006.severity = error
+
+# RCS0025: Put full access on its own line
+# Justification: Disabled by default; Improves readability
+dotnet_diagnostics.RCS0025.severity = error
+
+# RCS0027: Place new line after/before binary operator
+# Justification: Disabled by default; Consistency
+roslynator_binary_operator_new_line = after
+dotnet_diagnostic.RCS0027.severity = error
+
+# RCS0028: Place new line after/before '?:' operator
+# Justification: Disabled by default; Consistency
+roslynator_condition_operator_new_line = before
+dotnet_diagnostic.RCS0028.severity = error
+
+# RCS0032: Place new line after/before arrow token
+# Justification: Disabled by default; Consistency
+roslynator_arrow_token_new_line = after
+dotnet_diagnostic.RCS0032.severity = error
+
+# RCS0033: Add new line before statement
+# Justification: Disabled by default; Improves readability
+dotnet_diagnostic.RCS0033.severity = error
+
+# RCS0034: Put type parameter constraint on its own line
+# Justification: Disabled by default; Improves readability
+dotnet_diagnostic.RCS0034.severity = error
+
+# RCS0038: Remove blank line between using directives with same root namespace
+# Justification: Disabled by default; Removes unnecessary code
+dotnet_diagnostic.RCS0038.severity = error
+
+# RCS0041: Remove new line between 'if' keyword and 'else' keyword
+# Justification: Disabled by default; Consistency
+dotnet_diagnostic.RCS0041.severity = error
+
+# RCS0052: Place new line after/before equals token
+# Justification: Disabled by default; Consistency
+roslynator_equals_token_new_line = after
+dotnet_diagnostic.RCS0052.severity = error
+
+# RCS0054: Fix formatting of a call chain
+# Justification: Disabled by default; Improves readability
+dotnet_diagnostic.RCS0054.severity = error
+
+# RCS0055: Fix formatting of a binary expression chain
+# Justification: Disabled by default; Consistency
+dotnet_diagnostic.RCS0055.severity = error
+
+# RCS0056: A line is too long
+# Justification: Disabled by default; 80 is the historical recommendation due to punch cards but
+# also has some basis in "reading ergonomics" (e.g. typography). 100 is chosen as a compromise
+# between those coding full screen on larger monitors and those that aren't.
+roslynator_max_line_length = 100
+dotnet_diagnostic.RCS0056.severity = error
+
+# RCS1001: Add braces to if statement (when expression spans over multiple lines)
+# Justification: Handled by StyleCop SA1519, which is more descriptive
+dotnet_diagnostic.RCS1001.severity = none
+
+# RCS1037: Remove trailing white-space
+# Justification: Handled by IDE0055 & SA1028
+dotnet_diagnostic.RCS1037.severity = none
+
+# RCS1038: Remove empty statment
+# Justification: Handled by SA1106, which is more descriptive
+dotnet_diagnostic.RCS1038.severity = none
+
+# TODO: Consider enabling for libraries only
+# RCS1090: Add/remove 'ConfigureAwait(false)' call
+# Justification: Disabled by default; NuGet packages should always set this (see also CA2007)
+dotnet_diagnostic.RCS1090.severity = none
+
+# TODO: Only enable for build projects
+# RCS1110: Declare type inside namespace
+# Justification: There are situations where it is valid to not use a namespace.
+# dotnet_diagnostic.RCS1110.severity = suggestion
+
+# RCS1123: Add parentheses when necessary
+# Justification: Handled by IDE0048 & SA1408
+dotnet_diagnostic.RCS1123.severity = none
+
+# RCS1158: Static member in generic type should use a type parameter
+# Justification: Handled by CA1000; Triggers incorrectly for static fields anyway
+dotnet_diagnostic.RCS1158.severity = none
+
+# RCS1161: Enum should declare explicit values
+# Justification: Unnecessary unless used as flags or serialized as numeric (not recommended)
+dotnet_diagnostic.RCS1161.severity = none
+
+# RCS1165: Unconstrained type parameter checked for null
+# Justification: Unnecessary; Not smart enough to detect explicitly nullable type parameters (e.g. `T?`)
+# https://github.com/JosefPihrt/Roslynator/issues/384
+dotnet_diagnostic.RCS1165.severity = none
+
+# RCS1169: Make field read-only
+# Justification: Handled by IDE0044
+dotnet_diagnostic.RCS1169.severity = none
+
+# RCS1174: Remove redundant async/await
+# Justification: Disabled by default; Removes unnecessary code
+# See https://blog.stephencleary.com/2016/12/eliding-async-await.html regarding pass-through
+# TODO: Convert to error when `using` declaration bug is fixed:
+# https://github.com/JosefPihrt/Roslynator/issues/951
+dotnet_diagnostic.RCS1174.severity = suggestion
+
+# RCS1192: Unnecessary usage of verbatim string literal
+# Justification: We use verbatim strings to tell ReSharper the string
+# should not be analyzed for spelling errors.
+dotnet_diagnostic.RCS1192.severity = none
+
+# RCS1207: Use anonymous function or method group
+# Justification: Disabled by default; Improves readability
+roslynator_use_anonymous_function_or_method_group = method_group
+dotnet_diagnostic.RCS1207.severity = error
+
+# RCS1237: Use bit shift operator
+# Justification: Deprecated. Replaced by RCS1254
+dotnet_diagnostic.RCS1237.severity = none
+
+# RCS1254: Normalize format of enum flag value
+# Justification: Consistency
+roslynator_enum_flag_value_style = decimal_number
+
+#######################################
+# Menees Analyzers                    #
+# https://github.com/menees/Analyzers #
+#######################################
+
+# MEN002: Line is too long
+# Justification: Handled by Roslynator RCS0056 with a code fix;
+# This one handles XML comments whereas RCS0056 does not. We may
+# consider switching back at some point for that benefit.
+dotnet_diagnostic.MEN002.severity = none
+
+# MEN007: Use a single return
+# Justification: We adhere to the "fail fast" rule
+# https://www.martinfowler.com/ieeeSoftware/failFast.pdf
+dotnet_diagnostic.MEN007.severity = none
+
+# MEN012: Flags should be powers of two
+# Justification: Handled by Roslynator RCS1191/RCS1254
+dotnet_diagnostic.MEN012.severity = none
+
+# MEN013: Use UTC time
+# Justification: We already use local time extensively
+dotnet_diagnostic.MEN013.severity = none
+
+####################################################################################
+# JetBrains ReSharper                                                              #
+# https://www.jetbrains.com/help/resharper/Reference__Code_Inspections_CSHARP.html #
+####################################################################################
+# The following settings are maintained in ReSharper.DotSettings because they don't
+# support .editorconfig:
+#
+# Excluded file list
+# - Setting: /Default/CodeInspection/ExcludedFiles
+#
+# Abbreviation list
+# - Setting: /Default/CodeStyle/Naming/CSharpNaming/Abbreviations
+# - Setting: /Default/CodeStyle/Naming/XamlNaming/Abbreviations
+#
+# Todo pattern list
+# - Setting: /Default/PatternsAndTemplates/Todo/TodoPatterns
+#
+# Dictionary word list
+# - Setting: /Default/UserDictionary/Words
+#
+# Don't check spelling for verbatim strings
+# - Setting: /Default/ReSpeller/DontCheckVerbatimStrings
+# - Justification: Verbatim strings are often used for code or other codified values
+#   so we choose to skip spelling checks. It is also cleaner than using disable comments.
+# - Bug: You must use @$ instead of $@ for an interpolated verbatim string to be recognized
+#   https://youtrack.jetbrains.com/issue/RSRP-471861/ReSharper-reports-typo-in-literal-string-with-interpolation
+####################################################################################
+
+# Remove redundant parentheses
+# Justification: Handled by IDE0047 and StyleCop SA1119
+resharper_arrange_redundant_parentheses_highlighting = none
+
+# Use preferred style for trailing comma before new line in multiline lists
+# Justification: Matches StyleCop SA1413
+resharper_trailing_comma_in_multiline_lists = true
+
+# Redundant name qualifier
+# Justification: Conflicts with StyleCop SA1101, which is more beneficial than this rule.
+resharper_redundant_name_qualifier_highlighting = none
+
+# XML line length
+# Justification: Matches overall max line length (see also Roslynator RCS0056)
+resharper_xmldoc_max_line_length = 100
+resharper_xml_max_line_length = 100

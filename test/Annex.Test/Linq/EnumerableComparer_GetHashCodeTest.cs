@@ -1,29 +1,46 @@
+namespace Annex.Test.Linq;
+
+using System.Collections;
 using Annex.Linq;
-using NUnit.Framework;
-using Shouldly;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 
-namespace Annex.Test.Linq
+public sealed class EnumerableComparer_GetHashCodeTest
 {
-    public sealed class EnumerableComparer_GetHashCodeTest
-    {
-        [Test]
-        [SuppressMessage("ReSharper", "ReturnValueOfPureMethodIsNotUsed")]
-        [SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
-        public void NullObjThrowsArgumentNullException() =>
-            Should.Throw<ArgumentNullException>(() =>
-                EnumerableComparer<object>.Default.GetHashCode(null));
+    [Test]
+    public void Generic_NullObjReturnsZero() =>
+        EnumerableComparer<object>.Default.GetHashCode(null).ShouldBe(0);
 
-        [Test, AutoDomainData]
-        [SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
-        public void ItemEquality(IEnumerable<object> sut)
-        {
-            var comparer = EnumerableComparer<object>.Default;
-            comparer.GetHashCode(sut)
-                .ShouldBe(comparer.GetHashCode(sut.ToArray()));
-        }
+    [Theory]
+    [AutoDomainData]
+    public void Generic_ItemEquality(IEnumerable<object> value)
+    {
+        IEqualityComparer<IEnumerable<object>> sut = EnumerableComparer<object>.Default;
+        sut.GetHashCode(value).ShouldBe(sut.GetHashCode(value.ToArray()));
+    }
+
+    [Test]
+    public void NullObjReturnsZero()
+    {
+        IEqualityComparer sut = EnumerableComparer<object>.Default;
+
+        sut.GetHashCode(null!).ShouldBe(0);
+    }
+
+    [Theory]
+    [AutoDomainData]
+    public void InvalidTypeObjThrowsArgumentException(object value)
+    {
+        IEqualityComparer sut = EnumerableComparer<object>.Default;
+
+        Should.Throw<ArgumentException>(() => sut.GetHashCode(value))
+            .ParamName
+            .ShouldBe("obj");
+    }
+
+    [Theory]
+    [AutoDomainData]
+    public void ItemEquality(IEnumerable<object> value)
+    {
+        IEqualityComparer sut = EnumerableComparer<object>.Default;
+        sut.GetHashCode(value).ShouldBe(sut.GetHashCode(value.ToArray()));
     }
 }

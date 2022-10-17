@@ -1,8 +1,8 @@
 <Project Sdk="MSBuild.Sdk.Extras">
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0;netstandard2.0;net461;Xamarin.iOS10;MonoAndroid12.0</TargetFrameworks>
-    <PackageId>Annex.NET</PackageId>
+    <TargetFrameworks>net6.0;netstandard2.0;net462;Xamarin.iOS10;MonoAndroid12.0</TargetFrameworks>
+    <PackageId>Annex</PackageId>
     <Description>An extension of the .NET Framework.</Description>
   </PropertyGroup>
 
@@ -11,8 +11,21 @@
     <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
   </ItemGroup>
 
+  <ItemGroup Condition=" '$(TargetFramework)' != 'net6.0' ">
+    <PackageReference Include="IsExternalInit" Version="1.0.3" PrivateAssets="all" />
+    <PackageReference Include="Nullable" Version="1.3.1" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' Or '$(TargetFramework)' == 'net462'">
+    <PackageReference Include="Microsoft.Bcl.HashCode" Version="1.1.1" />
+  </ItemGroup>
+
   <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) Or $(TargetFramework.StartsWith('Xamarin.')) ">
     <Reference Include="System.Numerics" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Remove="System.Net.Http" />
   </ItemGroup>
 
 </Project>

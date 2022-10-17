@@ -1,11 +1,9 @@
-using JetBrains.Annotations;
-using System;
+namespace Annex.Uris;
 
-namespace Annex.Uris
+/// <summary>
+/// Extension methods for <see cref="Uri"/>.
+/// </summary>
+[PublicAPI]
+public static partial class UriExtensions
 {
-    /// <summary>
-    /// Extension methods for <see cref="Uri"/>.
-    /// </summary>
-    [PublicAPI]
-    public static partial class UriExtensions { }
 }

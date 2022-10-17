@@ -1,7 +1,7 @@
 <Project Sdk="MSBuild.Sdk.Extras">
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0;netstandard2.0;net461</TargetFrameworks>
+    <TargetFrameworks>net6.0;netstandard2.0;net462</TargetFrameworks>
     <Description>An extension of .NET Reactive Extensions</Description>
   </PropertyGroup>
 
@@ -11,6 +11,13 @@
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('net4')) ">
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="System.Reactive" />
+    <Using Include="System.Reactive.Concurrency" />
+    <Using Include="System.Reactive.Disposables" />
+    <Using Include="System.Reactive.Linq" />
   </ItemGroup>
 
 </Project>

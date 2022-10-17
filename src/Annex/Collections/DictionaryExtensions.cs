@@ -1,11 +1,9 @@
-using JetBrains.Annotations;
-using System.Collections.Generic;
+namespace Annex.Collections;
 
-namespace Annex.Collections
+/// <summary>
+///     Extension methods for <see cref="IDictionary{TKey, TValue}"/>.
+/// </summary>
+[PublicAPI]
+public static partial class DictionaryExtensions
 {
-    /// <summary>
-    ///     Extension methods for <see cref="IDictionary{TKey, TValue}"/>.
-    /// </summary>
-    [PublicAPI]
-    public static partial class DictionaryExtensions { }
 }
