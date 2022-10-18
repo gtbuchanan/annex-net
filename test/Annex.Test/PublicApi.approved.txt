@@ -119,6 +119,13 @@ namespace Annex.Pollution
             where T :  struct { }
     }
 }
+namespace Annex
+{
+    public static class RandomAnnex
+    {
+        public static System.Random Shared { get; }
+    }
+}
 namespace Annex.Reflection
 {
     public static class TypeExtensions
