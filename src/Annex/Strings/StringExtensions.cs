@@ -1,10 +1,9 @@
-using JetBrains.Annotations;
+namespace Annex.Strings;
 
-namespace Annex.Strings
+/// <summary>
+/// Extension methods for <see cref="string"/>.
+/// </summary>
+[PublicAPI]
+public static partial class StringExtensions
 {
-    /// <summary>
-    /// Extension methods for <see cref="string"/>.
-    /// </summary>
-    [PublicAPI]
-    public static partial class StringExtensions { }
 }

@@ -1,51 +1,47 @@
+namespace Annex.Test.Collections;
+
 using Annex.Collections;
 using AutoFixture.AutoNSubstitute;
-using NSubstitute;
-using NUnit.Framework;
-using Shouldly;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 
-namespace Annex.Test.Collections
+public sealed class CollectionExtensions_AddRangeTest
 {
-    public sealed class CollectionExtensions_AddRangeTest
+    [Theory]
+    [AutoDomainData]
+    public void NullThisThrowsArgumentNullException(IEnumerable<object> expectedValues) =>
+        Should.Throw<ArgumentNullException>(
+            () => ((ICollection<object>?)null!).AddRange(expectedValues));
+
+    [Theory]
+    [AutoDomainData]
+    public void NullCollectionThrowsArgumentNullException([Substitute] ICollection<object> sut) =>
+        Should.Throw<ArgumentNullException>(() => sut.AddRange(null!));
+
+    [Theory]
+    [AutoDomainData]
+    public void CollectionInvokesAdd(
+        [Substitute] ICollection<object> sut,
+        IEnumerable<object> expectedValues)
     {
-        [Test, AutoDomainData]
-        [SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
-        public void NullThisThrowsArgumentNullException(IEnumerable<object> expectedValues) =>
-            Should.Throw<ArgumentNullException>(() => ((ICollection<object>)null).AddRange(expectedValues));
+        var values = new List<object>();
+        sut.Add(Arg.Do<object>(values.Add));
 
-        [Test, AutoDomainData]
-        [SuppressMessage("ReSharper", "AssignNullToNotNullAttribute")]
-        public void NullCollectionThrowsArgumentNullException([Substitute]ICollection<object> sut) =>
-            Should.Throw<ArgumentNullException>(() => sut.AddRange(null));
+        sut.AddRange(expectedValues);
 
-        [Test, AutoDomainData]
-        [SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
-        public void CollectionInvokesAdd([Substitute]ICollection<object> sut, IEnumerable<object> expectedValues)
-        {
-            var values = new List<object>();
-            sut.Add(Arg.Do<object>(values.Add));
+        values.ShouldBe(expectedValues);
+    }
 
-            sut.AddRange(expectedValues);
+    [Theory]
+    [AutoDomainData]
+    public void ListInvokesAddRange(IEnumerable<object> expectedValues)
+    {
+        var values = Substitute.For<List<object>, ICollection<object>>();
+        var sut = (ICollection<object>)values;
 
-            values.ShouldBe(expectedValues);
-        }
+        sut.AddRange(expectedValues);
 
-        [Test, AutoDomainData]
-        [SuppressMessage("ReSharper", "PossibleMultipleEnumeration")]
-        public void ListInvokesAddRange(IEnumerable<object> expectedValues)
-        {
-            var values = Substitute.For<List<object>, ICollection<object>>();
-            var sut = (ICollection<object>)values;
+        // Since List.AddRange isn't virtual, this is the best we can do
+        sut.DidNotReceive().Add(Arg.Any<object>());
 
-            sut.AddRange(expectedValues);
-
-            // Since List.AddRange isn't virtual, this is the best we can do
-            sut.DidNotReceive().Add(Arg.Any<object>());
-
-            values.ToArray().ShouldBe(expectedValues);
-        }
+        values.ToArray().ShouldBe(expectedValues);
     }
 }

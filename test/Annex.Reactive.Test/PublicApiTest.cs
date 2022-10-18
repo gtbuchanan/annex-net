@@ -1,23 +1,26 @@
 #if NETFRAMEWORK // TODO: Remove when ShouldMatchApproved supports in .NET Core
-using NUnit.Framework;
-using PublicApiGenerator;
-using Shouldly;
-using System.Diagnostics.CodeAnalysis;
+namespace Annex.Reactive.Test;
 
-namespace Annex.Reactive.Test
+using System.Diagnostics.CodeAnalysis;
+using PublicApiGenerator;
+
+[ExcludeFromCodeCoverage]
+public sealed class PublicApiTest
 {
-    [ExcludeFromCodeCoverage]
-    public sealed class PublicApiTest
-    {
-        [Test]
-        public void IsApproved() =>
-            ApiGenerator
-                .GeneratePublicApi(
-                    typeof(ThisAssembly).Assembly,
-                    shouldIncludeAssemblyAttributes: false)
-                .ShouldMatchApproved(c => c
-                    .WithFilenameGenerator((_, __, fileType, extension) =>
-                        $"PublicApi.{fileType}.{extension}"));
-    }
+    [Test]
+    public void IsApproved() =>
+        typeof(ThisAssembly).Assembly
+            .GeneratePublicApi(
+                new ApiGeneratorOptions
+                {
+                    ExcludeAttributes = new[]
+                    {
+                        typeof(ExcludeFromCodeCoverageAttribute).FullName,
+                    },
+                    IncludeAssemblyAttributes = false,
+                })
+            .ShouldMatchApproved(c => c
+                .WithFilenameGenerator((_, _, fileType, extension) =>
+                    $"PublicApi.{fileType}.{extension}"));
 }
 #endif

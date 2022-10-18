@@ -1,18 +1,14 @@
-using NUnit.Framework;
-using Shouldly;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
+namespace Annex.Test;
 
-namespace Annex.Test
+using System.Diagnostics.CodeAnalysis;
+
+[ExcludeFromCodeCoverage]
+public sealed class AssemblyReferenceTest
 {
-    [ExcludeFromCodeCoverage]
-    public sealed class AssemblyReferenceTest
-    {
-        [Test]
-        public void DoesNotReferenceJetBrainsAnnotations() =>
-            typeof(ThisAssembly).Assembly
-                .GetReferencedAssemblies()
-                .Select(a => a.Name)
-                .ShouldNotContain("JetBrains.Annotations");
-    }
+    [Test]
+    public void DoesNotReferenceJetBrainsAnnotations() =>
+        typeof(ThisAssembly).Assembly
+            .GetReferencedAssemblies()
+            .Select(a => a.Name)
+            .ShouldNotContain("JetBrains.Annotations");
 }

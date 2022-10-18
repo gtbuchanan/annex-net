@@ -1,0 +1,51 @@
+[*.cs]
+
+######################
+# Built-in Analyzers #
+######################
+
+# CA1707: Identifiers should not contain underscores
+# Justification: Unit test methods may contain underscores for clarity.
+# Developers must have diligence to adhere to this rule for non-test methods.
+dotnet_diagnostic.CA1707.severity = none
+
+# CA2007: Do not directly await a Task
+# Justification: Test assemblies don't need to ConfigureAwait
+dotnet_diagnostic.CA2007.severity = none
+
+# CA2100: Review SQL queries for security vulnerabilities
+# Justification: No user input for unit tests
+dotnet_diagnostic.CA2100.severity = none
+
+# CA2201: Do not raise reserved exception types
+# Justification: This doesn't matter in unit test assemblies
+dotnet_diagnostic.CA2201.severity = none
+
+# CS1591: Missing XML comment for publicly visible type or member
+# Justification: Test assemblies don't need to be documented
+dotnet_diagnostic.CS1591.severity = none
+
+########################################################
+# StyleCop Analyzers                                   #
+# https://github.com/DotNetAnalyzers/StyleCopAnalyzers #
+########################################################
+
+# SA1600: Elements should be documented
+# Justification: Test assemblies don't need to be documented
+dotnet_diagnostic.SA1600.severity = none
+
+############################################
+# Roslynator Analyzers                     #
+# https://github.com/JosefPihrt/Roslynator #
+############################################
+
+# RCS0056: A line is too long
+# Justification: Unit test method names should be descriptive, but sometimes this means they are
+# quite long. We don't want to discourage descriptive names simply to enforce the line limit.
+# TODO: Research a way to have descriptive test titles without long method names
+dotnet_diagnostic.RCS0056.severity = suggestion
+
+# RCS1181: Convert comment to documentation comment
+# Justification: This exists to catch incorrectly formatted XML comments but we don't care as
+# much about that in test assemblies since they don't need to be documented.
+dotnet_diagnostic.RCS1181.severity = suggestion

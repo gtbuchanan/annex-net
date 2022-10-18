@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{A41BF24E-C31B-46FC-9643-37063C2C8DC5}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,6 +14,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Annex", "src\Annex\Annex.cs
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{3646AC8A-13BD-4570-B985-51E2C69AA6E8}"
 	ProjectSection(SolutionItems) = preProject
+		test\.editorconfig = test\.editorconfig
 		test\Directory.Build.props = test\Directory.Build.props
 		test\SharedAssemblyInfo.cs = test\SharedAssemblyInfo.cs
 	EndProjectSection
@@ -29,10 +30,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		build.cake = build.cake
 		build.ps1 = build.ps1
 		Directory.Build.props = Directory.Build.props
-		Directory.Build.targets = Directory.Build.targets
+		FodyWeavers.xml = FodyWeavers.xml
+		FodyWeavers.xsd = FodyWeavers.xsd
 		global.json = global.json
-		LICENSE = LICENSE
-		nuget.config = nuget.config
 		README.md = README.md
 	EndProjectSection
 EndProject

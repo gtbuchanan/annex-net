@@ -1,16 +1,12 @@
-using JetBrains.Annotations;
-using Shouldly;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
+namespace Annex.Reactive.Test;
 
-namespace Annex.Reactive.Test
+using System.Diagnostics.CodeAnalysis;
+
+[ExcludeFromCodeCoverage]
+internal static class ShouldlyExtensions
 {
-    [ExcludeFromCodeCoverage]
-    internal static class ShouldlyExtensions
-    {
-        [Pure]
-        public static void ShouldBe<T>([NotNull]this IEnumerable<T> @this, [NotNull]params T[] args) =>
-            @this.ShouldBe(args.AsEnumerable());
-    }
+    [Pure]
+    public static void ShouldBe<T>(
+        this IEnumerable<T> @this, params T[] args) =>
+        @this.ShouldBe(args.AsEnumerable());
 }

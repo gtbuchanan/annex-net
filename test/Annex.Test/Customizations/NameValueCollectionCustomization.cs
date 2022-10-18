@@ -1,14 +1,11 @@
-using Annex.Collections;
-using AutoFixture;
-using System.Collections.Generic;
-using System.Collections.Specialized;
+namespace Annex.Test.Customizations;
 
-namespace Annex.Test.Customizations
+using System.Collections.Specialized;
+using Annex.Collections;
+
+public sealed class NameValueCollectionCustomization : ICustomization
 {
-    internal sealed class NameValueCollectionCustomization : ICustomization
-    {
-        public void Customize(IFixture fixture) =>
-            fixture.Register<IDictionary<string, IEnumerable<string>>, NameValueCollection>(
-                d => d.ToNameValueCollection());
-    }
+    public void Customize(IFixture fixture) =>
+        fixture.Register<IDictionary<string, IEnumerable<string>>, NameValueCollection>(
+            d => d.ToNameValueCollection());
 }

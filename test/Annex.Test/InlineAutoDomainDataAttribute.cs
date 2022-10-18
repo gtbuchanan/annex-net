@@ -1,15 +1,17 @@
-using Annex.Test.Customizations;
-using AutoFixture;
-using AutoFixture.NUnit3;
+namespace Annex.Test;
+
 using System.Diagnostics.CodeAnalysis;
+using Annex.Test.Customizations;
+using AutoFixture.NUnit3;
 
-namespace Annex.Test
+[ExcludeFromCodeCoverage]
+internal sealed class InlineAutoDomainDataAttribute : InlineAutoDataAttribute
 {
-    [ExcludeFromCodeCoverage]
-    internal sealed class InlineAutoDomainDataAttribute : InlineAutoDataAttribute
+    public InlineAutoDomainDataAttribute(
+        params object[] arguments)
+        : base(FixtureFactory, arguments)
     {
-        public InlineAutoDomainDataAttribute(params object[] arguments) : base(FixtureFactory, arguments) { }
-
-        private static IFixture FixtureFactory() => new Fixture().Customize(new DomainCustomization());
     }
+
+    private static IFixture FixtureFactory() => new Fixture().Customize(new DomainCustomization());
 }

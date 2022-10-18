@@ -1,16 +1,13 @@
-using AutoFixture;
-using NUnit.Framework;
-using Shouldly;
+namespace Annex.Test.Customizations;
+
 using System.Collections.Specialized;
 
-namespace Annex.Test.Customizations
+public sealed class NameValueCollectionCustomizationTest
 {
-    public sealed class NameValueCollectionCustomizationTest
-    {
-        [Test]
-        public void CreatesNonEmptyNameValueCollection() =>
-            new Fixture().Customize(new NameValueCollectionCustomization())
-                .Create<NameValueCollection>()
-                .Count.ShouldBeGreaterThan(0);
-    }
+    [Test]
+    public void CreatesNonEmptyNameValueCollection() =>
+        new Fixture().Customize(new NameValueCollectionCustomization())
+            .Create<NameValueCollection>()
+            .Count
+            .ShouldBeGreaterThan(0);
 }

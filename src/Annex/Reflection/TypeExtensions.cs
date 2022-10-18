@@ -1,11 +1,9 @@
-using JetBrains.Annotations;
-using System;
+namespace Annex.Reflection;
 
-namespace Annex.Reflection
+/// <summary>
+/// Extension methods for <see cref="Type"/>.
+/// </summary>
+[PublicAPI]
+public static partial class TypeExtensions
 {
-    /// <summary>
-    /// Extension methods for <see cref="Type"/>.
-    /// </summary>
-    [PublicAPI]
-    public static partial class TypeExtensions { }
 }

@@ -1,122 +1,89 @@
-namespace Annex.Booleans.Global
-{
-    public enum BoundType
-    {
-        Include = 0,
-        Exclude = 1,
-        IncludeExclude = 2,
-        ExcludeInclude = 3,
-    }
-    public class static GlobalBooleanExtensions
-    {
-        public static bool In<TValue, TComparand>(this TValue @this, params TComparand[] comparands)
-            where TValue : TComparand { }
-        public static bool In<TValue, TComparand>(this TValue @this, System.Collections.Generic.IEqualityComparer<TComparand> comparer, params TComparand[] comparands)
-            where TValue : TComparand { }
-        public static bool InRange<T>(this T @this, T bound1, T bound2) { }
-        public static bool InRange<T>(this T @this, T bound1, T bound2, Annex.Booleans.Global.BoundType boundType) { }
-        public static bool InRange<T>(this T @this, T bound1, T bound2, System.Collections.Generic.IComparer<T> comparer) { }
-        public static bool InRange<T>(this T @this, T bound1, T bound2, Annex.Booleans.Global.BoundType boundType, System.Collections.Generic.IComparer<T> comparer) { }
-    }
-}
 namespace Annex.Collections
 {
-    public class static CollectionExtensions
+    public static class CollectionExtensions
     {
         public static void AddRange<T>(this System.Collections.Generic.ICollection<T> @this, System.Collections.Generic.IEnumerable<T> collection) { }
     }
-    public class static DictionaryExtensions
+    public static class DictionaryExtensions
     {
-        public static TValue GetValueOrDefault<TKey, TValue>(this System.Collections.Generic.IDictionary<TKey, TValue> @this, TKey key) { }
-        public static TValue GetValueOrDefault<TKey, TValue>(this System.Collections.Generic.IDictionary<TKey, TValue> @this, TKey key, TValue defaultValue) { }
+        [return: System.Diagnostics.CodeAnalysis.MaybeNull]
+        public static TValue GetValueOrDefault<TKey, TValue>(this System.Collections.Generic.IDictionary<TKey, TValue> @this, TKey key)
+            where TKey :  notnull { }
+        [return: System.Diagnostics.CodeAnalysis.MaybeNull]
+        [return: System.Diagnostics.CodeAnalysis.NotNullIfNotNull("defaultValue")]
+        public static TValue GetValueOrDefault<TKey, TValue>(this System.Collections.Generic.IDictionary<TKey, TValue> @this, TKey key, [System.Diagnostics.CodeAnalysis.AllowNull] TValue defaultValue)
+            where TKey :  notnull { }
         public static System.Collections.Specialized.NameValueCollection ToNameValueCollection(this System.Collections.Generic.IDictionary<string, System.Collections.Generic.IEnumerable<string>> @this) { }
     }
-    public class static NameValueCollectionExtensions
+    public static class NameValueCollectionExtensions
     {
-        public static System.Linq.ILookup<string, string> ToLookup(this System.Collections.Specialized.NameValueCollection @this) { }
-    }
-}
-namespace Annex.Collections.Global
-{
-    public class static GlobalCollectionExtensions
-    {
-        public static T AddTo<T, TElement>(this T @this, System.Collections.Generic.ICollection<TElement> collection)
-            where T : TElement { }
+        public static System.Linq.ILookup<string?, string> ToLookup(this System.Collections.Specialized.NameValueCollection @this) { }
     }
 }
 namespace Annex.Delegates
 {
-    public class static ActionEx
+    public static class ActionAnnex
     {
-        public static System.Action Empty { get; }
-    }
-}
-namespace Annex.Global
-{
-    public class static GlobalClassExtensions
-    {
-        public static T NullIf<T>(this T @this, T value)
-            where T :  class { }
-        public static T NullIf<T>(this T @this, T value, System.Collections.Generic.IEqualityComparer<T> comparer)
-            where T :  class { }
-    }
-    public class static GlobalStructExtensions
-    {
-        public static System.Nullable<T> NullIf<T>(this T @this, T value)
-            where T :  struct { }
-        public static System.Nullable<T> NullIf<T>(this T @this, T value, System.Collections.Generic.IEqualityComparer<T> comparer)
-            where T :  struct { }
-        public static System.Nullable<T> NullIfDefault<T>(this T @this)
-            where T :  struct { }
+        public static readonly System.Action Empty;
     }
 }
 namespace Annex.Linq
 {
-    public sealed class EnumerableComparer<T> : System.Collections.Generic.IEqualityComparer<System.Collections.Generic.IEnumerable<T>>
+    public sealed class EnumerableComparer<T> : System.Collections.Generic.IEqualityComparer<System.Collections.Generic.IEnumerable<T>>, System.Collections.IEqualityComparer
     {
         public static Annex.Linq.EnumerableComparer<T> Default { get; }
-        public bool Equals(System.Collections.Generic.IEnumerable<T> x, System.Collections.Generic.IEnumerable<T> y) { }
-        public int GetHashCode(System.Collections.Generic.IEnumerable<T> obj) { }
+        public bool Equals(System.Collections.Generic.IEnumerable<T>? x, System.Collections.Generic.IEnumerable<T>? y) { }
+        public new bool Equals(object? x, object? y) { }
+        public int GetHashCode(System.Collections.Generic.IEnumerable<T>? obj) { }
+        public int GetHashCode(object? obj) { }
     }
-    public class static EnumerableExtensions
+    public static class EnumerableExtensions
     {
         public static T RandomElement<T>(this System.Collections.Generic.IEnumerable<T> @this, System.Random random) { }
         public static System.Collections.Generic.IEnumerable<T> Shuffle<T>(this System.Collections.Generic.IEnumerable<T> @this, System.Random random) { }
         public static System.Collections.Generic.IEnumerable<T> TakeRandom<T>(this System.Collections.Generic.IEnumerable<T> @this, int count, System.Random random) { }
     }
-    public class static Grouping
+    public static class Grouping
     {
+        public static System.Linq.IGrouping<TKey, TElement> Create<TKey, TElement>(TKey key) { }
         public static System.Linq.IGrouping<TKey, TElement> Create<TKey, TElement>(TKey key, System.Collections.Generic.IEnumerable<TElement> values) { }
-        public static System.Linq.IGrouping<TKey, TElement> Empty<TKey, TElement>(TKey key = null) { }
     }
-    public class static LookupExtensions
+    public sealed class Grouping<TKey, TElement> : System.Collections.Generic.IEnumerable<TElement>, System.Collections.IEnumerable, System.Linq.IGrouping<TKey, TElement>
     {
-        public static System.Collections.Generic.IDictionary<TKey, System.Collections.Generic.IEnumerable<TElement>> ToDictionary<TKey, TElement>(this System.Linq.ILookup<TKey, TElement> @this) { }
+        public static readonly System.Linq.IGrouping<TKey?, TElement> Empty;
+        public TKey Key { get; }
+        public System.Collections.Generic.IEnumerator<TElement> GetEnumerator() { }
+    }
+    public static class LookupExtensions
+    {
+        public static System.Collections.Generic.IDictionary<TKey, System.Collections.Generic.IEnumerable<TElement>> ToDictionary<TKey, TElement>(this System.Linq.ILookup<TKey, TElement> @this)
+            where TKey :  notnull { }
     }
 }
 namespace Annex.Numerics
 {
-    public class static DoubleEx
+    public static class DoubleAnnex
     {
         public const double MinNormal = 2.2250738585072014E-308D;
     }
-    public class static DoubleExtensions
+    public static class DoubleExtensions
     {
         public static bool NearlyEquals(this double @this, double value, double epsilon) { }
         public static string ToExactString(this double @this) { }
     }
-    public class static FloatEx
+    public static class FloatAnnex
     {
         public const float MinNormal = 1.175494E-38F;
     }
-    public class static FloatExtensions
+    public static class FloatExtensions
     {
         public static bool NearlyEquals(this float @this, float value, double epsilon) { }
         public static string ToExactString(this float @this) { }
     }
-    [System.FlagsAttribute()]
-    public enum NumericClass : byte
+    [System.Flags]
+    public enum NumericClass
     {
+        None = 0,
         Integral = 1,
         FloatingPoint = 2,
         Complex = 4,
@@ -124,9 +91,37 @@ namespace Annex.Numerics
         All = 15,
     }
 }
+namespace Annex.Pollution
+{
+    public static class ClassExtensions
+    {
+        public static T? NullIf<T>(this T @this, T value)
+            where T :  class { }
+        public static T? NullIf<T>(this T @this, T value, System.Collections.Generic.IEqualityComparer<T> comparer)
+            where T :  class { }
+    }
+    public static class Extensions
+    {
+        public static T AddTo<T, TElement>(this T @this, System.Collections.Generic.ICollection<TElement> collection)
+            where T :  notnull, TElement { }
+        public static bool In<TValue, TComparand>(this TValue @this, params TComparand[] comparands)
+            where TValue :  notnull, TComparand { }
+        public static bool In<TValue, TComparand>(this TValue @this, System.Collections.Generic.IEqualityComparer<TComparand> comparer, params TComparand[] comparands)
+            where TValue : TComparand { }
+    }
+    public static class StructExtensions
+    {
+        public static T? NullIf<T>(this T @this, T value)
+            where T :  struct { }
+        public static T? NullIf<T>(this T @this, T value, System.Collections.Generic.IEqualityComparer<T> comparer)
+            where T :  struct { }
+        public static T? NullIfDefault<T>(this T @this)
+            where T :  struct { }
+    }
+}
 namespace Annex.Reflection
 {
-    public class static TypeExtensions
+    public static class TypeExtensions
     {
         public static bool IsNumeric(this System.Type @this) { }
         public static bool IsNumeric(this System.Type @this, Annex.Numerics.NumericClass numericClass) { }
@@ -149,23 +144,23 @@ namespace Annex.Security
 }
 namespace Annex.Strings
 {
-    public class static StringExtensions
+    public static class StringExtensions
     {
         public static bool Contains(this string @this, string value, System.StringComparison comparisonType) { }
-        public static string NullIfEmpty(this string @this) { }
-        public static string NullIfWhiteSpace(this string @this) { }
+        public static string? NullIfEmpty(this string @this) { }
+        public static string? NullIfWhiteSpace(this string @this) { }
     }
 }
 namespace Annex.Threading
 {
-    public class static CancellationTokenEx
+    public static class CancellationTokenAnnex
     {
         public static System.Threading.CancellationToken Canceled { get; }
     }
 }
-namespace Annex.Time.Global
+namespace Annex.Time.Pollution
 {
-    public class static GlobalDateTimeExtensions
+    public static class DateTimeExtensions
     {
         public static System.DateTime April(this int day, int year) { }
         public static System.DateTime August(this int day, int year) { }
@@ -180,7 +175,7 @@ namespace Annex.Time.Global
         public static System.DateTime October(this int day, int year) { }
         public static System.DateTime September(this int day, int year) { }
     }
-    public class static GlobalTimeSpanExtensions
+    public static class TimeSpanExtensions
     {
         public static System.TimeSpan Days(this int days) { }
         public static System.TimeSpan Hours(this int hours) { }
@@ -192,7 +187,7 @@ namespace Annex.Time.Global
 }
 namespace Annex.Uris
 {
-    public class static UriExtensions
+    public static class UriExtensions
     {
         public static System.Linq.ILookup<string, string> ParseQueryString(this System.Uri @this) { }
     }
