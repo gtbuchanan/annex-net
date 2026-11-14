@@ -79,7 +79,9 @@ public sealed record Interval<T> : IFormattable
         IntervalClassification.Empty => false,
         IntervalClassification.Unbounded => true,
         IntervalClassification.Degenerate =>
-            this.LeftEndpoint.Contains(value, this.Comparer),
+            this.Comparer.Compare(
+                value,
+                ((LeftIntervalEndpoint<T>.Bounded)this.LeftEndpoint).Value) == 0,
         _ => this.LeftEndpoint.Contains(value, this.Comparer) &&
             this.RightEndpoint.Contains(value, this.Comparer),
     };

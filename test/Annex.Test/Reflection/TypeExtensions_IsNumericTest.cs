@@ -25,12 +25,12 @@ public sealed class TypeExtensions_IsNumericTest
             .Select(kvp => new object?[] { kvp.Key, kvp.Value, true })
             .Concat(NumericAnnex.TypeMap
                 .SelectMany(kvp => Enums // Numerics wrong class
-                    .GetValues<NumericClass>(EnumMemberSelection.Flags)
+                    .GetValues<NumericTypeOption>(EnumMemberSelection.Flags)
                     .Where(nc => nc != kvp.Value)
                     .Select(nc => (kvp.Key, nc)))
                 .Concat(// Non-numerics
                     from t in NonNumericTestTypes
-                    from v in Enums.GetValues<NumericClass>()
+                    from v in Enums.GetValues<NumericTypeOption>()
                     select (t, v))
                 .Select(t => new object?[] { t.Item1, t.Item2, false }))
             .ToArray();
@@ -43,32 +43,32 @@ public sealed class TypeExtensions_IsNumericTest
 
     [Theory]
     [AutoDomainData]
-    public void NullThisThrowsArgumentNullException(NumericClass numericClass) =>
-        Should.Throw<ArgumentNullException>(() => default(Type?)!.IsNumeric(numericClass))
+    public void NullThisThrowsArgumentNullException(NumericTypeOption option) =>
+        Should.Throw<ArgumentNullException>(() => default(Type?)!.IsNumeric(option))
             .ParamName
             .ShouldBe("this");
 
     [Test]
-    public void InvalidNumericClassThrowsArgumentOutOfRangeException()
+    public void InvalidOptionThrowsArgumentOutOfRangeException()
     {
-        const NumericClass numericClass = (NumericClass)byte.MaxValue;
+        const NumericTypeOption option = (NumericTypeOption)byte.MaxValue;
 
         var ex = Should.Throw<ArgumentOutOfRangeException>(() =>
-            typeof(object).IsNumeric(numericClass));
+            typeof(object).IsNumeric(option));
 
         ex.ShouldSatisfyAllConditions(
-            () => ex.ParamName.ShouldBe("numericClass"),
-            () => ex.ActualValue.ShouldBe(numericClass));
+            () => ex.ParamName.ShouldBe("option"),
+            () => ex.ActualValue.ShouldBe(option));
     }
 
     [Theory]
     [TestCaseSource(nameof(DefaultCases))]
-    public void DefaultsToAllNumericClasses(Type type, bool expected) =>
+    public void DefaultsToAllOptions(Type type, bool expected) =>
         type.IsNumeric().ShouldBe(expected);
 
     [Theory]
     [TestCaseSource(nameof(ClassCases))]
     public void ReturnsExpectedResult(
-        Type type, NumericClass numericClass, bool expected) =>
-        type.IsNumeric(numericClass).ShouldBe(expected);
+        Type type, NumericTypeOption option, bool expected) =>
+        type.IsNumeric(option).ShouldBe(expected);
 }

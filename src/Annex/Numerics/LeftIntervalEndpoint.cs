@@ -36,7 +36,7 @@ public static class LeftIntervalEndpoint
     /// <exception cref="ArgumentException">
     /// <paramref name="value"/> is NaN or positive infinity.
     /// </exception>
-    public static LeftIntervalEndpoint<float> FromFloat(float? value, bool include)
+    public static LeftIntervalEndpoint<float> FromSingle(float? value, bool include)
     {
         if (value == null)
             return LeftIntervalEndpoint<float>.Unbounded;
@@ -57,8 +57,8 @@ public static class LeftIntervalEndpoint
     /// <exception cref="ArgumentException">
     /// <paramref name="value"/> is NaN or positive infinity.
     /// </exception>
-    public static LeftIntervalEndpoint<float> FromFloat(float? value) =>
-        FromFloat(value, true);
+    public static LeftIntervalEndpoint<float> FromSingle(float? value) =>
+        FromSingle(value, true);
 
     /// <summary>
     /// Creates a left endpoint from the specified <see cref="double"/>.

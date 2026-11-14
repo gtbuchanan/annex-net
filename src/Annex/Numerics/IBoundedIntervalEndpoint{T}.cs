@@ -4,7 +4,8 @@ namespace Annex.Numerics;
 /// Represents a bounded endpoint for an interval.
 /// </summary>
 /// <typeparam name="T">The type of endpoint value.</typeparam>
-internal interface IBoundedIntervalEndpoint<T>
+[PublicAPI]
+public interface IBoundedIntervalEndpoint<T> : IIntervalEndpoint<T>
 {
     /// <summary>
     /// Gets the endpoint value.

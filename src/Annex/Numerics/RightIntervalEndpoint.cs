@@ -36,7 +36,7 @@ public static class RightIntervalEndpoint
     /// <exception cref="ArgumentException">
     /// <paramref name="value"/> is NaN or negative infinity.
     /// </exception>
-    public static RightIntervalEndpoint<float> FromFloat(float? value, bool include)
+    public static RightIntervalEndpoint<float> FromSingle(float? value, bool include)
     {
         if (value == null)
             return RightIntervalEndpoint<float>.Unbounded;
@@ -57,8 +57,8 @@ public static class RightIntervalEndpoint
     /// <exception cref="ArgumentException">
     /// <paramref name="value"/> is NaN or negative infinity.
     /// </exception>
-    public static RightIntervalEndpoint<float> FromFloat(float value) =>
-        FromFloat(value, true);
+    public static RightIntervalEndpoint<float> FromSingle(float? value) =>
+        FromSingle(value, true);
 
     /// <summary>
     /// Creates a right endpoint from the specified <see cref="double"/>.
@@ -72,15 +72,17 @@ public static class RightIntervalEndpoint
     /// <exception cref="ArgumentException">
     /// <paramref name="value"/> is NaN or negative infinity.
     /// </exception>
-    public static RightIntervalEndpoint<double> FromDouble(double value, bool include)
+    public static RightIntervalEndpoint<double> FromDouble(double? value, bool include)
     {
-        if (double.IsNaN(value))
+        if (value == null)
+            return RightIntervalEndpoint<double>.Unbounded;
+        if (double.IsNaN(value.Value))
             throw new ArgumentException("Must not be NaN.", nameof(value));
-        if (double.IsNegativeInfinity(value))
+        if (double.IsNegativeInfinity(value.Value))
             throw new ArgumentException("Must not be positive infinity.", nameof(value));
-        return double.IsPositiveInfinity(value)
+        return double.IsPositiveInfinity(value.Value)
             ? RightIntervalEndpoint<double>.Unbounded
-            : Create(value, include);
+            : Create(value.Value, include);
     }
 
     /// <summary>
@@ -91,6 +93,6 @@ public static class RightIntervalEndpoint
     /// <exception cref="ArgumentException">
     /// <paramref name="value"/> is NaN or negative infinity.
     /// </exception>
-    public static RightIntervalEndpoint<double> FromDouble(double value) =>
+    public static RightIntervalEndpoint<double> FromDouble(double? value) =>
         FromDouble(value, true);
 }

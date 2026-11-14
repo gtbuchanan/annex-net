@@ -4,6 +4,10 @@
 # Built-in Analyzers #
 ######################
 
+# CA1052: Static holder types should be Static or NotInheritable
+# Justification: False positive for nested test fixtures with type or constructor arguments
+dotnet_diagnostic.CA1052.severity = suggestion
+
 # CA1707: Identifiers should not contain underscores
 # Justification: Unit test methods may contain underscores for clarity.
 # Developers must have diligence to adhere to this rule for non-test methods.
@@ -34,6 +38,10 @@ dotnet_diagnostic.CS1591.severity = none
 # Justification: Test assemblies don't need to be documented
 dotnet_diagnostic.SA1600.severity = none
 
+# SA1601: Partial elements should be documented
+# Justification: Test assemblies don't need to be documented
+dotnet_diagnostic.SA1601.severity = none
+
 ############################################
 # Roslynator Analyzers                     #
 # https://github.com/JosefPihrt/Roslynator #
@@ -44,6 +52,10 @@ dotnet_diagnostic.SA1600.severity = none
 # quite long. We don't want to discourage descriptive names simply to enforce the line limit.
 # TODO: Research a way to have descriptive test titles without long method names
 dotnet_diagnostic.RCS0056.severity = suggestion
+
+# RCS1102: Make class static
+# Justification: False positive when inherited by nested types
+dotnet_diagnostic.RCS1102.severity = suggestion
 
 # RCS1181: Convert comment to documentation comment
 # Justification: This exists to catch incorrectly formatted XML comments but we don't care as

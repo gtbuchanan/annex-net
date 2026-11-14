@@ -30,8 +30,39 @@ public static class Interval
     /// <param name="rightEndpoint">The right endpoint.</param>
     /// <returns>The interval.</returns>
     public static Interval<T> Create<T>(
-        LeftIntervalEndpoint<T> leftEndpoint,
-        RightIntervalEndpoint<T> rightEndpoint) =>
+        LeftIntervalEndpoint<T> leftEndpoint, RightIntervalEndpoint<T> rightEndpoint) =>
+        new(leftEndpoint, rightEndpoint);
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Interval{T}" /> class.
+    /// </summary>
+    /// <typeparam name="T">The type of endpoint.</typeparam>
+    /// <param name="leftEndpoint">The left endpoint.</param>
+    /// <param name="rightEndpoint">The right endpoint.</param>
+    /// <returns>The interval.</returns>
+    public static Interval<T> Create<T>(
+        T leftEndpoint, RightIntervalEndpoint<T> rightEndpoint) =>
+        new(leftEndpoint, rightEndpoint);
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Interval{T}" /> class.
+    /// </summary>
+    /// <typeparam name="T">The type of endpoint.</typeparam>
+    /// <param name="leftEndpoint">The left endpoint.</param>
+    /// <param name="rightEndpoint">The right endpoint.</param>
+    /// <returns>The interval.</returns>
+    public static Interval<T> Create<T>(
+        LeftIntervalEndpoint<T> leftEndpoint, T rightEndpoint) =>
+        new(leftEndpoint, rightEndpoint);
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Interval{T}" /> class.
+    /// </summary>
+    /// <typeparam name="T">The type of endpoint.</typeparam>
+    /// <param name="leftEndpoint">The left endpoint.</param>
+    /// <param name="rightEndpoint">The right endpoint.</param>
+    /// <returns>The interval.</returns>
+    public static Interval<T> Create<T>(T leftEndpoint, T rightEndpoint) =>
         new(leftEndpoint, rightEndpoint);
 
     /// <summary>
@@ -53,36 +84,19 @@ public static class Interval
         RightIntervalEndpoint<T> rightEndpoint,
         IComparer<T> comparer)
     {
-        if (leftEndpoint == LeftIntervalEndpoint<T>.Unbounded &&
-            rightEndpoint == RightIntervalEndpoint<T>.Unbounded)
-        {
-            return IntervalClassification.Unbounded;
-        }
-
         var leftBounded = leftEndpoint as LeftIntervalEndpoint<T>.Bounded;
         var rightBounded = rightEndpoint as RightIntervalEndpoint<T>.Bounded;
 
         if (leftBounded != null && rightBounded != null)
             return ClassifyProper(leftBounded, rightBounded, comparer);
-
         if (leftBounded != null)
-        {
-            return leftBounded.Include
-                ? IntervalClassification.LeftClosed
-                : IntervalClassification.LeftOpen;
-        }
-
+            return ClassifyLeftBounded(leftBounded);
         if (rightBounded != null)
-        {
-            return rightBounded.Include
-                ? IntervalClassification.RightClosed
-                : IntervalClassification.RightOpen;
-        }
-
-        throw new InvalidOperationException("Unreachable code.");
+            return ClassifyRightBounded(rightBounded);
+        return IntervalClassification.Unbounded;
     }
 
-    internal static IntervalClassification ClassifyProper<T>(
+    private static IntervalClassification ClassifyProper<T>(
         LeftIntervalEndpoint<T>.Bounded leftBounded,
         RightIntervalEndpoint<T>.Bounded rightBounded,
         IComparer<T> comparer)
@@ -96,7 +110,7 @@ public static class Interval
                 : IntervalClassification.Closed;
         }
 
-        if (comparison <= 0)
+        if (comparison >= 0)
             return IntervalClassification.Empty;
         if (leftBounded.Include)
             return IntervalClassification.LeftClosedRightOpen;
@@ -104,4 +118,16 @@ public static class Interval
             ? IntervalClassification.LeftOpenRightClosed
             : IntervalClassification.Open;
     }
+
+    private static IntervalClassification ClassifyLeftBounded<T>(
+        LeftIntervalEndpoint<T>.Bounded leftBounded) =>
+        leftBounded.Include
+            ? IntervalClassification.LeftClosed
+            : IntervalClassification.LeftOpen;
+
+    private static IntervalClassification ClassifyRightBounded<T>(
+        RightIntervalEndpoint<T>.Bounded rightBounded) =>
+        rightBounded.Include
+            ? IntervalClassification.RightClosed
+            : IntervalClassification.RightOpen;
 }

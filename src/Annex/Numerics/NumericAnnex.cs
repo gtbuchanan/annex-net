@@ -4,30 +4,30 @@ using System.Numerics;
 
 internal static class NumericAnnex
 {
-    internal static Dictionary<Type, NumericClass> TypeMap { get; } = new()
+    internal static Dictionary<Type, NumericTypeOption> TypeMap { get; } = new()
     {
-        { typeof(byte), NumericClass.Integral },
-        { typeof(sbyte), NumericClass.Integral },
-        { typeof(ushort), NumericClass.Integral },
-        { typeof(short), NumericClass.Integral },
-        { typeof(uint), NumericClass.Integral },
-        { typeof(int), NumericClass.Integral },
-        { typeof(ulong), NumericClass.Integral },
-        { typeof(long), NumericClass.Integral },
-        { typeof(decimal), NumericClass.FloatingPoint },
-        { typeof(double), NumericClass.FloatingPoint },
-        { typeof(float), NumericClass.FloatingPoint },
-        { typeof(BigInteger), NumericClass.Integral },
-        { typeof(Complex), NumericClass.Complex },
-        { typeof(Matrix3x2), NumericClass.Vector },
-        { typeof(Matrix4x4), NumericClass.Vector },
-        { typeof(Plane), NumericClass.Vector },
-        { typeof(Quaternion), NumericClass.Vector },
-        { typeof(Vector2), NumericClass.Vector },
-        { typeof(Vector3), NumericClass.Vector },
-        { typeof(Vector4), NumericClass.Vector },
+        { typeof(byte), NumericTypeOption.Integral },
+        { typeof(sbyte), NumericTypeOption.Integral },
+        { typeof(ushort), NumericTypeOption.Integral },
+        { typeof(short), NumericTypeOption.Integral },
+        { typeof(uint), NumericTypeOption.Integral },
+        { typeof(int), NumericTypeOption.Integral },
+        { typeof(ulong), NumericTypeOption.Integral },
+        { typeof(long), NumericTypeOption.Integral },
+        { typeof(decimal), NumericTypeOption.FloatingPoint },
+        { typeof(double), NumericTypeOption.FloatingPoint },
+        { typeof(float), NumericTypeOption.FloatingPoint },
+        { typeof(BigInteger), NumericTypeOption.Integral },
+        { typeof(Complex), NumericTypeOption.Complex },
+        { typeof(Matrix3x2), NumericTypeOption.Vector },
+        { typeof(Matrix4x4), NumericTypeOption.Vector },
+        { typeof(Plane), NumericTypeOption.Vector },
+        { typeof(Quaternion), NumericTypeOption.Vector },
+        { typeof(Vector2), NumericTypeOption.Vector },
+        { typeof(Vector3), NumericTypeOption.Vector },
+        { typeof(Vector4), NumericTypeOption.Vector },
 #if NET6_0_OR_GREATER || NETFRAMEWORK || NETSTANDARD || TIZEN || WINDOWS_UWP
-        { typeof(Vector<>), NumericClass.Vector },
+        { typeof(Vector<>), NumericTypeOption.Vector },
 #endif
     };
 }

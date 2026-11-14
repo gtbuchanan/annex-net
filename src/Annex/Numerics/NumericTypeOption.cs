@@ -5,10 +5,10 @@ namespace Annex.Numerics;
 /// </summary>
 [PublicAPI]
 [Flags]
-public enum NumericClass
+public enum NumericTypeOption
 {
     /// <summary>
-    /// No numeric class.
+    /// No numeric type.
     /// </summary>
     None = 0,
 

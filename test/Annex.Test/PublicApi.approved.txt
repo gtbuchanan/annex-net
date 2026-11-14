@@ -108,8 +108,59 @@ namespace Annex.Numerics
         public static bool NearlyEquals(this float @this, float value, double epsilon) { }
         public static string ToExactString(this float @this) { }
     }
+    public interface IIntervalEndpoint<T> : System.IFormattable
+    {
+        bool Contains(T value, System.Collections.Generic.IComparer<T> comparer);
+    }
+    public static class Interval
+    {
+        public static Annex.Numerics.Interval<T> Create<T>(Annex.Numerics.LeftIntervalEndpoint<T> leftEndpoint, Annex.Numerics.RightIntervalEndpoint<T> rightEndpoint) { }
+        public static Annex.Numerics.Interval<T> Create<T>(Annex.Numerics.LeftIntervalEndpoint<T> leftEndpoint, Annex.Numerics.RightIntervalEndpoint<T> rightEndpoint, System.Collections.Generic.IComparer<T> comparer) { }
+    }
+    public enum IntervalClassification
+    {
+        Empty = 0,
+        Degenerate = 1,
+        LeftOpen = 2,
+        LeftClosed = 4,
+        RightOpen = 8,
+        Open = 10,
+        LeftClosedRightOpen = 12,
+        RightClosed = 16,
+        LeftOpenRightClosed = 18,
+        Closed = 20,
+        Unbounded = 30,
+    }
+    public sealed class Interval<T> : System.IEquatable<Annex.Numerics.Interval<T>>, System.IFormattable
+    {
+        public static readonly Annex.Numerics.Interval<T> Unbounded;
+        public Interval(Annex.Numerics.LeftIntervalEndpoint<T> leftEndpoint, Annex.Numerics.RightIntervalEndpoint<T> rightEndpoint) { }
+        public Interval(Annex.Numerics.LeftIntervalEndpoint<T> leftEndpoint, Annex.Numerics.RightIntervalEndpoint<T> rightEndpoint, System.Collections.Generic.IComparer<T> comparer) { }
+        public Annex.Numerics.IntervalClassification Classification { get; }
+        public System.Collections.Generic.IComparer<T> Comparer { get; }
+        public Annex.Numerics.LeftIntervalEndpoint<T> LeftEndpoint { get; }
+        public Annex.Numerics.RightIntervalEndpoint<T> RightEndpoint { get; }
+        public bool Contains(T value) { }
+        public override string ToString() { }
+        public string ToString(string? format, System.IFormatProvider? formatProvider) { }
+    }
+    public static class LeftIntervalEndpoint
+    {
+        public static Annex.Numerics.LeftIntervalEndpoint<T> Create<T>(T value, bool include) { }
+        public static Annex.Numerics.LeftIntervalEndpoint<double> FromDouble(double? value) { }
+        public static Annex.Numerics.LeftIntervalEndpoint<double> FromDouble(double? value, bool include) { }
+        public static Annex.Numerics.LeftIntervalEndpoint<float> FromSingle(float? value) { }
+        public static Annex.Numerics.LeftIntervalEndpoint<float> FromSingle(float? value, bool include) { }
+    }
+    public abstract class LeftIntervalEndpoint<T> : Annex.Numerics.IIntervalEndpoint<T>, System.IEquatable<Annex.Numerics.LeftIntervalEndpoint<T>>, System.IFormattable
+    {
+        public static readonly Annex.Numerics.LeftIntervalEndpoint<T> Unbounded;
+        public abstract bool Contains(T value, System.Collections.Generic.IComparer<T> comparer);
+        public abstract string ToString(string? format, System.IFormatProvider? formatProvider);
+        public static Annex.Numerics.LeftIntervalEndpoint<T> op_Implicit(T? value) { }
+    }
     [System.Flags]
-    public enum NumericClass
+    public enum NumericTypeOption
     {
         None = 0,
         Integral = 1,
@@ -117,6 +168,21 @@ namespace Annex.Numerics
         Complex = 4,
         Vector = 8,
         All = 15,
+    }
+    public static class RightIntervalEndpoint
+    {
+        public static Annex.Numerics.RightIntervalEndpoint<T> Create<T>(T value, bool include) { }
+        public static Annex.Numerics.RightIntervalEndpoint<double> FromDouble(double? value) { }
+        public static Annex.Numerics.RightIntervalEndpoint<double> FromDouble(double? value, bool include) { }
+        public static Annex.Numerics.RightIntervalEndpoint<float> FromSingle(float? value) { }
+        public static Annex.Numerics.RightIntervalEndpoint<float> FromSingle(float? value, bool include) { }
+    }
+    public abstract class RightIntervalEndpoint<T> : Annex.Numerics.IIntervalEndpoint<T>, System.IEquatable<Annex.Numerics.RightIntervalEndpoint<T>>, System.IFormattable
+    {
+        public static readonly Annex.Numerics.RightIntervalEndpoint<T> Unbounded;
+        public abstract bool Contains(T value, System.Collections.Generic.IComparer<T> comparer);
+        public abstract string ToString(string? format, System.IFormatProvider? formatProvider);
+        public static Annex.Numerics.RightIntervalEndpoint<T> op_Implicit(T? value) { }
     }
 }
 namespace Annex.Pollution
@@ -159,7 +225,7 @@ namespace Annex.Reflection
     public static class TypeExtensions
     {
         public static bool IsNumeric(this System.Type @this) { }
-        public static bool IsNumeric(this System.Type @this, Annex.Numerics.NumericClass numericClass) { }
+        public static bool IsNumeric(this System.Type @this, Annex.Numerics.NumericTypeOption option) { }
         public static System.Type UnwrapNullable(this System.Type @this) { }
     }
 }

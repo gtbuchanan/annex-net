@@ -12,8 +12,7 @@ public abstract record RightIntervalEndpoint<T> : IIntervalEndpoint<T>
     /// <summary>
     /// The unbounded right endpoint.
     /// </summary>
-    public static readonly RightIntervalEndpoint<T> Unbounded =
-        PositiveInfinity.Instance;
+    public static readonly RightIntervalEndpoint<T> Unbounded = PositiveInfinity.Instance;
 
     private RightIntervalEndpoint()
     {
@@ -49,7 +48,7 @@ public abstract record RightIntervalEndpoint<T> : IIntervalEndpoint<T>
         /// <inheritdoc/>
         public override bool Contains(T value, IComparer<T> comparer)
         {
-            var comparison = comparer.Compare(this.Value, value);
+            var comparison = comparer.Compare(value, this.Value);
             return this.Include ? comparison <= 0 : comparison < 0;
         }
 
@@ -109,7 +108,8 @@ public abstract record RightIntervalEndpoint<T> : IIntervalEndpoint<T>
             var formats = format?.Split(':') ?? new[] { IntervalFormatSpecifier.General };
             return formats[0] switch
             {
-                IntervalFormatSpecifier.General => StringValue + RightIntervalEndpoint.ExclusionNotation,
+                IntervalFormatSpecifier.General =>
+                    StringValue + RightIntervalEndpoint.ExclusionNotation,
                 IntervalFormatSpecifier.Unambiguous =>
                     StringValue + RightIntervalEndpoint.ExclusionNotationUnambiguous,
                 _ => throw new FormatException(
